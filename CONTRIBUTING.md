@@ -36,4 +36,36 @@ Before you submit, please check that:
 
 - every link works;
 - the evidence link shows REA use (if you claim REA);
-- the license is stated.
+- the license is stated;
+- `python3 scripts/validate_list.py` reports no errors;
+- the tables are still aligned, which `python3 scripts/align_tables.py` fixes.
+
+`scripts/validate_list.py` is the same check the CI runs. It covers the tag
+vocabulary, the licence on every case, the evidence row for every `REA` case,
+the English and Chinese lists matching each other, in-page anchors, the table
+of contents matching the headings in order, mirrors of the upstream project,
+and an English document sending the reader to a Chinese-only file.
+
+## Markdown style, and where this list deliberately differs
+
+This list carries the [awesome.re](https://awesome.re) badge, and it does not
+pass every default of the [awesome-lint](https://github.com/sindresorhus/awesome-lint)
+rules. The differences are intentional:
+
+| Rule                              | Why it is left                                                                                                                                                                |
+| --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| duplicate links                   | The "Most shared" table repeats entries that also appear in the body, and the legal section links the research it cites. Both are deliberate.                                 |
+| every list item is a link         | The bullets in the legal section are prose with a bold label, not catalogue entries.                                                                                          |
+| the contents is the first section | The "Most shared" table is the hook of the page and comes first, as it does in [morluto/awesome-reverse-engineering](https://github.com/morluto/awesome-reverse-engineering). |
+| the heading is in title case      | The badge is part of the heading, and the badge is how the list is found.                                                                                                     |
+
+Everything else is fixed: the tables are aligned, the spelling is checked,
+and the contents matches the headings.
+
+`awesome-lint` reads the file from the GitHub URL it is given, not from the
+working tree, so it has to be run against a pushed branch:
+
+```bash
+npx awesome-lint https://github.com/<owner>/<repo>/tree/<branch>
+```
+

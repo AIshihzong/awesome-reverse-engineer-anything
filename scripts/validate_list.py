@@ -293,6 +293,30 @@ def check_anchors(path: Path) -> list[str]:
     return problems
 
 
+def check_tables(path: Path) -> list[str]:
+    """Every row of a table must have the same number of cells as its header.
+
+    A row with the wrong count renders as a broken table on GitHub, and it
+    is the one mistake that alignment cannot fix.
+    """
+    problems: list[str] = []
+    expected: int | None = None
+    for line_no, line in enumerate(read(path).splitlines(), start=1):
+        stripped = line.strip()
+        if not (stripped.startswith("|") and stripped.endswith("|")):
+            expected = None
+            continue
+        cells = len(stripped[1:-1].split("|"))
+        if expected is None:
+            expected = cells
+        elif cells != expected:
+            problems.append(
+                f"{path.name}:{line_no} table row has {cells} cells, the header has "
+                f"{expected}"
+            )
+    return problems
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--json", action="store_true", help="machine-readable output")
@@ -382,6 +406,12 @@ def main() -> int:
     # 5b. the table of contents must match the headings
     errors.extend(check_toc(ROOT / EN_README, "Contents"))
     errors.extend(check_toc(ROOT / ZH_README, "目录"))
+
+    # 5c. table rows must have the same number of cells as their header
+    for name in files:
+        path = ROOT / name
+        if path.exists():
+            errors.extend(check_tables(path))
 
     # 6. mirrors
     for name in files:
