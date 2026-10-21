@@ -66,6 +66,6 @@ and the contents matches the headings.
 working tree, so it has to be run against a pushed branch:
 
 ```bash
-npx awesome-lint https://github.com/<owner>/<repo>/tree/<branch>
+npx awesome-lint <repo-url>/tree/<branch>
 ```
 
