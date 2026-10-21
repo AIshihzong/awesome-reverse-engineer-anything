@@ -6,7 +6,7 @@
 
 > 非官方列表，与 morluto/rea 无隶属关系。
 
-"REA" 原指 [morluto/rea](https://github.com/morluto/rea)（Reverse Engineer Anything），一个开源 MCP Server + CLI（npm 包 `rea-agents`），让 Claude Code、Codex 等编码 Agent 在**没有源码**的情况下检查原生二进制、Electron 应用、.NET 程序集、APK、固件和网站，解释功能如何实现、给出证据，再在你自己的项目里重建。它本身不做反编译，而是把 Hopper / Ghidra / IDA / JADX 等现有工具编排给 Agent 使用。
+"REA" 原指 [morluto/rea](https://github.com/morluto/rea)（Reverse Engineer Anything），一个开源 MCP Server + CLI（npm 包 `rea-agents`，35 万+ Star），让 Claude Code、Codex 等编码 Agent 在**没有源码**的情况下检查原生二进制、Electron 应用、.NET 程序集、APK、固件和网站，解释功能如何实现、给出证据，再在你自己的项目里重建。它本身不做反编译，而是把 Hopper / Ghidra / IDA / JADX 等现有工具编排给 Agent 使用。
 
 现在 "REA" 也常被用来泛指整股浪潮：AI Agent 逆向并重建闭源软件，无论用的是 REA，还是 Claude Code / Codex 加 Ghidra / IDA MCP。本列表收录这股浪潮，标明每个案例实际用了什么工具。
 
@@ -16,6 +16,8 @@
 - `AI 逆向`：使用了其他 AI 工具，或未写明工具。
 - `重写`：clean-room 重写，没有逆向证据。
 - `待核实`：暂时无法核实。
+
+> 本列表中的数据与链接核对于 2026-10-21。REA 及其周边项目每周都在变化，引用某个数字前请先看它旁边的日期。
 
 ## 先看这些
 
@@ -80,7 +82,7 @@
 
 ## 社区案例：用 REA 做出来的东西
 
-> 每个条目的标签说明证据来源。下面的 Star 数是 2026-10-14 的快照。
+> 每个条目的标签说明证据来源。仓库 Star 数每天都在变，因此这里不再列出。
 
 ### 经典游戏复原
 
@@ -105,7 +107,8 @@
 - [LilZeeCN/zee-rp](https://github.com/LilZeeCN/zee-rp) - `REA` 逆向 Axure RP 的 `.rp` 原型文件格式，提供 CLI 和 MCP，让 AI 读写原型。REA 的使用说明在作者回复中，README 未提。目前只在 macOS 和 Axure RP 11 上验证过。MIT。
 - [wquguru/cameo](https://github.com/wquguru/cameo) - `待核实` 链接的仓库是作者自己开发的原创桌面宠物应用，不是 REA 的产出。据作者的后续帖子，REA 用于产出伪代码，再由 Claude Code 还原交互，但重建源码未公开。
 - [lxistired/ledger-reborn](https://github.com/lxistired/ledger-reborn) - `REA` 用 REA 研究 QuickBooks Desktop for Mac 2024 试用版后，独立实现的本地记账应用，有早期预览版。REA 的说明见 [REA 讨论 #2198](https://github.com/morluto/rea/discussions/2198)。MIT。
-- [KarlssonChristoffer/DiskLens](https://github.com/KarlssonChristoffer/DiskLens) - `REA` 仿 WinDirStat 的 Windows 11 磁盘分析工具，由 Claude Code 编写。作者先用 REA 研究了已安装的 WinDirStat 2.5.0 二进制。作者称代码未经审阅，视为实验性项目。
+- [KarlssonChristoffer/DiskLens](https://github.com/KarlssonChristoffer/DiskLens) - `REA` 仿 WinDirStat 的 Windows 11 磁盘分析工具，由 Claude Code 编写。作者先用 REA 研究了已安装的 WinDirStat 2.5.0 二进制。作者称代码未经审阅，视为实验性项目。协议为 GPL-3.0-or-later：`crates/core/src/treemap.rs` 与 `palette.rs` 直接移植了 WinDirStat 2.5.0 的 GPL-2.0-or-later 代码，因此这是 GPL 衍生作品而非 clean-room 复原，README 本身也是这么写的。
+- [yazzang-homelab/blender-agent-sdk](https://github.com/yazzang-homelab/blender-agent-sdk) - `REA` 纯 Python SDK，让 AI Agent 直接驱动 Blender，不走 MCP。设计依据是用 REA + Ghidra 对剥离后的 174 MB Blender 5.2.2 二进制做的完整分析，约 70 分钟处理了 301,393 个函数，结果再与 v5.2.2 源码交叉核对。GPL-3.0-or-later。
 
 ### 硬件、协议与驱动
 
@@ -121,6 +124,8 @@
 - [REA 讨论 #1406：Next.js + Stripe 应用的外部泄露检查](https://github.com/morluto/rea/discussions/1406) - `REA` 用网站模式从外部检查自己的线上应用，再与源码对照。
 - [REA 讨论 #2254：剥离符号的 bzip2](https://github.com/morluto/rea/discussions/2254) - `REA` 把 REA 对剥离版二进制的分析结果，与未剥离的构建和源码逐条对照。
 - [UnknownHacker1/rea-groundtruth](https://github.com/UnknownHacker1/rea-groundtruth) - `REA` 把 REA 的报告与代码中的真实情况逐项比对，为它的盲区提供一键复现脚本。MIT。
+- [dagoSte/rea-safe-agents](https://github.com/dagoSte/rea-safe-agents) - `REA` 把 REA 与接收结果的 Agent 分别关进两个受限 Docker 容器：无网络、只读根文件系统、不给 capability、不挂 Docker socket，Agent 一侧零主机挂载。只通过白名单开放 REA 207 个工具中的 27 个，且只把经过哈希批准的冻结副本交给 REA。固定 REA 6.7.0、Ghidra 12.1.4、JADX 0.7.1。Linux 与 macOS 已验证，Windows 仍是实验性。MIT。
+- [Junhan2/reaproof](https://github.com/Junhan2/reaproof) - `AI 逆向` 评估你发布的应用对 REA 这类 Agent 暴露到什么程度，并修掉能修的部分：带着原始源码的 source map、服务端密钥、`.env` 的值、混进构建产物的 `.git` 目录。用自带的 "rea risk" 等级给出结论，并在 22 个框架测试应用上用 `aapt`、`dexdump`、`readelf`、`otool`、`@electron/fuses` 交叉核对计数。MIT。
 
 ## 同一波浪潮：未写明使用 REA 的 AI 逆向项目
 
@@ -140,7 +145,7 @@
 - [zhaofeng130/dsh-rea](https://github.com/zhaofeng130/dsh-rea) - DeepSeek Harness 适配器，在每个会话中注册 REA Skill 以及 `rea` / `rea_doctor` 工具。
 - [ya123-4/rea-dsh-plugin](https://github.com/ya123-4/rea-dsh-plugin) - DeepSeek Harness 插件，安装后把 REA MCP 注册为 `mcp__rea__*` 工具并附带 Skill。
 - [sheilacraig/dsh-rea-mcp](https://github.com/sheilacraig/dsh-rea-mcp) - 纯配置的 DeepSeek Harness bundle，用内置 MCP 客户端挂载 REA。
-- [cognixws/picode-rea](https://github.com/cognixws/picode-rea) - PiCode 扩展，只启用 REA 的静态分析工具。当前版本固定为 rea-agents 6.1.0，最新为 6.4.0。
+- [cognixws/picode-rea](https://github.com/cognixws/picode-rea) - PiCode 扩展，只启用 REA 的静态分析工具。当前版本固定为 rea-agents 6.1.0，最新为 6.7.0。
 - [pablodiazjorge/rea-casebook](https://github.com/pablodiazjorge/rea-casebook) - Claude Code mod，实时记录 REA 返回的证据，要求结论必须引用真实的 `evidence_id`，可导出 Markdown。
 - [laaielichter/reverseport](https://github.com/laaielichter/reverseport) - 把逆向结果移植到 Godot、Unity、Unreal、three.js 的 CLI + MCP。**注意**：README 写明其深度分析引擎"基于 REA"，THIRD_PARTY_NOTICES 也称 REA 代码以 MIT 授权，它更像是 REA 的衍生版本，而不是独立工具。
 - [Nowng/rea-mcp](https://github.com/Nowng/rea-mcp) - LM Studio 插件，封装原版 REA MCP Server，方便接本地模型。运行时会克隆 REA。
@@ -150,11 +155,15 @@
 - [moonfruit/homebrew-tap](https://github.com/moonfruit/homebrew-tap/blob/main/Formula/rea-agents.rb) - 一位个人的 Homebrew tap，不是 homebrew-core 官方收录。
 - [czcdr/dsh-plugin-rea](https://github.com/czcdr/dsh-plugin-rea) - 第三方适配插件，把 morluto/rea 的 MCP 服务接入 DeepSeek Harness，提供 `mcp__rea__*` 工具。2.x 会自动安装 REA CLI、JDK 和 Ghidra。
 - [ShadowSwaps/REA-Reconstruction-Companion](https://github.com/ShadowSwaps/REA-Reconstruction-Companion) - Agent Skill，把 REA 的发现整理成复原所需的规格、架构、计划和验证步骤。
+- [aicodeking/leanrea](https://github.com/aicodeking/leanrea) - `AI 逆向` 一个 8 KB 的 Skill 文件，去掉 REA 的 MCP 层，直接用 shell 驱动同样的工具。附带 36 次运行的对照基准：相比 REA 6.5.0，墙钟时间少 38%、成本低 35%、轮次少 56%、token 少 60%，准确率相同，而占用上下文只有 34.5k token（REA 为 400.7k）。注意事项：每组只有 3 次重复、一个模型、一台机器，两组都没有安装 Ghidra、Hopper 和 JADX。MIT。
+- [nesaon03/XYREVERSE](https://github.com/nesaon03/XYREVERSE) - `AI 逆向` 覆盖 IDA、Ghidra、内核驱动、.NET、IL2CPP、Unreal、Frida、x64dbg 与 REA 的 Agent Skill 包。MIT。
+- [kandada/rea-python](https://github.com/kandada/rea-python) - `AI 逆向` REA 的非官方 Python 移植，作者因为自家 Python 语言的 Agent 产品需要原生集成而写。上游作者未背书。MIT。
+- [Fractal-Tess/rea-flake](https://github.com/Fractal-Tess/rea-flake) - `AI 逆向` 打包成 Nix 包的 REA。MIT。
 
 ## 教程与深度调研
 
 - [ringozzt/rea-research](https://github.com/ringozzt/rea-research) - 🇨🇳 中文深度技术调研：架构、证据模型、DX-Ball 数字的真实含义、信任模型、Star 与安装量的差距，以及争议背景。仓库未附许可证，数据快照为 10-11。推荐先读。
-- [pablodiazjorge/rea-lab](https://github.com/pablodiazjorge/rea-lab) - 🇪🇸 Windows + Ghidra 环境下的 REA 搭建、练习题和工具评测。其预注册的第一项研究发现：Claude Code 有无 REA 解出的题目数相同（30 题中 28 题），但使用 REA 时每次运行约慢一倍、花费更高。这是本列表中唯一的对照实验。
+- [pablodiazjorge/rea-lab](https://github.com/pablodiazjorge/rea-lab) - 🇪🇸 Windows + Ghidra 环境下的 REA 搭建、练习题和工具评测。五项预注册研究、共 482 次运行，是本列表中最有决策价值的一组证据。研究 1：Claude Code 有无 REA 解出的题目数相同（30 题中 28 题），但使用 REA 时每次运行约慢一倍、花费更高。**研究 2：在更难的二进制上 REA 反而让准确率变差，不使用 REA 时 24 次中解出 11 次，使用后只解出 4 次**（exact McNemar，p = 0.092）。研究 5：REA 自带的 Skill 让每次运行贵 14%，准确率没有可测变化。结论：把 REA 用在目标明确的具体问题上，不要拿它做开放式探索。
 - [jinshi666888/rea-playbook](https://github.com/jinshi666888/rea-playbook) - 🇨🇳 动手实验：最小 Electron 靶机、带 `file:line` 引用的证据提取、MCP 探针，跑通"反编译 → 理解 → 重建"闭环。
 - [valorisa/Reverse-Engineer-Anything](https://github.com/valorisa/Reverse-Engineer-Anything) - 🇫🇷 法语非官方教学指南，含逆向工程的法律框架。
 - [REA: Reverse Engineer Anything with AI Agents & MCP（HoangYell）](https://hoangyell.com/rea-explained/) - 英文入门讲解。
@@ -180,11 +189,13 @@ REA 编排的底层工具，或同类的"给 Agent 用的逆向工具"。
 - [kaixinbaba/awesome-rea](https://github.com/kaixinbaba/awesome-rea) - 开源逆向、重实现与兼容替代品目录（[awesomerea.com](https://awesomerea.com)），不要求使用 REA。
 - [zhuyansen/awesome-ai-reverse-engineering](https://github.com/zhuyansen/awesome-ai-reverse-engineering) - AI 逆向工具列表，每个仓库都有安全评级，中英双语。
 - [DiscoverBox/awesome-ai-reverse](https://github.com/DiscoverBox/awesome-ai-reverse) - 🇨🇳 AI 辅助逆向工具清单，覆盖 MCP、Skill、插件、Agent。
-- [songshikang0111/awesome-REA-cases](https://github.com/songshikang0111/awesome-REA-cases) - 🇨🇳 每天多次追踪 REA 与 AI 逆向公开案例，当前收录 139 个案例与项目，按游戏、硬件、应用、算法分类，并标明是否确认使用了 REA。
+- [songshikang0111/awesome-REA-cases](https://github.com/songshikang0111/awesome-REA-cases) - 每天多次追踪 REA 与 AI 逆向公开案例。截至 2026-10-20 共 627 个案例与项目，按游戏、硬件、应用、算法分类，并标明是否确认使用了 REA。默认英文，另有中文版。
 - [Asymmetrical-1024/awsome-REA](https://github.com/Asymmetrical-1024/awsome-REA) - 🇨🇳 REA 案例合集，每条附 X 原帖截图、证据切片和验证边界。
 - [yibie/awesome-rea](https://github.com/yibie/awesome-rea) - 只收录有明确验收标准的 AI 反编译和移植案例。
 - [heaven-hm/awesome-reverse-engineered-games](https://github.com/heaven-hm/awesome-reverse-engineered-games) - 英文，AI 重建的游戏。
 - [SubmitGame/awesome-decomp-games](https://github.com/SubmitGame/awesome-decomp-games) - 英文，反编译游戏，首屏即可在浏览器中直接游玩，CC0 许可。
+- [morluto/awesome-reverse-engineering](https://github.com/morluto/awesome-reverse-engineering) - 由 REA 作者本人维护的通用逆向工程工具与学习资源列表，覆盖二进制、应用、固件、文件格式与协议。按"你想做什么任务"而不是按工具分类。它自己已经跑每周一次的链接检查 CI。CC0-1.0。
+- [reacher-z/Awesome-REA](https://github.com/reacher-z/Awesome-REA) - 中英双语的逆向工程工具、复原项目、案例与研究论文目录，覆盖网站、游戏、应用、二进制、固件与通信协议，带可搜索站点和单独标注的自动化仓库索引。MIT。
 
 ## 社区讨论与媒体
 

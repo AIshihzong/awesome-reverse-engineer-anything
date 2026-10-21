@@ -6,7 +6,7 @@
 
 > Unofficial. Not affiliated with morluto/rea.
 
-"REA" started as [morluto/rea](https://github.com/morluto/rea) (Reverse Engineer Anything, 200k+ stars), an open-source MCP server and CLI (npm `rea-agents`) that lets coding agents inspect native binaries, Electron apps, .NET assemblies, APKs, firmware and websites without their source code, explain how a feature works with evidence, and rebuild it. REA itself does not decompile; it orchestrates Hopper, Ghidra, IDA and JADX for the agent.
+"REA" started as [morluto/rea](https://github.com/morluto/rea) (Reverse Engineer Anything, 350k+ stars), an open-source MCP server and CLI (npm `rea-agents`) that lets coding agents inspect native binaries, Electron apps, .NET assemblies, APKs, firmware and websites without their source code, explain how a feature works with evidence, and rebuild it. REA itself does not decompile; it orchestrates Hopper, Ghidra, IDA and JADX for the agent.
 
 "REA" now also names the whole wave of AI agents reverse-engineering and rebuilding closed software, whether they use REA, or Claude Code and Codex with Ghidra or IDA MCP. This list covers that wave and says what each case actually used.
 
@@ -16,6 +16,8 @@
 - `AI-RE`: AI reverse engineering with other tools, or with no tool named.
 - `Rebuild`: clean-room rewrite with no reverse-engineering evidence.
 - `Claim?`: not yet verified.
+
+> Figures and links in this list were checked on 2026-10-21. REA and the projects around it move weekly, so read the date next to a number before relying on it.
 
 > ⚠️ Reverse engineering is governed by local law, software licenses and terms of service. This list covers only public information, for learning, research, interoperability and preservation. Make sure you are allowed to analyse the target. See [Legal and controversy](#legal-and-controversy).
 
@@ -64,7 +66,7 @@ These are on [rea.tools](https://rea.tools/showcase/) and are tagged `REA`, exce
 
 ## Community cases built with REA
 
-Tags show the evidence source. Star counts are from 2026-10-14.
+Tags show the evidence source. Repo stars change daily, so they are not listed here.
 
 ### Games and reconstructions
 
@@ -89,7 +91,8 @@ Tags show the evidence source. Star counts are from 2026-10-14.
 - [LilZeeCN/zee-rp](https://github.com/LilZeeCN/zee-rp) - `REA` (author's reply) CLI and MCP for reading and writing Axure RP `.rp` prototype files. Validated only on macOS with Axure RP 11. MIT.
 - [wquguru/cameo](https://github.com/wquguru/cameo) - `Claim?` The linked repo is the author's original desktop-pet app, not REA output. The author's follow-up post describes an REA-based reconstruction, but its source was not published.
 - [lxistired/ledger-reborn](https://github.com/lxistired/ledger-reborn) - `REA` Independent local accounting app, built after studying QuickBooks Desktop for Mac 2024 trial with REA. See [discussion #2198](https://github.com/morluto/rea/discussions/2198). Preview release. MIT.
-- [KarlssonChristoffer/DiskLens](https://github.com/KarlssonChristoffer/DiskLens) - `REA` WinDirStat-style disk analyzer for Windows 11, written by Claude Code. The author used REA to study the shipped WinDirStat 2.5.0 binary first. The author says the code has not been reviewed, so treat it as experimental.
+- [KarlssonChristoffer/DiskLens](https://github.com/KarlssonChristoffer/DiskLens) - `REA` WinDirStat-style disk analyzer for Windows 11, written by Claude Code. The author used REA to study the shipped WinDirStat 2.5.0 binary first. The author says the code has not been reviewed, so treat it as experimental. GPL-3.0-or-later: `crates/core/src/treemap.rs` and `palette.rs` port WinDirStat 2.5.0 GPL-2.0-or-later code, so this is a GPL derivative rather than clean-room work, and the README says so.
+- [yazzang-homelab/blender-agent-sdk](https://github.com/yazzang-homelab/blender-agent-sdk) - `REA` Plain Python SDK for driving Blender from AI agents, with no MCP. Its grounding work is a REA and Ghidra pass over the stripped 174 MB Blender 5.2.2 binary, 301,393 procedures in about 70 minutes, cross-checked against the v5.2.2 source. GPL-3.0-or-later.
 
 ### Hardware, protocols and drivers
 
@@ -105,12 +108,14 @@ Tags show the evidence source. Star counts are from 2026-10-14.
 - [REA discussion #1406](https://github.com/morluto/rea/discussions/1406) - `REA` Outside-in leak check of a production Next.js + Stripe app.
 - [REA discussion #2254](https://github.com/morluto/rea/discussions/2254) - `REA` Stripped bzip2 analysed and checked against an unstripped build.
 - [UnknownHacker1/rea-groundtruth](https://github.com/UnknownHacker1/rea-groundtruth) - `REA` Compares REA's reports with the actual code and provides one-command repros. MIT.
+- [dagoSte/rea-safe-agents](https://github.com/dagoSte/rea-safe-agents) - `REA` Skill that contains REA and the receiving agent in two separate restricted Docker containers: no network, read-only roots, no capabilities, no Docker socket, and zero host mounts for the agent. Exposes 27 of REA's 207 tools through an allowlist, and shares only frozen, hash-approved copies of selected inputs with REA. Pins REA 6.7.0, Ghidra 12.1.4 and JADX 0.7.1. Linux and macOS are verified; Windows is experimental. MIT.
+- [Junhan2/reaproof](https://github.com/Junhan2/reaproof) - `AI-RE` Rates how exposed a shipped app is to agents such as REA, and closes what it can close: source maps carrying your original source, server keys, `.env` values and `.git` folders that ended up in the build output. Rates the result on its own "rea risk" scale and cross-checks its counts against `aapt`, `dexdump`, `readelf`, `otool` and `@electron/fuses` on 22 framework test apps. MIT.
 
 ## The wider wave: without confirmed REA
 
 These projects came up alongside REA. Their READMEs do not say REA was used, so they are listed as background.
 
-- [storytold's Craft apps](https://github.com/storytold/photocraft) - `Rebuild` PhotoCraft (Photoshop-style, about 59k stars), WordCraft, GridCraft, VectorCraft, FilmCraft, LightCraft, PdfCraft, DeckCraft, CADCraft, EffectCraft, DesignCraft, SoundCraft and FigCraft. Clean-room rewrites, mostly alpha. WordCraft's AGENTS.md forbids disassembling the Word program, so it is a black-box rewrite. Only FilmCraft says it was "largely built" by agents. Dual MIT or Apache-2.0.
+- [storytold's Craft apps](https://github.com/storytold/photocraft) - `Rebuild` PhotoCraft (Photoshop-style, about 59k stars), [WordCraft](https://github.com/storytold/wordcraft), [GridCraft](https://github.com/storytold/gridcraft), [VectorCraft](https://github.com/storytold/vectorcraft), [FilmCraft](https://github.com/storytold/filmcraft), [LightCraft](https://github.com/storytold/lightcraft), [PdfCraft](https://github.com/storytold/pdfcraft), [DeckCraft](https://github.com/storytold/deckcraft), [CADCraft](https://github.com/storytold/cadcraft), [EffectCraft](https://github.com/storytold/effectcraft), [DesignCraft](https://github.com/storytold/designcraft), [SoundCraft](https://github.com/storytold/soundcraft) and [FigCraft](https://github.com/storytold/figcraft). Clean-room rewrites, mostly alpha. WordCraft's AGENTS.md forbids disassembling the Word program, so it is a black-box rewrite. Only FilmCraft says it was "largely built" by agents. Dual MIT or Apache-2.0. [ArtCraft](https://github.com/storytold/artcraft) is the pre-existing AI creation app in the same series, not a rewrite.
 - [AsyncFinn/rook](https://github.com/AsyncFinn/rook) - `Rebuild` Rust reimplementation of the Roblox engine, tested against Studio recordings. Early development. Apache-2.0.
 - [tallowmere/free-heroes4](https://github.com/tallowmere/free-heroes4) - `Rebuild` C++23 reimplementation of the Heroes of Might and Magic IV engine. Needs GOG game files. Unfinished. GPL-3.0.
 - [designgears/wine-uwp](https://github.com/designgears/wine-uwp) - `AI-RE` Patches Wine to run Windows Store apps such as Shapr3D. Not clean-room: it uses Microsoft's own components. The AI claim comes from the author's X post.
@@ -123,7 +128,7 @@ These projects came up alongside REA. Their READMEs do not say REA was used, so 
 - [zhaofeng130/dsh-rea](https://github.com/zhaofeng130/dsh-rea) - DeepSeek Harness adapter that registers the REA Skill and tools.
 - [ya123-4/rea-dsh-plugin](https://github.com/ya123-4/rea-dsh-plugin) - DeepSeek Harness plugin that registers REA MCP tools.
 - [sheilacraig/dsh-rea-mcp](https://github.com/sheilacraig/dsh-rea-mcp) - Config-only DeepSeek Harness bundle that mounts REA.
-- [cognixws/picode-rea](https://github.com/cognixws/picode-rea) - PiCode extension enabling REA's static-analysis tools. Pins rea-agents 6.1.0; current is 6.4.0.
+- [cognixws/picode-rea](https://github.com/cognixws/picode-rea) - PiCode extension enabling REA's static-analysis tools. Pins rea-agents 6.1.0; current is 6.7.0.
 - [pablodiazjorge/rea-casebook](https://github.com/pablodiazjorge/rea-casebook) - Claude Code mod that logs REA evidence and requires conclusions to cite real `evidence_id`s.
 - [laaielichter/reverseport](https://github.com/laaielichter/reverseport) - CLI + MCP for porting reverse-engineering results to Godot, Unity, Unreal and three.js. **Note:** its README says the analysis engine is "based on REA", and its notices say REA code is MIT-licensed. Treat it as a derivative of REA, not an independent tool.
 - [Nowng/rea-mcp](https://github.com/Nowng/rea-mcp) - LM Studio plugin that wraps the original REA MCP server, for local models. It clones REA at runtime.
@@ -133,11 +138,15 @@ These projects came up alongside REA. Their READMEs do not say REA was used, so 
 - [moonfruit/homebrew-tap](https://github.com/moonfruit/homebrew-tap/blob/main/Formula/rea-agents.rb) - One person's Homebrew tap. Not in homebrew-core.
 - [czcdr/dsh-plugin-rea](https://github.com/czcdr/dsh-plugin-rea) - Third-party adapter that brings the morluto/rea MCP server into DeepSeek Harness as `mcp__rea__*` tools. Version 2.x installs the REA CLI, JDK and Ghidra for you.
 - [ShadowSwaps/REA-Reconstruction-Companion](https://github.com/ShadowSwaps/REA-Reconstruction-Companion) - Agent Skill that turns REA findings into a specification, architecture, plan and validation steps for rebuilding an app, feature or format.
+- [aicodeking/leanrea](https://github.com/aicodeking/leanrea) - `AI-RE` One 8 KB skill file that replaces the REA MCP layer and drives the same tools directly through the shell. Ships a 36-run benchmark: against REA 6.5.0 it used 38 % less wall time, 35 % less cost, 56 % fewer turns and 60 % fewer tokens at the same accuracy, while loading 34.5k tokens of context instead of 400.7k. Caveats: three reps per cell, one model, one machine, and Ghidra, Hopper and JADX absent from both arms. MIT.
+- [nesaon03/XYREVERSE](https://github.com/nesaon03/XYREVERSE) - `AI-RE` Agent skill pack covering IDA, Ghidra, kernel drivers, .NET, IL2CPP, Unreal, Frida, x64dbg and REA. MIT.
+- [kandada/rea-python](https://github.com/kandada/rea-python) - `AI-RE` Unofficial Python port of REA, written because the author's Python-based agent products needed native integration. Not endorsed by the upstream authors. MIT.
+- [Fractal-Tess/rea-flake](https://github.com/Fractal-Tess/rea-flake) - `AI-RE` REA packaged for Nix. MIT.
 
 ## Guides and research
 
 - [ringozzt/rea-research](https://github.com/ringozzt/rea-research) - 🇨🇳 Chinese technical research: architecture, evidence model, what DX-Ball's numbers mean, trust model, and the gap between stars and installs. Unlicensed, data from 10-11. Read this first.
-- [pablodiazjorge/rea-lab](https://github.com/pablodiazjorge/rea-lab) - 🇪🇸 Setup, exercises and tool evaluation on Windows with Ghidra. Its pre-registered study found Claude Code solved 28 of 30 tasks both with and without REA, while REA runs took about twice as long and cost more. The only controlled comparison in this list.
+- [pablodiazjorge/rea-lab](https://github.com/pablodiazjorge/rea-lab) - 🇪🇸 Setup, exercises and tool evaluation on Windows with Ghidra. Five preregistered studies, 482 runs, and the most decision-relevant evidence in this list. Study 1: Claude Code solved 28 of 30 crackmes with and without REA, but REA runs took about twice as long and cost more. **Study 2: on harder binaries REA made accuracy worse, 11 of 24 runs solved without it against 4 of 24 with it** (exact McNemar, p = 0.092). Study 5: REA's own skill made runs 14 % more expensive and changed nothing measurable. Use REA for targeted questions on a known surface, not open-ended exploration.
 - [jinshi666888/rea-playbook](https://github.com/jinshi666888/rea-playbook) - 🇨🇳 Hands-on lab: a minimal Electron target, evidence extraction with `file:line` references, and an MCP probe.
 - [valorisa/Reverse-Engineer-Anything](https://github.com/valorisa/Reverse-Engineer-Anything) - 🇫🇷 Unofficial French guide, including the legal framework.
 - [REA: Reverse Engineer Anything with AI Agents & MCP (HoangYell)](https://hoangyell.com/rea-explained/) - Introduction.
@@ -163,11 +172,13 @@ Tools that REA drives, or tools in the same category.
 - [kaixinbaba/awesome-rea](https://github.com/kaixinbaba/awesome-rea) - Catalog of reverse-engineering, reimplementation and compatible alternatives ([awesomerea.com](https://awesomerea.com)). REA is not required.
 - [zhuyansen/awesome-ai-reverse-engineering](https://github.com/zhuyansen/awesome-ai-reverse-engineering) - AI reverse-engineering tools, each with a security rating. Bilingual.
 - [DiscoverBox/awesome-ai-reverse](https://github.com/DiscoverBox/awesome-ai-reverse) - 🇨🇳 AI-assisted reverse-engineering tools across MCP, Skills, plugins and agents.
-- [songshikang0111/awesome-REA-cases](https://github.com/songshikang0111/awesome-REA-cases) - 🇨🇳 Tracks REA and AI reverse-engineering cases several times a day. Currently 139 cases, each marked as confirmed-REA or not.
+- [songshikang0111/awesome-REA-cases](https://github.com/songshikang0111/awesome-REA-cases) - Tracks REA and AI reverse-engineering cases several times a day. 627 cases as of 2026-10-20, each marked as confirmed-REA or not, with categories and a search index. English by default, with a Chinese edition.
 - [Asymmetrical-1024/awsome-REA](https://github.com/Asymmetrical-1024/awsome-REA) - 🇨🇳 REA case collection with post screenshots, evidence excerpts and verification limits.
 - [yibie/awesome-rea](https://github.com/yibie/awesome-rea) - Only includes AI decompilation and porting cases with stated acceptance tests.
 - [heaven-hm/awesome-reverse-engineered-games](https://github.com/heaven-hm/awesome-reverse-engineered-games) - AI-rebuilt games.
 - [SubmitGame/awesome-decomp-games](https://github.com/SubmitGame/awesome-decomp-games) - Decompiled games, many playable in the browser. CC0-1.0.
+- [morluto/awesome-reverse-engineering](https://github.com/morluto/awesome-reverse-engineering) - Curated general reverse-engineering tools and learning resources for binaries, applications, firmware, file formats and protocols, maintained by REA's own author. Organised by the task you want to do rather than by tool. It already runs its own weekly link check in CI. CC0-1.0.
+- [reacher-z/Awesome-REA](https://github.com/reacher-z/Awesome-REA) - Bilingual catalogue of reverse-engineering tools, reconstruction projects, case studies and research papers across websites, games, apps, binaries, firmware and protocols, with a searchable site and a separately labelled automated repository index. MIT.
 
 ## Discussion and press
 
