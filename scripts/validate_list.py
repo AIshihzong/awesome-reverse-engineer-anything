@@ -303,10 +303,13 @@ def main() -> int:
                     f"{name}:{entry.line_no} {repo} reads like a mirror of the upstream project"
                 )
 
-    # 7. an English document must not send the reader to a Chinese-only file.
-    # The one exception is the language switcher on line 3, which links a
-    # document to its own Chinese sibling. Chinese documents may link their
-    # English siblings too, which is how a reader switches language.
+    # 7. an English document must not send the reader to a Chinese-only file,
+    # but only when the English counterpart exists. Pointing at the Chinese
+    # edition is correct while no English edition has been written yet.
+    # The one other allowed case is the language switcher on line 3, which
+    # links a document to its own Chinese sibling. Chinese documents may
+    # link their English siblings too, which is how a reader switches
+    # language.
     for name in files:
         if name.endswith(".zh-CN.md"):
             continue
@@ -319,11 +322,17 @@ def main() -> int:
             for _, url in REL_LINK.findall(line):
                 if not url.endswith(".zh-CN.md"):
                     continue
-                if url.rsplit("/", 1)[-1] == sibling:
+                base = url.rsplit("/", 1)[-1]
+                if base == sibling:
+                    continue
+                # Resolve the English counterpart relative to the link's own
+                # directory, not the current file's.
+                english_url = url[: -len(".zh-CN.md")] + ".md"
+                if not (path.parent / english_url).resolve().exists():
                     continue
                 errors.append(
                     f"{name}:{line_no} links {url}, which is the Chinese edition of a "
-                    f"different document. Link the English file, or the language switcher."
+                    f"document that also exists in English. Link the English file."
                 )
 
     if args.json:
