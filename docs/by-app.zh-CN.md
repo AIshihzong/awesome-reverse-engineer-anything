@@ -25,6 +25,8 @@
 | Wispr Flow | [wispr-flow-rea-teardown](https://github.com/az9713/wispr-flow-rea-teardown) | REA | 无 | 仅文章 |
 | QuickBooks Desktop for Mac（试用版） | [ledger-reborn](https://github.com/lxistired/ledger-reborn) | REA | MIT | Alpha（预览版） |
 | Ghostty | [AdamTerm](https://github.com/AdamLinCodes/AdamTerm) | REA | 无 | 可用（需从源码构建） |
+| WinDirStat | [DiskLens](https://github.com/KarlssonChristoffer/DiskLens) | REA | GPL-3.0-or-later | 实验性（未经审阅；移植了 WinDirStat 2.5.0 的 GPL-2.0 代码） |
+| Blender | [blender-agent-sdk](https://github.com/yazzang-homelab/blender-agent-sdk) | REA | GPL-3.0-or-later | 可用（需自备 Blender） |
 | PowerToys 取色器 | [hexgrab](https://github.com/iammukeshm/hexgrab) | REA | MIT | 可用 |
 | Claude Slides 编辑器 | [baocut](https://github.com/JimLiu/baocut) | REA（作者帖子） | source-available，非开源 | 可用 |
 | Apple TV Siri Remote（初代） | [open-appleremote](https://github.com/a-funk/open-appleremote) | 待核实 | MIT | Alpha（0.1.0） |

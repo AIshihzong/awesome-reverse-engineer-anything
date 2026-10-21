@@ -27,6 +27,8 @@
 | [netcat-openbsd 分析](https://github.com/NullLabTests/OpenBSD_netcat_REA) | 是 | — | **已确认。** |
 | [REA-demo](https://github.com/az9713/REA-demo) | 是 | — | **已确认。** |
 | [rea-groundtruth](https://github.com/UnknownHacker1/rea-groundtruth) | 是 | — | **已确认。** |
+| [rea-safe-agents](https://github.com/dagoSte/rea-safe-agents) | 是 | — | **已确认。** 固定 REA 6.7.0 并把它放进受限容器运行。它的贡献在隔离本身，不在分析。 |
+| [blender-agent-sdk](https://github.com/yazzang-homelab/blender-agent-sdk) | 是 | — | **已确认。** 用 REA 的 Ghidra provider 分析剥离后的 Blender 5.2.2 二进制；证据与边界说明都在仓库里。 |
 | [VSL-DSP](https://github.com/grisuno/VSL-DSP) | 是 | — | **部分确认。** REA 只帮忙找到了一些厂商相关的发现；该仓库早于 REA。 |
 | [plx-native](https://github.com/GLinnik21/plx-native) | 否 | 转述的帖子说用的是 Ghidra + Claude Code | **不是 REA。** 标注为 AI 逆向。 |
 | [open-appleremote](https://github.com/a-funk/open-appleremote) | 否 | 作者的帖子没有说明用了什么工具 | **未确认。** |
