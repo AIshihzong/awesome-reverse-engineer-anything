@@ -43,7 +43,7 @@ All of these are things their authors describe doing with REA on X. Most have no
 
 **Games**
 
-- [Air Management 2](https://x.com/TSFisher24nrex/status/2109452544913326086) - Uses REA with Kimi to study KOEI's 1993 airline business game.
+- [Air Management 2](https://x.com/TSFisher24nrex/status/2109452544913326086) - Uses REA with Kimi to study KOEI's 1993 airline business game. The original post could not be retrieved on 2026-10-21; the account is still active, but that status is gone, so the claim is unverified.
 - [The speed rules of the runner game (the HTTP t-rex page)](https://x.com/0xlangeai/status/2109595393260761111) - 🇨🇳 The author rebuilds it with REA and Codex and publishes a side-by-side video of the original, the official showcase version and their own. Note: the official dinosaur case is [morluto/rea PR #1203](https://github.com/morluto/rea/pull/1203), not this one.
 
 **Evaluations and controlled comparisons**
