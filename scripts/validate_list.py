@@ -232,20 +232,23 @@ def check_toc(path: Path, toc_name: str) -> list[str]:
     """Every table-of-contents entry must point at a heading, in order.
 
     Entries that link a file rather than an anchor cannot be matched, and
-    they break the pairing for everything after them.
+    they break the pairing for everything after them. Only the headings
+    that come after the table of contents are paired with it; a section
+    that sits above the contents is not part of it.
     """
     text = read(path)
     problems: list[str] = []
-    headings = [
-        anchor_of(h)
-        for h in re.findall(r"^##\s+(.*)$", text, re.M)
-        if h.strip() != toc_name
-    ]
     match = re.search(
         r"^##\s+" + re.escape(toc_name) + r"\s*\n\n(.*?)\n\n", text, re.M | re.S
     )
     if not match:
         return [f"{path.name} has no table of contents under {toc_name!r}"]
+    toc_start = match.start()
+    headings = [
+        anchor_of(h)
+        for h in re.findall(r"^##\s+(.*)$", text[toc_start:], re.M)
+        if h.strip() != toc_name
+    ]
     items = re.findall(r"^- \[([^\]]+)\]\(#([^)]+)\)", match.group(1), re.M)
     for (label, anchor), heading in zip(items, headings):
         if anchor != heading:

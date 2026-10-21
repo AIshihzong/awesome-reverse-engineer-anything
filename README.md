@@ -36,7 +36,6 @@ Snapshot dates: likes from [songshikang0111/awesome-REA-cases](https://github.co
 
 ## Contents
 
-- [Most shared](#most-shared)
 - [Official resources](#official-resources)
 - [Official showcases](#official-showcases)
 - [Community cases built with REA](#community-cases-built-with-rea)
