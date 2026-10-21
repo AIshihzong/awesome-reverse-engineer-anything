@@ -46,7 +46,7 @@
 
 **游戏**
 
-- [《航空霸业 2》](https://x.com/TSFisher24nrex/status/2109452544913326086) - 用 REA + Kimi 研究 KOEI 1993 年的航空经营游戏。
+- [《航空霸业 2》](https://x.com/TSFisher24nrex/status/2109452544913326086) - 用 REA + Kimi 研究 KOEI 1993 年的航空经营游戏。2026-10-21 核对时原帖已无法打开：账号仍然活跃，但那条推文已不存在，因此说法未经证实。
 - [跑酷游戏的加速规则（HTTP t-rex 页面）](https://x.com/0xlangeai/status/2109595393260761111) - 🇨🇳 作者用 REA + Codex 复刻，并发布原版、官方案例版和自制版的并排对比视频。注意：官方的恐龙案例见 [morluto/rea PR #1203](https://github.com/morluto/rea/pull/1203)，不是这条。
 
 **评测与对照实验**
