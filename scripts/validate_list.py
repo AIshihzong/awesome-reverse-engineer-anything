@@ -113,6 +113,8 @@ UPSTREAM_TAGLINE = re.compile(
 
 BULLET = re.compile(r"^\s*[-*]\s+(.*)$")
 LINK = re.compile(r"\[([^\]]+)\]\((https?://[^)\s]+)\)")
+# Relative links, e.g. docs/by-app.md or ../README.md
+REL_LINK = re.compile(r"\[([^\]]+)\]\((?!https?://|#)([^)\s]+)\)")
 HEADING = re.compile(r"^(#{1,6})\s+(.*)$")
 
 
@@ -341,6 +343,38 @@ def main() -> int:
             elif MIRROR_DESC.search(entry.text) or UPSTREAM_TAGLINE.search(entry.text):
                 errors.append(
                     f"{name}:{entry.line_no} {repo} reads like a mirror of the upstream project"
+                )
+
+    # 7. an English document must not send the reader to a Chinese-only file,
+    # but only when the English counterpart exists. Pointing at the Chinese
+    # edition is correct while no English edition has been written yet.
+    # The one other allowed case is the language switcher on line 3, which
+    # links a document to its own Chinese sibling. Chinese documents may
+    # link their English siblings too, which is how a reader switches
+    # language.
+    for name in files:
+        if name.endswith(".zh-CN.md"):
+            continue
+        path = ROOT / name
+        if not path.exists():
+            continue
+        sibling = Path(name).name.replace(".md", ".zh-CN.md")
+        text = read(path)
+        for line_no, line in enumerate(text.splitlines(), start=1):
+            for _, url in REL_LINK.findall(line):
+                if not url.endswith(".zh-CN.md"):
+                    continue
+                base = url.rsplit("/", 1)[-1]
+                if base == sibling:
+                    continue
+                # Resolve the English counterpart relative to the link's own
+                # directory, not the current file's.
+                english_url = url[: -len(".zh-CN.md")] + ".md"
+                if not (path.parent / english_url).resolve().exists():
+                    continue
+                errors.append(
+                    f"{name}:{line_no} links {url}, which is the Chinese edition of a "
+                    f"document that also exists in English. Link the English file."
                 )
 
     if args.json:

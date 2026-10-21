@@ -72,9 +72,13 @@ Rules that the validator in `scripts/validate_list.py` enforces:
    `docs/x-posts.zh-CN.md` are translations of each other, as are
    `docs/press-and-posts.md` and `docs/press-and-posts.zh-CN.md`. Adding a
    post to one means adding it to the other.
-5. **Every `REA` case has a row in `docs/is-it-rea.md`** and its Chinese
+5. **An English document never sends the reader to a Chinese-only file**,
+   unless no English edition exists yet. The language switcher at the top of
+   each page is the one other exception, because it links a document to its
+   own Chinese sibling.
+6. **Every `REA` case has a row in `docs/is-it-rea.md`** and its Chinese
    counterpart. That table is where the evidence link lives.
-6. **No mirrors, pure forks, or re-uploads** of the upstream project, and no
+7. **No mirrors, pure forks, or re-uploads** of the upstream project, and no
    projects whose main purpose is bypassing licensing or distributing
    copyrighted assets.
 

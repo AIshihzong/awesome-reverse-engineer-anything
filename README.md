@@ -51,6 +51,18 @@ Snapshot dates: likes from [songshikang0111/awesome-REA-cases](https://github.co
 - [Press and posts about REA](docs/press-and-posts.md)
 - [Legal and controversy](#legal-and-controversy)
 - [Contributing](#contributing)
+- [Case submission form](.github/ISSUE_TEMPLATE/case.yml)
+
+## Official resources
+
+- [morluto/rea](https://github.com/morluto/rea) - The REA repository, MIT licensed. `npx rea-agents setup` registers it with your agent.
+- [rea.tools](https://rea.tools/) - The website, with [illustrated guides](https://rea.tools/guides/), [case studies](https://rea.tools/showcase/) and a blog.
+- [rea-agents on npm](https://www.npmjs.com/package/rea-agents) - The published CLI and MCP server.
+- [The REA skill on skills.sh](https://skills.sh/morluto/rea/reverse-engineer-anything) - An agent skill with the investigation workflow instructions only.
+- [The Chinese README](https://github.com/morluto/rea/blob/main/docs/readme/README_zh.md) - The official Simplified Chinese documentation.
+- [How the MCP tool catalog is generated](https://github.com/morluto/rea/blob/main/docs/mcp-contracts.md#generated-catalog) - How the full list of tools, providers and CLI commands is produced. The generated output is not committed.
+- [morluto/awesome-reverse-engineering](https://github.com/morluto/awesome-reverse-engineering) - A general reverse-engineering tools and learning list, maintained by REA's own author. CC0-1.0.
+- [The Discord community](https://discord.gg/GkcryMnJDM) - Official Q&A and Show and Tell.
 
 ## Official showcases
 
@@ -215,7 +227,7 @@ This list does not accept projects whose main purpose is bypassing licensing, co
 
 Suggestions are welcome as issues or pull requests. Inclusion rules:
 
-1. Prefer **open-source** projects with a source link. Cases without code belong on the [X page](docs/x-posts.zh-CN.md).
+1. Prefer **open-source** projects with a source link. Cases without code belong on the [X page](docs/x-posts.md).
 2. A community case needs evidence that REA was used (the README, the author's post or an official showcase). Otherwise it goes in "The wider wave".
 3. One line per entry: `- [Name](link) - what it does, and its tag.`
 4. No mirrors, pure forks, or projects whose main purpose is infringement or bypassing licensing.
