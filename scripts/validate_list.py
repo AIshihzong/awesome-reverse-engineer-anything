@@ -228,6 +228,39 @@ def anchor_of(heading: str) -> str:
     return re.sub(r"\s+", "-", slug)
 
 
+def check_toc(path: Path, toc_name: str) -> list[str]:
+    """Every table-of-contents entry must point at a heading, in order.
+
+    Entries that link a file rather than an anchor cannot be matched, and
+    they break the pairing for everything after them.
+    """
+    text = read(path)
+    problems: list[str] = []
+    headings = [
+        anchor_of(h)
+        for h in re.findall(r"^##\s+(.*)$", text, re.M)
+        if h.strip() != toc_name
+    ]
+    match = re.search(
+        r"^##\s+" + re.escape(toc_name) + r"\s*\n\n(.*?)\n\n", text, re.M | re.S
+    )
+    if not match:
+        return [f"{path.name} has no table of contents under {toc_name!r}"]
+    items = re.findall(r"^- \[([^\]]+)\]\(#([^)]+)\)", match.group(1), re.M)
+    for (label, anchor), heading in zip(items, headings):
+        if anchor != heading:
+            problems.append(
+                f"{path.name} table of contents points at #{anchor} but the next "
+                f"heading is #{heading}"
+            )
+    if len(items) != len(headings):
+        problems.append(
+            f"{path.name} table of contents has {len(items)} entries for "
+            f"{len(headings)} headings"
+        )
+    return problems
+
+
 def check_anchors(path: Path) -> list[str]:
     text = read(path)
     anchors = set()
@@ -328,6 +361,10 @@ def main() -> int:
         path = ROOT / name
         if path.exists():
             errors.extend(check_anchors(path))
+
+    # 5b. the table of contents must match the headings
+    errors.extend(check_toc(ROOT / EN_README, "Contents"))
+    errors.extend(check_toc(ROOT / ZH_README, "目录"))
 
     # 6. mirrors
     for name in files:
