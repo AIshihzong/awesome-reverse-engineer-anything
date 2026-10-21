@@ -8,7 +8,7 @@ Thanks for helping. Please read the rules before you open a pull request or an i
 2. **Community cases** need evidence that REA was used: the project's README, the author's post, or an official showcase. Put the link to that evidence on the entry.
 3. **Projects that only claim AI use**, or that have no evidence either way, go in "The wider wave" with the matching tag.
 4. **No** mirrors, pure forks, or projects whose main purpose is bypassing licensing, copying paid features or distributing copyrighted assets.
-5. **Posts on X** without public code belong on the [X page](docs/x-posts.zh-CN.md).
+5. **Posts on X** without public code belong on the [X page](docs/x-posts.md).
 
 ## Tags
 
