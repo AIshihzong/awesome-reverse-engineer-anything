@@ -68,9 +68,13 @@ Rules that the validator in `scripts/validate_list.py` enforces:
 3. **Both READMEs change together.** The English and Chinese lists carry the
    same projects. The validator fails if one side has an entry the other
    lacks.
-4. **Every `REA` case has a row in `docs/is-it-rea.md`** and its Chinese
+4. **Translations carry the same links.** `docs/x-posts.md` and
+   `docs/x-posts.zh-CN.md` are translations of each other, as are
+   `docs/press-and-posts.md` and `docs/press-and-posts.zh-CN.md`. Adding a
+   post to one means adding it to the other.
+5. **Every `REA` case has a row in `docs/is-it-rea.md`** and its Chinese
    counterpart. That table is where the evidence link lives.
-5. **No mirrors, pure forks, or re-uploads** of the upstream project, and no
+6. **No mirrors, pure forks, or re-uploads** of the upstream project, and no
    projects whose main purpose is bypassing licensing or distributing
    copyrighted assets.
 

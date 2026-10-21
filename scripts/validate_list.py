@@ -41,6 +41,15 @@ ROOT = Path(__file__).resolve().parent.parent
 EN_README, ZH_README = "README.md", "README.zh-CN.md"
 EN_BY_APP, ZH_BY_APP = "docs/by-app.md", "docs/by-app.zh-CN.md"
 EN_ISIT, ZH_ISIT = "docs/is-it-rea.md", "docs/is-it-rea.zh-CN.md"
+EN_XPOSTS, ZH_XPOSTS = "docs/x-posts.md", "docs/x-posts.zh-CN.md"
+EN_PRESS, ZH_PRESS = "docs/press-and-posts.md", "docs/press-and-posts.zh-CN.md"
+
+# Documents that are translations of each other and must therefore carry the
+# same links. Each entry is (english, chinese).
+DOC_PAIRS = [
+    (EN_XPOSTS, ZH_XPOSTS),
+    (EN_PRESS, ZH_PRESS),
+]
 
 # Sections whose entries are claims about other people's work.
 CASE_SECTIONS = {
@@ -120,6 +129,27 @@ def repo_of(url: str) -> str | None:
     if name.endswith(".git"):
         name = name[:-4]
     return f"{owner}/{name}"
+
+
+def normalise_link(url: str) -> str:
+    """Collapse a link so the English and Chinese editions of a document match.
+
+    Each edition points at its own language sibling, so `x-posts.md` and
+    `x-posts.zh-CN.md` are the same target for parity purposes.
+    """
+    if re.match(r"^[a-z]+://", url):
+        return url
+    base = url.rsplit("/", 1)[-1]
+    if base.endswith(".zh-CN.md"):
+        base = base[: -len(".zh-CN.md")] + ".md"
+    elif base.endswith("-zh-CN.md"):
+        base = base[: -len("-zh-CN.md")] + ".md"
+    prefix = url[: len(url) - len(url.rsplit("/", 1)[-1])]
+    return prefix + base
+
+
+def all_links(path: Path) -> set[str]:
+    return {normalise_link(url) for _, url in LINK.findall(read(path))}
 
 
 class Entry:
@@ -220,6 +250,7 @@ def main() -> int:
     warnings: list[str] = []
 
     files = [EN_README, ZH_README, EN_BY_APP, ZH_BY_APP, EN_ISIT, ZH_ISIT]
+    files += [name for pair in DOC_PAIRS for name in pair]
     entries_by_file: dict[str, list[Entry]] = {}
     repos_by_file: dict[str, set[str]] = {}
     for name in files:
@@ -278,6 +309,17 @@ def main() -> int:
             errors.append(f"{en_name} lists {repo} but {zh_name} does not")
         for repo in sorted(zh_repos - en_repos):
             errors.append(f"{zh_name} lists {repo} but {en_name} does not")
+
+    # 4b. documents that are translations of each other must carry the same links
+    for en_name, zh_name in DOC_PAIRS:
+        en_path, zh_path = ROOT / en_name, ROOT / zh_name
+        if not (en_path.exists() and zh_path.exists()):
+            continue
+        en_links, zh_links = all_links(en_path), all_links(zh_path)
+        for url in sorted(en_links - zh_links):
+            errors.append(f"{en_name} links {url} but {zh_name} does not")
+        for url in sorted(zh_links - en_links):
+            errors.append(f"{zh_name} links {url} but {en_name} does not")
 
     # 5. anchors
     for name in files:
