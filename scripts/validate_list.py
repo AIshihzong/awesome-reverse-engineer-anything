@@ -61,6 +61,20 @@ CASE_SECTIONS = {
     "官方案例",
 }
 
+# Sections that a table of contents is not expected to list.
+BOILERPLATE = {
+    "contributing",
+    "license",
+    "code-of-conduct",
+    "security",
+    "contents",
+    "贡献",
+    "许可",
+    "许可证",
+    "行为准则",
+    "目录",
+}
+
 # Tag vocabulary from CONTRIBUTING.md, including the Chinese forms.
 TAGS = {
     "REA",
@@ -247,7 +261,7 @@ def check_toc(path: Path, toc_name: str) -> list[str]:
     headings = [
         anchor_of(h)
         for h in re.findall(r"^##\s+(.*)$", text[toc_start:], re.M)
-        if h.strip() != toc_name
+        if h.strip() != toc_name and anchor_of(h) not in BOILERPLATE
     ]
     items = re.findall(r"^- \[([^\]]+)\]\(#([^)]+)\)", match.group(1), re.M)
     for (label, anchor), heading in zip(items, headings):

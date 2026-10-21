@@ -46,9 +46,8 @@ Snapshot dates: likes from [songshikang0111/awesome-REA-cases](https://github.co
 - [Other lists](#other-lists)
 - [Discussion and press](#discussion-and-press)
 - [Legal and controversy](#legal-and-controversy)
-- [Contributing](#contributing)
 
-The pages in this list: [Find projects by the app they replace](docs/by-app.md), [Did it really use REA?](docs/is-it-rea.md) for a claim check on each case, [New this week](docs/new-this-week.md), [Posts from X](docs/x-posts.md) for the intro posts, the roundups, the official accounts, the controversy and the case-by-case accounts from users, [Press and posts about REA](docs/press-and-posts.md), and the [case submission form](.github/ISSUE_TEMPLATE/case.yml).
+The pages in this list: [Find projects by the app they replace](docs/by-app.md), [Did it really use REA?](docs/is-it-rea.md) for a claim check on each case, [New this week](docs/new-this-week.md), [Posts from X](docs/x-posts.md) for the intro posts, the roundups, the official accounts, the controversy and the case-by-case accounts from users, [Press and posts about REA](docs/press-and-posts.md), and the [case submission form](.github/ISSUE_TEMPLATE/case.yml). The [Contributing](#contributing) section has the rules for a new entry.
 
 ## Official resources
 

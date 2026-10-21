@@ -50,9 +50,8 @@
 - [其他列表](#其他列表)
 - [社区讨论与媒体](#社区讨论与媒体)
 - [合规与争议](#合规与争议)
-- [贡献](#贡献)
 
-本列表的其他页面：[按被替代的软件找项目](docs/by-app.zh-CN.md)、[REA 说法核实](docs/is-it-rea.zh-CN.md)、[本周新增](docs/new-this-week.zh-CN.md)、[X 上的案例与帖子](docs/x-posts.zh-CN.md) · [English](docs/x-posts.md)、[关于 REA 的帖子与报道](docs/press-and-posts.zh-CN.md)，以及[投稿模板](.github/ISSUE_TEMPLATE/case.yml)。
+本列表的其他页面：[按被替代的软件找项目](docs/by-app.zh-CN.md)、[REA 说法核实](docs/is-it-rea.zh-CN.md)、[本周新增](docs/new-this-week.zh-CN.md)、[X 上的案例与帖子](docs/x-posts.zh-CN.md) · [English](docs/x-posts.md)、[关于 REA 的帖子与报道](docs/press-and-posts.zh-CN.md)，以及[投稿模板](.github/ISSUE_TEMPLATE/case.yml)。新增条目的规则见[贡献](#贡献)。
 
 ## 官方资源
 
