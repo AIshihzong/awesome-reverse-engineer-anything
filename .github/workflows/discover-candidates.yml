@@ -52,6 +52,24 @@ jobs:
 
           sort -u -t$'\t' -k1,1 found.tsv \
             | awk -F'\t' 'NR==FNR { known[$1]; next } !(tolower($1) in known)' known.txt - \
+            | awk -F'\t' '
+                # Drop mirrors, re-uploads and copies of the upstream project.
+                # These are not GitHub forks, so isFork does not catch them.
+                {
+                  d = tolower($4); n = tolower($1);
+                }
+                n ~ /https-github(\.|-)com-morluto-rea/ { next }
+                n ~ /(^|\/)(npx-)?(rea|rea-agents|rea-agents-[0-9.]+|morluto-rea|rea-backup|morluto-rea-backup|rea-agents-setup|rea-independent|morluto-rea-explainer)$/ { next }
+                d ~ /reverse engineer anything with agents, from app behavior down to native binaries/ { next }
+                d ~ /(^| )https?:\/\/github\.com\/morluto\/rea/ { next }
+                d ~ /mirror|backup of|copy of|fork of|unofficial (port|mirror|fork|clone)/ { next }
+                d ~ /clone of/ && d !~ /built with/ { next }
+                { print }
+              ' \
+            | awk -F'\t' '
+                # Keep a repo only if it has traction, or its description names REA.
+                ($2+0) >= 10 || tolower($4) ~ /(^|[^a-z])rea([^a-z]|$)/ { print }
+              ' \
             | sort -t$'\t' -k2,2nr | head -n 60 > candidates.tsv
 
           {

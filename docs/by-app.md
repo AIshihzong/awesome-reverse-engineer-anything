@@ -25,6 +25,8 @@ Find a project by the app it replaces or works with. Each row says whether REA w
 | Wispr Flow | [wispr-flow-rea-teardown](https://github.com/az9713/wispr-flow-rea-teardown) | REA | none | Write-up |
 | QuickBooks Desktop for Mac (trial) | [ledger-reborn](https://github.com/lxistired/ledger-reborn) | REA | MIT | Alpha (preview) |
 | Ghostty | [AdamTerm](https://github.com/AdamLinCodes/AdamTerm) | REA | none | Ready (build from source) |
+| WinDirStat | [DiskLens](https://github.com/KarlssonChristoffer/DiskLens) | REA | GPL-3.0-or-later | Experimental (unreviewed; ports WinDirStat 2.5.0 GPL-2.0 code) |
+| Blender | [blender-agent-sdk](https://github.com/yazzang-homelab/blender-agent-sdk) | REA | GPL-3.0-or-later | Ready (needs Blender) |
 | PowerToys Color Picker | [hexgrab](https://github.com/iammukeshm/hexgrab) | REA | MIT | Ready |
 | Claude Slides editor | [baocut](https://github.com/JimLiu/baocut) | REA (author's post) | Source-available, not open source | Ready |
 | Apple TV Siri Remote (1st gen) | [open-appleremote](https://github.com/a-funk/open-appleremote) | Claim? | MIT | Alpha (0.1.0) |
