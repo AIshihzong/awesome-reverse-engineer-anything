@@ -6,6 +6,8 @@
 
 > Unofficial. Not affiliated with morluto/rea.
 
+**[Find a project by the app it replaces](docs/by-app.md)** · **[Did it really use REA?](docs/is-it-rea.md)** · **[Does REA help? The evidence](#does-rea-help-the-evidence)** · **[New this week](docs/new-this-week.md)** · **[Submit a case](https://github.com/AIshihzong/awesome-reverse-engineer-anything/issues/new?template=case.yml)**
+
 "REA" started as [morluto/rea](https://github.com/morluto/rea) (Reverse Engineer Anything, 380k+ stars as of 2026-10-25), an open-source MCP server and CLI (npm `rea-agents`) that lets coding agents inspect native binaries, Electron apps, .NET assemblies, APKs, firmware and websites without their source code, explain how a feature works with evidence, and rebuild it. REA itself does not decompile; it orchestrates Hopper, Ghidra, IDA and JADX for the agent.
 
 "REA" now also names the whole wave of AI agents reverse-engineering and rebuilding closed software, whether they use REA, or Claude Code and Codex with Ghidra or IDA MCP. This list covers that wave and says what each case actually used.
@@ -33,6 +35,15 @@
 | [DX-Ball](https://github.com/N0zoM1z0/dx-ball) by N0zoM1z0                                      | Byte-exact reconstruction of one sound-pan function, checked against 3,205 original x86 cases                    | official showcase                 | `REA`                 |
 
 Snapshot dates: likes from [songshikang0111/awesome-REA-cases](https://github.com/songshikang0111/awesome-REA-cases) on 2026-10-12; views as noted.
+
+## Does REA help? The evidence
+
+The controlled tests of REA we know of, both by third parties:
+
+- [rea-lab](https://github.com/pablodiazjorge/rea-lab): five preregistered studies, 482 runs with Claude Code. None found a significant gain in solve rate with REA, and REA runs took about twice the time and cost. Details under [Guides and research](#guides-and-research).
+- [leanrea](https://github.com/aicodeking/leanrea): 36 runs against REA 6.5.0. A plain-CLI skill came close to REA's accuracy (74/75 against 75/75) with 38 % less wall time and 35 % less cost. Three reps per cell, one model, one machine.
+
+Ran your own comparison? [Submit it](https://github.com/AIshihzong/awesome-reverse-engineer-anything/issues/new?template=case.yml).
 
 ## Contents
 

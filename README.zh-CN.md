@@ -6,6 +6,8 @@
 
 > 非官方列表，与 morluto/rea 无隶属关系。
 
+**[按被替代的软件找项目](docs/by-app.zh-CN.md)** · **[REA 说法核实](docs/is-it-rea.zh-CN.md)** · **[REA 到底有没有用：对照实验](#rea-到底有没有用对照实验)** · **[本周新增](docs/new-this-week.zh-CN.md)** · **[投稿案例](https://github.com/AIshihzong/awesome-reverse-engineer-anything/issues/new?template=case.yml)**
+
 "REA" 原指 [morluto/rea](https://github.com/morluto/rea)（Reverse Engineer Anything），一个开源 MCP Server + CLI（npm 包 `rea-agents`，2026-10-25 时 38 万+ Star），让 Claude Code、Codex 等编码 Agent 在**没有源码**的情况下检查原生二进制、Electron 应用、.NET 程序集、APK、固件和网站，解释功能如何实现、给出证据，再在你自己的项目里重建。它本身不做反编译，而是把 Hopper / Ghidra / IDA / JADX 等现有工具编排给 Agent 使用。
 
 现在 "REA" 也常被用来泛指整股浪潮：AI Agent 逆向并重建闭源软件，无论用的是 REA，还是 Claude Code / Codex 加 Ghidra / IDA MCP。本列表收录这股浪潮，标明每个案例实际用了什么工具。
@@ -31,6 +33,15 @@
 | [DX-Ball 复原](https://github.com/N0zoM1z0/dx-ball)                                        | 一个函数复原后 3,205 个原版 x86 用例对照，63 字节逐字节一致                                                   | 官方案例                      | `REA`       |
 
 快照日期：赞数来自 [songshikang0111/awesome-REA-cases](https://github.com/songshikang0111/awesome-REA-cases)（2026-10-12）。
+
+## REA 到底有没有用：对照实验
+
+我们目前知道的 REA 对照测试有两组，都来自第三方：
+
+- [rea-lab](https://github.com/pablodiazjorge/rea-lab)：五项预注册研究，用 Claude Code 共跑 482 次。没有一项发现 REA 能显著提高解题率，使用 REA 时时间和花费约为两倍。详见[教程与深度调研](#教程与深度调研)。
+- [leanrea](https://github.com/aicodeking/leanrea)：对比 REA 6.5.0 跑了 36 次。一个只用命令行工具的 Skill 准确率与 REA 相当（74/75 对 75/75），耗时少 38%，花费少 35%。每组只重复 3 次，只用了一个模型、一台机器。
+
+自己做过对比测试？欢迎[投稿](https://github.com/AIshihzong/awesome-reverse-engineer-anything/issues/new?template=case.yml)。
 
 - [按被替代的软件找项目](docs/by-app.zh-CN.md)：Photoshop、Word、Excel、OBS、Roblox 引擎等替代项目的索引。
 - [REA 说法核实](docs/is-it-rea.zh-CN.md)：逐个案例核对是否真的用了 REA。
