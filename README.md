@@ -42,7 +42,7 @@ Snapshot dates: likes from [songshikang0111/awesome-REA-cases](https://github.co
 - [Find projects by the app they replace](docs/by-app.md)
 - [Did it really use REA?](docs/is-it-rea.md): a claim check for each case
 - [New this week](docs/new-this-week.md)
-- [Posts from X](docs/x-posts.zh-CN.md) (in Chinese)
+- [Posts from X](docs/x-posts.md): the intro posts, the roundups, the official accounts, the controversy, and the case-by-case accounts from users
 - [Plugins and integrations](#plugins-and-integrations)
 - [Guides and research](#guides-and-research)
 - [Related MCP reverse-engineering tools](#related-mcp-reverse-engineering-tools)
