@@ -6,7 +6,7 @@
 
 > 非官方列表，与 morluto/rea 无隶属关系。
 
-"REA" 原指 [morluto/rea](https://github.com/morluto/rea)（Reverse Engineer Anything），一个开源 MCP Server + CLI（npm 包 `rea-agents`，35 万+ Star），让 Claude Code、Codex 等编码 Agent 在**没有源码**的情况下检查原生二进制、Electron 应用、.NET 程序集、APK、固件和网站，解释功能如何实现、给出证据，再在你自己的项目里重建。它本身不做反编译，而是把 Hopper / Ghidra / IDA / JADX 等现有工具编排给 Agent 使用。
+"REA" 原指 [morluto/rea](https://github.com/morluto/rea)（Reverse Engineer Anything），一个开源 MCP Server + CLI（npm 包 `rea-agents`，2026-10-25 时 38 万+ Star），让 Claude Code、Codex 等编码 Agent 在**没有源码**的情况下检查原生二进制、Electron 应用、.NET 程序集、APK、固件和网站，解释功能如何实现、给出证据，再在你自己的项目里重建。它本身不做反编译，而是把 Hopper / Ghidra / IDA / JADX 等现有工具编排给 Agent 使用。
 
 现在 "REA" 也常被用来泛指整股浪潮：AI Agent 逆向并重建闭源软件，无论用的是 REA，还是 Claude Code / Codex 加 Ghidra / IDA MCP。本列表收录这股浪潮，标明每个案例实际用了什么工具。
 
@@ -17,7 +17,7 @@
 - `重写`：clean-room 重写，没有逆向证据。
 - `待核实`：暂时无法核实。
 
-> 本列表中的数据与链接核对于 2026-10-21。REA 及其周边项目每周都在变化，引用某个数字前请先看它旁边的日期。
+> 本列表中的数据与链接核对于 2026-10-21，REA 星数和此后新增的条目更新于 2026-10-25。REA 及其周边项目每周都在变化，引用某个数字前请先看它旁边的日期。
 
 ## 先看这些
 
@@ -155,11 +155,12 @@
 - [nesaon03/XYREVERSE](https://github.com/nesaon03/XYREVERSE) - `AI 逆向` 覆盖 IDA、Ghidra、内核驱动、.NET、IL2CPP、Unreal、Frida、x64dbg 与 REA 的 Agent Skill 包。MIT。
 - [kandada/rea-python](https://github.com/kandada/rea-python) - `AI 逆向` REA 的非官方 Python 移植，作者因为自家 Python 语言的 Agent 产品需要原生集成而写。上游作者未背书。MIT。
 - [Fractal-Tess/rea-flake](https://github.com/Fractal-Tess/rea-flake) - `AI 逆向` 打包成 Nix 包的 REA。MIT。
+- [cranebeaker/coop-anything](https://github.com/cranebeaker/coop-anything) - `AI 逆向` MCP Server、操作手册和 Agent Skill，让编码 Agent 给单机游戏加上联机合作：先找现成的联机 Mod，必要时逆向游戏，用机器人测试，再打包到 Steam 上和朋友一起玩。建议搭配 REA、GhidraMCP 或 ida-pro-mcp 等逆向 MCP。每位玩家都要有自己的正版游戏，不涉及反作弊和在线服务。MIT。
 
 ## 教程与深度调研
 
 - [ringozzt/rea-research](https://github.com/ringozzt/rea-research) - 🇨🇳 中文深度技术调研：架构、证据模型、DX-Ball 数字的真实含义、信任模型、Star 与安装量的差距，以及争议背景。仓库未附许可证，数据快照为 10-11。推荐先读。
-- [pablodiazjorge/rea-lab](https://github.com/pablodiazjorge/rea-lab) - 🇪🇸 Windows + Ghidra 环境下的 REA 搭建、练习题和工具评测。五项预注册研究、共 482 次运行，是本列表中最有决策价值的一组证据。研究 1：Claude Code 有无 REA 解出的题目数相同（30 题中 28 题），但使用 REA 时每次运行约慢一倍、花费更高。**研究 2：在更难的二进制上 REA 反而让准确率变差，不使用 REA 时 24 次中解出 11 次，使用后只解出 4 次**（exact McNemar，p = 0.092）。研究 5：REA 自带的 Skill 让每次运行贵 14%，准确率没有可测变化。结论：把 REA 用在目标明确的具体问题上，不要拿它做开放式探索。
+- [pablodiazjorge/rea-lab](https://github.com/pablodiazjorge/rea-lab) - 🇪🇸 Windows + Ghidra 环境下的 REA 搭建、练习题和工具评测。五项预注册研究、共 482 次运行，是本列表中最有决策价值的一组证据。研究 1：Claude Code 有无 REA 解出的题目数相同（30 题中 28 题），但使用 REA 时每次运行约慢一倍、花费更高。研究 2：在更难的二进制上，不使用 REA 时 24 次中解出 11 次，使用后解出 4 次，时间和花费同样约为两倍；作者标注这一差异不显著（exact McNemar，p = 0.092）。研究 3 和研究 4 也没有发现显著差异。研究 5：REA 官方 Skill 与不用 Skill 相比没有可测差异，作者改进后的版本比官方版每次运行贵 14%。结论：把 REA 用在目标明确的具体问题上，不要拿它做开放式探索。
 - [jinshi666888/rea-playbook](https://github.com/jinshi666888/rea-playbook) - 🇨🇳 动手实验：最小 Electron 靶机、带 `file:line` 引用的证据提取、MCP 探针，跑通"反编译 → 理解 → 重建"闭环。
 - [valorisa/Reverse-Engineer-Anything](https://github.com/valorisa/Reverse-Engineer-Anything) - 🇫🇷 法语非官方教学指南，含逆向工程的法律框架。
 - [REA: Reverse Engineer Anything with AI Agents & MCP（HoangYell）](https://hoangyell.com/rea-explained/) - 英文入门讲解。
@@ -168,6 +169,7 @@
 - [How To Use REA To Clone Any Software In Minutes（Eric Tech，YouTube）](https://www.youtube.com/watch?v=FnB9tHKBJXQ) - 视频教程。
 - [inematds/rea-engenharia-reversa](https://github.com/inematds/rea-engenharia-reversa) - 🇧🇷 有葡语、英语和西语三个版本的 REA 指南，包含链接、案例、客观评估和实际测试。
 - [ZooHero500/reatool](https://github.com/ZooHero500/reatool) - 非官方的 REA 教程与对比，讲如何在编码 Agent 中安装和使用。与 morluto 无关。
+- [JoasASantos/REA-Prompts](https://github.com/JoasASantos/REA-Prompts) - REA 提示词合集，覆盖原生二进制、固件、游戏、Android、Electron 和网站。其中的复刻类提示词按 clean-room 方式写，授权和破解研究类提示词只要求记录分析结果，不做绕过。MIT。
 
 ## 相关 MCP 逆向工具
 

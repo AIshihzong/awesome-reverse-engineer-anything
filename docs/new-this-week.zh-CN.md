@@ -6,10 +6,12 @@
 
 | 创建日期       | 项目                                                                                         | 标签        | 简介                                                        |
 | ---------- | ------------------------------------------------------------------------------------------ | --------- | --------------------------------------------------------- |
+| 2026-10-19 | [REA-Prompts](https://github.com/JoasASantos/REA-Prompts)                                  | 教程        | REA 提示词合集                                                 |
 | 2026-10-18 | [rea-safe-agents](https://github.com/dagoSte/rea-safe-agents)                              | REA       | 把 REA 与 Agent 分别关进两个受限 Docker 容器                          |
 | 2026-10-18 | [blender-agent-sdk](https://github.com/yazzang-homelab/blender-agent-sdk)                  | REA       | Blender 的 Python SDK，依据是对 Blender 5.2.2 的 REA + Ghidra 分析 |
 | 2026-10-17 | [leanrea](https://github.com/aicodeking/leanrea)                                           | AI 逆向     | 8 KB 的 Skill，去掉 REA 的 MCP 层，自带对照基准                        |
 | 2026-10-17 | [rea-python](https://github.com/kandada/rea-python)                                        | AI 逆向     | REA 的非官方 Python 移植                                        |
+| 2026-10-16 | [coop-anything](https://github.com/cranebeaker/coop-anything)                              | AI 逆向     | 让 Agent 给单机游戏加联机合作的操作手册                                   |
 | 2026-10-15 | [rea-flake](https://github.com/Fractal-Tess/rea-flake)                                     | AI 逆向     | 打包成 Nix 包的 REA                                            |
 | 2026-10-13 | [reaproof](https://github.com/Junhan2/reaproof)                                            | AI 逆向     | 评估你发布的应用对 REA 这类 Agent 暴露到什么程度                            |
 | 2026-10-12 | [XYREVERSE](https://github.com/nesaon03/XYREVERSE)                                         | AI 逆向     | 逆向工程用的 Agent Skill 包                                      |
