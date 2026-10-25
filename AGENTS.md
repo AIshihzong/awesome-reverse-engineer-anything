@@ -24,13 +24,13 @@ means the reconstruction is legally clean. Say so when it is not.
 
 ## Tags
 
-| Tag | Means | Evidence to look for |
-|---|---|---|
-| `REA` | morluto/rea was used | README, author's post, or the official showcase |
-| `AI-RE` | other or unstated AI tools | README or post naming a different tool |
-| `Rebuild` | clean-room rewrite, no reverse-engineering evidence | README stating a clean-room approach |
-| `Claim?` | not yet verified | nothing conclusive found |
-| `Manual RE` | reverse-engineered by hand, no AI stated | README with no AI mention |
+| Tag         | Means                                               | Evidence to look for                            |
+| ----------- | --------------------------------------------------- | ----------------------------------------------- |
+| `REA`       | morluto/rea was used                                | README, author's post, or the official showcase |
+| `AI-RE`     | other or unstated AI tools                          | README or post naming a different tool          |
+| `Rebuild`   | clean-room rewrite, no reverse-engineering evidence | README stating a clean-room approach            |
+| `Claim?`    | not yet verified                                    | nothing conclusive found                        |
+| `Manual RE` | reverse-engineered by hand, no AI stated            | README with no AI mention                       |
 
 A tag may be qualified: `REA (showcase)`, `REA (partial)`, `REA (author's post)`.
 
@@ -38,15 +38,15 @@ Chinese tags: `REA`, `AI 逆向`, `重写`, `待核实`, `手工逆向`.
 
 ## Where an entry goes
 
-| Section | What belongs there |
-|---|---|
-| Official showcases | cases on `rea.tools/showcase/` |
-| Community cases built with REA | cases whose source says REA was used |
-| The wider wave | AI work that says nothing about REA, or uses other tools |
-| Plugins and integrations | adapters, plugins, skills, packaging |
-| Guides and research | write-ups, labs, deep research |
-| Related MCP reverse-engineering tools | tools in the same category as REA |
-| Other lists | other curated lists |
+| Section                               | What belongs there                                       |
+| ------------------------------------- | -------------------------------------------------------- |
+| Official showcases                    | cases on `rea.tools/showcase/`                           |
+| Community cases built with REA        | cases whose source says REA was used                     |
+| The wider wave                        | AI work that says nothing about REA, or uses other tools |
+| Plugins and integrations              | adapters, plugins, skills, packaging                     |
+| Guides and research                   | write-ups, labs, deep research                           |
+| Related MCP reverse-engineering tools | tools in the same category as REA                        |
+| Other lists                           | other curated lists                                      |
 
 A case that only says "AI" belongs in **The wider wave**, not in the REA
 section, even when the project is clearly in the same space.
@@ -96,8 +96,16 @@ Anything countable goes stale weekly. When you write one:
 python3 scripts/validate_list.py
 ```
 
-It reports tags, licenses, English/Chinese parity, broken anchors, and
-mirrors. Zero errors is the bar. Warnings are worth fixing too.
+It reports tags, licences, English/Chinese parity, broken anchors, the table
+of contents against the headings, and mirrors. Zero errors is the bar.
+Warnings are worth fixing too.
+
+```bash
+python3 scripts/align_tables.py
+```
+
+Fixes the markdown tables: aligned pipes and consistent cell padding. It is
+idempotent, so running it on an unchanged tree does nothing.
 
 Then check, by hand:
 
@@ -105,6 +113,9 @@ Then check, by hand:
 - the evidence link shows REA use, if you claim REA;
 - the license is stated and correct;
 - you updated **both** `README.md` and `README.zh-CN.md`.
+
+CONTRIBUTING.md lists the places where this list deliberately differs from
+the awesome-lint defaults. Do not "fix" those.
 
 Use the **Case** issue form for suggestions, and the pull request template
 for changes.

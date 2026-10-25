@@ -61,6 +61,20 @@ CASE_SECTIONS = {
     "官方案例",
 }
 
+# Sections that a table of contents is not expected to list.
+BOILERPLATE = {
+    "contributing",
+    "license",
+    "code-of-conduct",
+    "security",
+    "contents",
+    "贡献",
+    "许可",
+    "许可证",
+    "行为准则",
+    "目录",
+}
+
 # Tag vocabulary from CONTRIBUTING.md, including the Chinese forms.
 TAGS = {
     "REA",
@@ -228,6 +242,42 @@ def anchor_of(heading: str) -> str:
     return re.sub(r"\s+", "-", slug)
 
 
+def check_toc(path: Path, toc_name: str) -> list[str]:
+    """Every table-of-contents entry must point at a heading, in order.
+
+    Entries that link a file rather than an anchor cannot be matched, and
+    they break the pairing for everything after them. Only the headings
+    that come after the table of contents are paired with it; a section
+    that sits above the contents is not part of it.
+    """
+    text = read(path)
+    problems: list[str] = []
+    match = re.search(
+        r"^##\s+" + re.escape(toc_name) + r"\s*\n\n(.*?)\n\n", text, re.M | re.S
+    )
+    if not match:
+        return [f"{path.name} has no table of contents under {toc_name!r}"]
+    toc_start = match.start()
+    headings = [
+        anchor_of(h)
+        for h in re.findall(r"^##\s+(.*)$", text[toc_start:], re.M)
+        if h.strip() != toc_name and anchor_of(h) not in BOILERPLATE
+    ]
+    items = re.findall(r"^- \[([^\]]+)\]\(#([^)]+)\)", match.group(1), re.M)
+    for (label, anchor), heading in zip(items, headings):
+        if anchor != heading:
+            problems.append(
+                f"{path.name} table of contents points at #{anchor} but the next "
+                f"heading is #{heading}"
+            )
+    if len(items) != len(headings):
+        problems.append(
+            f"{path.name} table of contents has {len(items)} entries for "
+            f"{len(headings)} headings"
+        )
+    return problems
+
+
 def check_anchors(path: Path) -> list[str]:
     text = read(path)
     anchors = set()
@@ -240,6 +290,30 @@ def check_anchors(path: Path) -> list[str]:
         for target in re.findall(r"\]\(#([^)]+)\)", line):
             if target not in anchors:
                 problems.append(f"{path.name}:{line_no} broken anchor #{target}")
+    return problems
+
+
+def check_tables(path: Path) -> list[str]:
+    """Every row of a table must have the same number of cells as its header.
+
+    A row with the wrong count renders as a broken table on GitHub, and it
+    is the one mistake that alignment cannot fix.
+    """
+    problems: list[str] = []
+    expected: int | None = None
+    for line_no, line in enumerate(read(path).splitlines(), start=1):
+        stripped = line.strip()
+        if not (stripped.startswith("|") and stripped.endswith("|")):
+            expected = None
+            continue
+        cells = len(stripped[1:-1].split("|"))
+        if expected is None:
+            expected = cells
+        elif cells != expected:
+            problems.append(
+                f"{path.name}:{line_no} table row has {cells} cells, the header has "
+                f"{expected}"
+            )
     return problems
 
 
@@ -328,6 +402,16 @@ def main() -> int:
         path = ROOT / name
         if path.exists():
             errors.extend(check_anchors(path))
+
+    # 5b. the table of contents must match the headings
+    errors.extend(check_toc(ROOT / EN_README, "Contents"))
+    errors.extend(check_toc(ROOT / ZH_README, "目录"))
+
+    # 5c. table rows must have the same number of cells as their header
+    for name in files:
+        path = ROOT / name
+        if path.exists():
+            errors.extend(check_tables(path))
 
     # 6. mirrors
     for name in files:

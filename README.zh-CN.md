@@ -21,14 +21,14 @@
 
 ## 先看这些
 
-| 案例 | 做了什么 | 热度 | 标签 |
-|---|---|---|---|
-| [Universal Modder](https://github.com/rehan-remade/universal-modder)，作者 @rehan_shei | 把 Minecraft 内容放进你拥有的 GTA V 等游戏 | 1.4 万赞 | `AI 逆向` |
-| [Steam 游戏 30 分钟跑进 Unity](https://x.com/AIWarper/status/2109060856466264566)，作者 @AIWarper | 把自己买的游戏反编译成 C#，用 Opus 5.5 | 46.7 万浏览 | `REA`（作者帖子） |
-| [Claude Slides 编辑器](https://x.com/dotey/status/2109151666020794711)，作者 @dotey | 还原混淆的网页前端后用 Claude Code 重写（[baocut](https://github.com/JimLiu/baocut)，source-available） | 686 赞，8.1 万浏览（2026-10-12） | `REA`（作者帖子） |
-| [LG 电视原生 Plex 客户端](https://github.com/GLinnik21/plx-native)，作者 GLinnik21 | 用 Ghidra + Claude Code 研究电视原生媒体栈，选择界面从约 30 秒降到约 3 秒 | 7,268 赞（转述） | `AI 逆向` |
-| [Apple TV 遥控器接上 Linux](https://github.com/a-funk/open-appleremote)，作者 @alexzfunk | 逆向初代遥控器的蓝牙协议 | 5,419 赞 | `待核实` |
-| [DX-Ball 复原](https://github.com/N0zoM1z0/dx-ball) | 一个函数复原后 3,205 个原版 x86 用例对照，63 字节逐字节一致 | 官方案例 | `REA` |
+| 案例                                                                                       | 做了什么                                                                                    | 热度                        | 标签          |
+| ---------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | ------------------------- | ----------- |
+| [Universal Modder](https://github.com/rehan-remade/universal-modder)，作者 @rehan_shei      | 把 Minecraft 内容放进你拥有的 GTA V 等游戏                                                          | 1.4 万赞                    | `AI 逆向`     |
+| [Steam 游戏 30 分钟跑进 Unity](https://x.com/AIWarper/status/2109060856466264566)，作者 @AIWarper | 把自己买的游戏反编译成 C#，用 Opus 5.5                                                               | 46.7 万浏览                  | `REA`（作者帖子） |
+| [Claude Slides 编辑器](https://x.com/dotey/status/2109151666020794711)，作者 @dotey            | 还原混淆的网页前端后用 Claude Code 重写（[baocut](https://github.com/JimLiu/baocut)，source-available） | 686 赞，8.1 万浏览（2026-10-12） | `REA`（作者帖子） |
+| [LG 电视原生 Plex 客户端](https://github.com/GLinnik21/plx-native)，作者 GLinnik21                 | 用 Ghidra + Claude Code 研究电视原生媒体栈，选择界面从约 30 秒降到约 3 秒                                     | 7,268 赞（转述）               | `AI 逆向`     |
+| [Apple TV 遥控器接上 Linux](https://github.com/a-funk/open-appleremote)，作者 @alexzfunk         | 逆向初代遥控器的蓝牙协议                                                                            | 5,419 赞                   | `待核实`       |
+| [DX-Ball 复原](https://github.com/N0zoM1z0/dx-ball)                                        | 一个函数复原后 3,205 个原版 x86 用例对照，63 字节逐字节一致                                                   | 官方案例                      | `REA`       |
 
 快照日期：赞数来自 [songshikang0111/awesome-REA-cases](https://github.com/songshikang0111/awesome-REA-cases)（2026-10-12）。
 
@@ -40,22 +40,18 @@
 
 ## 目录
 
+- [官方资源](#官方资源)
 - [官方案例](#官方案例)
 - [社区案例：用 REA 做出来的东西](#社区案例用-rea-做出来的东西)
 - [同一波浪潮：未写明使用 REA 的 AI 逆向项目](#同一波浪潮未写明使用-rea-的-ai-逆向项目)
-- [X 上的案例与帖子](docs/x-posts.zh-CN.md) · [English](docs/x-posts.md)
 - [插件与集成](#插件与集成)
 - [教程与深度调研](#教程与深度调研)
 - [相关 MCP 逆向工具](#相关-mcp-逆向工具)
 - [其他列表](#其他列表)
 - [社区讨论与媒体](#社区讨论与媒体)
-- [按被替代的软件找项目](docs/by-app.zh-CN.md)
-- [REA 说法核实](docs/is-it-rea.zh-CN.md)
-- [本周新增](docs/new-this-week.zh-CN.md)
-- [投稿模板](.github/ISSUE_TEMPLATE/case.yml)
-- [关于 REA 的帖子与报道](docs/press-and-posts.zh-CN.md)
 - [合规与争议](#合规与争议)
-- [贡献](#贡献)
+
+本列表的其他页面：[按被替代的软件找项目](docs/by-app.zh-CN.md)、[REA 说法核实](docs/is-it-rea.zh-CN.md)、[本周新增](docs/new-this-week.zh-CN.md)、[X 上的案例与帖子](docs/x-posts.zh-CN.md) · [English](docs/x-posts.md)、[关于 REA 的帖子与报道](docs/press-and-posts.zh-CN.md)，以及[投稿模板](.github/ISSUE_TEMPLATE/case.yml)。新增条目的规则见[贡献](#贡献)。
 
 ## 官方资源
 

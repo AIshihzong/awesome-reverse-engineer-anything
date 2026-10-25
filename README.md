@@ -23,35 +23,31 @@
 
 ## Most shared
 
-| Case | What they did | Reach | Tag |
-|---|---|---|---|
-| [Universal Modder](https://github.com/rehan-remade/universal-modder) by @rehan_shei | Minecraft content inside GTA V and other games you own | 14k likes | `AI-RE` |
-| [Steam game to Unity in 30 min](https://x.com/AIWarper/status/2109060856466264566) by @AIWarper | Decompiled a game he owns to C#, using Opus 5.5 | 467k views | `REA` (author's post) |
-| [Claude Slides editor](https://x.com/dotey/status/2109151666020794711) by @dotey | Deobfuscated the web front end, then rewrote it as [baocut](https://github.com/JimLiu/baocut) (source-available) | 686 likes, 81k views (2026-10-12) | `REA` (author's post) |
-| [Native Plex client for LG TVs](https://github.com/GLinnik21/plx-native) by GLinnik21 | Startup and selection screen faster on an LG TV | 7.3k likes (repost) | `AI-RE` |
-| [Apple TV remote on Linux](https://github.com/a-funk/open-appleremote) by @alexzfunk | Bluetooth protocol of the first-gen remote, open source | 5.4k likes | `Claim?` |
-| [DX-Ball](https://github.com/N0zoM1z0/dx-ball) by N0zoM1z0 | Byte-exact reconstruction of one sound-pan function, checked against 3,205 original x86 cases | official showcase | `REA` |
+| Case                                                                                            | What they did                                                                                                    | Reach                             | Tag                   |
+| ----------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | --------------------------------- | --------------------- |
+| [Universal Modder](https://github.com/rehan-remade/universal-modder) by @rehan_shei             | Minecraft content inside GTA V and other games you own                                                           | 14k likes                         | `AI-RE`               |
+| [Steam game to Unity in 30 min](https://x.com/AIWarper/status/2109060856466264566) by @AIWarper | Decompiled a game he owns to C#, using Opus 5.5                                                                  | 467k views                        | `REA` (author's post) |
+| [Claude Slides editor](https://x.com/dotey/status/2109151666020794711) by @dotey                | Deobfuscated the web front end, then rewrote it as [baocut](https://github.com/JimLiu/baocut) (source-available) | 686 likes, 81k views (2026-10-12) | `REA` (author's post) |
+| [Native Plex client for LG TVs](https://github.com/GLinnik21/plx-native) by GLinnik21           | Startup and selection screen faster on an LG TV                                                                  | 7.3k likes (repost)               | `AI-RE`               |
+| [Apple TV remote on Linux](https://github.com/a-funk/open-appleremote) by @alexzfunk            | Bluetooth protocol of the first-gen remote, open source                                                          | 5.4k likes                        | `Claim?`              |
+| [DX-Ball](https://github.com/N0zoM1z0/dx-ball) by N0zoM1z0                                      | Byte-exact reconstruction of one sound-pan function, checked against 3,205 original x86 cases                    | official showcase                 | `REA`                 |
 
 Snapshot dates: likes from [songshikang0111/awesome-REA-cases](https://github.com/songshikang0111/awesome-REA-cases) on 2026-10-12; views as noted.
 
 ## Contents
 
+- [Official resources](#official-resources)
 - [Official showcases](#official-showcases)
 - [Community cases built with REA](#community-cases-built-with-rea)
 - [The wider wave: without confirmed REA](#the-wider-wave-without-confirmed-rea)
-- [Find projects by the app they replace](docs/by-app.md)
-- [Did it really use REA?](docs/is-it-rea.md): a claim check for each case
-- [New this week](docs/new-this-week.md)
-- [Posts from X](docs/x-posts.md): the intro posts, the roundups, the official accounts, the controversy, and the case-by-case accounts from users
 - [Plugins and integrations](#plugins-and-integrations)
 - [Guides and research](#guides-and-research)
 - [Related MCP reverse-engineering tools](#related-mcp-reverse-engineering-tools)
 - [Other lists](#other-lists)
 - [Discussion and press](#discussion-and-press)
-- [Press and posts about REA](docs/press-and-posts.md)
 - [Legal and controversy](#legal-and-controversy)
-- [Contributing](#contributing)
-- [Case submission form](.github/ISSUE_TEMPLATE/case.yml)
+
+The pages in this list: [Find projects by the app they replace](docs/by-app.md), [Did it really use REA?](docs/is-it-rea.md) for a claim check on each case, [New this week](docs/new-this-week.md), [Posts from X](docs/x-posts.md) for the intro posts, the roundups, the official accounts, the controversy and the case-by-case accounts from users, [Press and posts about REA](docs/press-and-posts.md), and the [case submission form](.github/ISSUE_TEMPLATE/case.yml). The [Contributing](#contributing) section has the rules for a new entry.
 
 ## Official resources
 
@@ -146,7 +142,7 @@ These projects came up alongside REA. Their READMEs do not say REA was used, so 
 - [Nowng/rea-mcp](https://github.com/Nowng/rea-mcp) - LM Studio plugin that wraps the original REA MCP server, for local models. It clones REA at runtime.
 - [sickpyramid/ReaFuse](https://github.com/sickpyramid/ReaFuse) - Builds on REA to fuse two JS/TS source projects. v0.1, alpha.
 - [dav1dngy/era-agent](https://github.com/dav1dngy/era-agent) - Evidence-driven reverse-engineering agent with a self-improvement lab. Experimental, v0.1.0.
-- [alexmi256/rea-agent-docker](https://github.com/alexmi256/rea-agent-docker) - Docker images for REA. Four variants: Ghidra + Hopper, ghidra, hopper, and ida. The IDA image does not ship IDA itself. linux/amd64 only.
+- [alexmi256/rea-agent-docker](https://github.com/alexmi256/rea-agent-docker) - Docker images for REA. Four variants: Ghidra + Hopper, ghidra, hopper, and ida. The IDA image does not ship IDA itself. Linux/amd64 only.
 - [moonfruit/homebrew-tap](https://github.com/moonfruit/homebrew-tap/blob/main/Formula/rea-agents.rb) - One person's Homebrew tap. Not in homebrew-core.
 - [czcdr/dsh-plugin-rea](https://github.com/czcdr/dsh-plugin-rea) - Third-party adapter that brings the morluto/rea MCP server into DeepSeek Harness as `mcp__rea__*` tools. Version 2.x installs the REA CLI, JDK and Ghidra for you.
 - [ShadowSwaps/REA-Reconstruction-Companion](https://github.com/ShadowSwaps/REA-Reconstruction-Companion) - Agent Skill that turns REA findings into a specification, architecture, plan and validation steps for rebuilding an app, feature or format.
