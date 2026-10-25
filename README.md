@@ -6,7 +6,7 @@
 
 > Unofficial. Not affiliated with morluto/rea.
 
-"REA" started as [morluto/rea](https://github.com/morluto/rea) (Reverse Engineer Anything, 350k+ stars), an open-source MCP server and CLI (npm `rea-agents`) that lets coding agents inspect native binaries, Electron apps, .NET assemblies, APKs, firmware and websites without their source code, explain how a feature works with evidence, and rebuild it. REA itself does not decompile; it orchestrates Hopper, Ghidra, IDA and JADX for the agent.
+"REA" started as [morluto/rea](https://github.com/morluto/rea) (Reverse Engineer Anything, 380k+ stars as of 2026-10-25), an open-source MCP server and CLI (npm `rea-agents`) that lets coding agents inspect native binaries, Electron apps, .NET assemblies, APKs, firmware and websites without their source code, explain how a feature works with evidence, and rebuild it. REA itself does not decompile; it orchestrates Hopper, Ghidra, IDA and JADX for the agent.
 
 "REA" now also names the whole wave of AI agents reverse-engineering and rebuilding closed software, whether they use REA, or Claude Code and Codex with Ghidra or IDA MCP. This list covers that wave and says what each case actually used.
 
@@ -17,7 +17,7 @@
 - `Rebuild`: clean-room rewrite with no reverse-engineering evidence.
 - `Claim?`: not yet verified.
 
-> Figures and links in this list were checked on 2026-10-21. REA and the projects around it move weekly, so read the date next to a number before relying on it.
+> Figures and links in this list were checked on 2026-10-21, with REA's star count and the entries added since refreshed on 2026-10-25. REA and the projects around it move weekly, so read the date next to a number before relying on it.
 
 > ⚠️ Reverse engineering is governed by local law, software licenses and terms of service. This list covers only public information, for learning, research, interoperability and preservation. Make sure you are allowed to analyse the target. See [Legal and controversy](#legal-and-controversy).
 
@@ -150,11 +150,12 @@ These projects came up alongside REA. Their READMEs do not say REA was used, so 
 - [nesaon03/XYREVERSE](https://github.com/nesaon03/XYREVERSE) - `AI-RE` Agent skill pack covering IDA, Ghidra, kernel drivers, .NET, IL2CPP, Unreal, Frida, x64dbg and REA. MIT.
 - [kandada/rea-python](https://github.com/kandada/rea-python) - `AI-RE` Unofficial Python port of REA, written because the author's Python-based agent products needed native integration. Not endorsed by the upstream authors. MIT.
 - [Fractal-Tess/rea-flake](https://github.com/Fractal-Tess/rea-flake) - `AI-RE` REA packaged for Nix. MIT.
+- [cranebeaker/coop-anything](https://github.com/cranebeaker/coop-anything) - `AI-RE` MCP server, playbook and agent skills that have a coding agent add co-op to a single-player game: look for existing co-op mods, reverse-engineer the game if needed, test with bots, and package it for Steam. Suggests pairing it with a reverse-engineering MCP such as REA, GhidraMCP or ida-pro-mcp. Every player needs their own copy, and it does not touch anti-cheat or online services. MIT.
 
 ## Guides and research
 
 - [ringozzt/rea-research](https://github.com/ringozzt/rea-research) - 🇨🇳 Chinese technical research: architecture, evidence model, what DX-Ball's numbers mean, trust model, and the gap between stars and installs. Unlicensed, data from 10-11. Read this first.
-- [pablodiazjorge/rea-lab](https://github.com/pablodiazjorge/rea-lab) - 🇪🇸 Setup, exercises and tool evaluation on Windows with Ghidra. Five preregistered studies, 482 runs, and the most decision-relevant evidence in this list. Study 1: Claude Code solved 28 of 30 crackmes with and without REA, but REA runs took about twice as long and cost more. **Study 2: on harder binaries REA made accuracy worse, 11 of 24 runs solved without it against 4 of 24 with it** (exact McNemar, p = 0.092). Study 5: REA's own skill made runs 14 % more expensive and changed nothing measurable. Use REA for targeted questions on a known surface, not open-ended exploration.
+- [pablodiazjorge/rea-lab](https://github.com/pablodiazjorge/rea-lab) - 🇪🇸 Setup, exercises and tool evaluation on Windows with Ghidra. Five preregistered studies, 482 runs, and the most decision-relevant evidence in this list. Study 1: Claude Code solved 28 of 30 crackmes with and without REA, but REA runs took about twice as long and cost more. Study 2: on harder binaries, 11 of 24 runs solved without REA against 4 of 24 with it, again at about twice the time and cost; the author labels the difference not significant (exact McNemar, p = 0.092). Studies 3 and 4 found no significant difference either. Study 5: REA's official skill changed nothing measurable against no skill, and the author's improved version made runs 14 % more expensive than the official one. Use REA for targeted questions on a known surface, not open-ended exploration.
 - [jinshi666888/rea-playbook](https://github.com/jinshi666888/rea-playbook) - 🇨🇳 Hands-on lab: a minimal Electron target, evidence extraction with `file:line` references, and an MCP probe.
 - [valorisa/Reverse-Engineer-Anything](https://github.com/valorisa/Reverse-Engineer-Anything) - 🇫🇷 Unofficial French guide, including the legal framework.
 - [REA: Reverse Engineer Anything with AI Agents & MCP (HoangYell)](https://hoangyell.com/rea-explained/) - Introduction.
@@ -163,6 +164,7 @@ These projects came up alongside REA. Their READMEs do not say REA was used, so 
 - [How To Use REA To Clone Any Software In Minutes (Eric Tech, YouTube)](https://www.youtube.com/watch?v=FnB9tHKBJXQ) - Video tutorial.
 - [inematds/rea-engenharia-reversa](https://github.com/inematds/rea-engenharia-reversa) - 🇧🇷 Guide to REA in Portuguese, English and Spanish, with links, cases, an honest assessment and a test run.
 - [ZooHero500/reatool](https://github.com/ZooHero500/reatool) - Unofficial REA tutorials and comparisons for installing and using it with coding agents. Not affiliated with morluto.
+- [JoasASantos/REA-Prompts](https://github.com/JoasASantos/REA-Prompts) - Prompt collection for REA, covering native binaries, firmware, games, Android, Electron and websites. Its cloning prompts are framed as clean-room work, and its licensing and cracking-research prompts ask for documentation only, not bypasses. MIT.
 
 ## Related MCP reverse-engineering tools
 
