@@ -27,6 +27,8 @@ Many cases are described as "built with REA". This page checks each one against 
 | [netcat-openbsd analysis](https://github.com/NullLabTests/OpenBSD_netcat_REA) | Yes | — | **Confirmed.** |
 | [REA-demo](https://github.com/az9713/REA-demo) | Yes | — | **Confirmed.** |
 | [rea-groundtruth](https://github.com/UnknownHacker1/rea-groundtruth) | Yes | — | **Confirmed.** |
+| [rea-safe-agents](https://github.com/dagoSte/rea-safe-agents) | Yes | — | **Confirmed.** Pins REA 6.7.0 and ships it inside a restricted container. The contribution is the containment, not the analysis. |
+| [blender-agent-sdk](https://github.com/yazzang-homelab/blender-agent-sdk) | Yes | — | **Confirmed.** REA with the Ghidra provider over the stripped Blender 5.2.2 binary; the write-up and its stated limits are in the repo. |
 | [VSL-DSP](https://github.com/grisuno/VSL-DSP) | Yes | — | **Partly.** REA helped with some vendor findings only; the repo predates REA. |
 | [plx-native](https://github.com/GLinnik21/plx-native) | No | Relayed post says Ghidra + Claude Code | **Not REA.** Tagged AI-RE. |
 | [open-appleremote](https://github.com/a-funk/open-appleremote) | No | Author's post does not say which tool | **Not confirmed.** |

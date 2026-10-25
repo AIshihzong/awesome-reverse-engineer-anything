@@ -6,6 +6,13 @@ Entries added in the past week, by the date each repo was created on GitHub. Dat
 
 | Created | Project | Tag | What it is |
 |---|---|---|---|
+| 2026-10-18 | [rea-safe-agents](https://github.com/dagoSte/rea-safe-agents) | REA | REA and the agent contained in two restricted Docker containers |
+| 2026-10-18 | [blender-agent-sdk](https://github.com/yazzang-homelab/blender-agent-sdk) | REA | Python SDK for Blender, built on a REA and Ghidra pass over Blender 5.2.2 |
+| 2026-10-17 | [leanrea](https://github.com/aicodeking/leanrea) | AI-RE | 8 KB skill that replaces the REA MCP layer, with its own benchmark |
+| 2026-10-17 | [rea-python](https://github.com/kandada/rea-python) | AI-RE | Unofficial Python port of REA |
+| 2026-10-15 | [rea-flake](https://github.com/Fractal-Tess/rea-flake) | AI-RE | REA packaged for Nix |
+| 2026-10-13 | [reaproof](https://github.com/Junhan2/reaproof) | AI-RE | Rates how exposed a shipped app is to agents such as REA |
+| 2026-10-12 | [XYREVERSE](https://github.com/nesaon03/XYREVERSE) | AI-RE | Agent skill pack for reverse engineering |
 | 2026-10-13 | [rea-groundtruth](https://github.com/UnknownHacker1/rea-groundtruth) | REA | Compares REA's reports with the real code |
 | 2026-10-13 | [AdamTerm](https://github.com/AdamLinCodes/AdamTerm) | REA | Minimal macOS terminal built after studying Ghostty |
 | 2026-10-12 | [zee-rp](https://github.com/LilZeeCN/zee-rp) | REA (author's reply) | CLI and MCP for Axure RP prototype files |
