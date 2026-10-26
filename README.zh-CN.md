@@ -8,7 +8,7 @@
 
 **[按被替代的软件找项目](docs/by-app.zh-CN.md)** · **[REA 说法核实](docs/is-it-rea.zh-CN.md)** · **[REA 到底有没有用：对照实验](#rea-到底有没有用对照实验)** · **[本周新增](docs/new-this-week.zh-CN.md)** · **[投稿案例](https://github.com/AIshihzong/awesome-reverse-engineer-anything/issues/new?template=case.yml)**
 
-"REA" 原指 [morluto/rea](https://github.com/morluto/rea)（Reverse Engineer Anything），一个开源 MCP Server + CLI（npm 包 `rea-agents`，2026-10-25 时 38 万+ Star），让 Claude Code、Codex 等编码 Agent 在**没有源码**的情况下检查原生二进制、Electron 应用、.NET 程序集、APK、固件和网站，解释功能如何实现、给出证据，再在你自己的项目里重建。它本身不做反编译，而是把 Hopper / Ghidra / IDA / JADX 等现有工具编排给 Agent 使用。
+"REA" 原指 [morluto/rea](https://github.com/morluto/rea)（Reverse Engineer Anything），一个开源 MCP Server + CLI（npm 包 `rea-agents`，2026-10-26 时 38.5 万+ Star），让 Claude Code、Codex 等编码 Agent 在**没有源码**的情况下检查原生二进制、Electron 应用、.NET 程序集、APK、固件和网站，解释功能如何实现、给出证据，再在你自己的项目里重建。它本身不做反编译，而是把 Hopper / Ghidra / IDA / JADX 等现有工具编排给 Agent 使用。
 
 现在 "REA" 也常被用来泛指整股浪潮：AI Agent 逆向并重建闭源软件，无论用的是 REA，还是 Claude Code / Codex 加 Ghidra / IDA MCP。本列表收录这股浪潮，标明每个案例实际用了什么工具。
 
@@ -19,7 +19,7 @@
 - `重写`：clean-room 重写，没有逆向证据。
 - `待核实`：暂时无法核实。
 
-> 本列表中的数据与链接核对于 2026-10-21，REA 星数和此后新增的条目更新于 2026-10-25。REA 及其周边项目每周都在变化，引用某个数字前请先看它旁边的日期。
+> 本列表中的数据与链接核对于 2026-10-21，REA 星数和此后新增的条目更新于 2026-10-26。REA 及其周边项目每周都在变化，引用某个数字前请先看它旁边的日期。
 
 ## 先看这些
 
@@ -116,6 +116,8 @@
 - [lxistired/ledger-reborn](https://github.com/lxistired/ledger-reborn) - `REA` 用 REA 研究 QuickBooks Desktop for Mac 2024 试用版后，独立实现的本地记账应用，有早期预览版。REA 的说明见 [REA 讨论 #2198](https://github.com/morluto/rea/discussions/2198)。MIT。
 - [KarlssonChristoffer/DiskLens](https://github.com/KarlssonChristoffer/DiskLens) - `REA` 仿 WinDirStat 的 Windows 11 磁盘分析工具，由 Claude Code 编写。作者先用 REA 研究了已安装的 WinDirStat 2.5.0 二进制。作者称代码未经审阅，视为实验性项目。协议为 GPL-3.0-or-later：`crates/core/src/treemap.rs` 与 `palette.rs` 直接移植了 WinDirStat 2.5.0 的 GPL-2.0-or-later 代码，因此这是 GPL 衍生作品而非 clean-room 复原，README 本身也是这么写的。
 - [yazzang-homelab/blender-agent-sdk](https://github.com/yazzang-homelab/blender-agent-sdk) - `REA` 纯 Python SDK，让 AI Agent 直接驱动 Blender，不走 MCP。设计依据是用 REA + Ghidra 对剥离后的 174 MB Blender 5.2.2 二进制做的完整分析，约 70 分钟处理了 301,393 个函数，结果再与 v5.2.2 源码交叉核对。GPL-3.0-or-later。
+- [E2-Veera/calendar-reconstruction](https://github.com/E2-Veera/calendar-reconstruction) - `REA` 用 Swift/SwiftUI 复刻 macOS 日历的概念验证：月、周、日、年视图，事件、多日历和搜索。行为依据来自对 Calendar.app 的 REA 分析（rea-agents 6.5.0），摘要在 `evidence/rea/`。README 说明不含苹果的代码和素材，也没有提交提取出的资源文件。No license file。
+- [soyrochus/mucrab](https://github.com/soyrochus/mucrab) - `REA（部分）` 把 muCommander 的文件管理功能（本地、ZIP、SFTP 浏览，复制、搜索、查看器、标签页）从已发布的 Java 二进制移植到 Rust。固定版本的 REA 6.5.0 负责清点 JAR 内容、核对类指纹；方法还原用的是 CFR 和 `javap`，不是 REA。实验性。GPL-3.0。
 
 ### 硬件、协议与驱动
 
@@ -133,6 +135,7 @@
 - [UnknownHacker1/rea-groundtruth](https://github.com/UnknownHacker1/rea-groundtruth) - `REA` 把 REA 的报告与代码中的真实情况逐项比对，为它的盲区提供一键复现脚本。MIT。
 - [dagoSte/rea-safe-agents](https://github.com/dagoSte/rea-safe-agents) - `REA` 把 REA 与接收结果的 Agent 分别关进两个受限 Docker 容器：无网络、只读根文件系统、不给 capability、不挂 Docker socket，Agent 一侧零主机挂载。只通过白名单开放 REA 207 个工具中的 27 个，且只把经过哈希批准的冻结副本交给 REA。固定 REA 6.7.0、Ghidra 12.1.4、JADX 0.7.1。Linux 与 macOS 已验证，Windows 仍是实验性。MIT。
 - [Junhan2/reaproof](https://github.com/Junhan2/reaproof) - `AI 逆向` 评估你发布的应用对 REA 这类 Agent 暴露到什么程度，并修掉能修的部分：带着原始源码的 source map、服务端密钥、`.env` 的值、混进构建产物的 `.git` 目录。用自带的 "rea risk" 等级给出结论，并在 22 个框架测试应用上用 `aapt`、`dexdump`、`readelf`、`otool`、`@electron/fuses` 交叉核对计数。MIT。
+- [MockirDev/antirea](https://github.com/MockirDev/antirea) - `AI 逆向` 防守方的工具：在 Agent 最先读取的指令文件里放"停止"指令，再加终端 shim 和构建加固。只对遵守这些文件的 Agent 有效，README 没有给出实测数据。MIT。
 
 ## 同一波浪潮：未写明使用 REA 的 AI 逆向项目
 

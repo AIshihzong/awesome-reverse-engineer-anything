@@ -8,7 +8,7 @@
 
 **[Find a project by the app it replaces](docs/by-app.md)** · **[Did it really use REA?](docs/is-it-rea.md)** · **[Does REA help? The evidence](#does-rea-help-the-evidence)** · **[New this week](docs/new-this-week.md)** · **[Submit a case](https://github.com/AIshihzong/awesome-reverse-engineer-anything/issues/new?template=case.yml)**
 
-"REA" started as [morluto/rea](https://github.com/morluto/rea) (Reverse Engineer Anything, 380k+ stars as of 2026-10-25), an open-source MCP server and CLI (npm `rea-agents`) that lets coding agents inspect native binaries, Electron apps, .NET assemblies, APKs, firmware and websites without their source code, explain how a feature works with evidence, and rebuild it. REA itself does not decompile; it orchestrates Hopper, Ghidra, IDA and JADX for the agent.
+"REA" started as [morluto/rea](https://github.com/morluto/rea) (Reverse Engineer Anything, 385k+ stars as of 2026-10-26), an open-source MCP server and CLI (npm `rea-agents`) that lets coding agents inspect native binaries, Electron apps, .NET assemblies, APKs, firmware and websites without their source code, explain how a feature works with evidence, and rebuild it. REA itself does not decompile; it orchestrates Hopper, Ghidra, IDA and JADX for the agent.
 
 "REA" now also names the whole wave of AI agents reverse-engineering and rebuilding closed software, whether they use REA, or Claude Code and Codex with Ghidra or IDA MCP. This list covers that wave and says what each case actually used.
 
@@ -19,7 +19,7 @@
 - `Rebuild`: clean-room rewrite with no reverse-engineering evidence.
 - `Claim?`: not yet verified.
 
-> Figures and links in this list were checked on 2026-10-21, with REA's star count and the entries added since refreshed on 2026-10-25. REA and the projects around it move weekly, so read the date next to a number before relying on it.
+> Figures and links in this list were checked on 2026-10-21, with REA's star count and the entries added since refreshed on 2026-10-26. REA and the projects around it move weekly, so read the date next to a number before relying on it.
 
 > ⚠️ Reverse engineering is governed by local law, software licenses and terms of service. This list covers only public information, for learning, research, interoperability and preservation. Make sure you are allowed to analyse the target. See [Legal and controversy](#legal-and-controversy).
 
@@ -112,6 +112,8 @@ Tags show the evidence source. Repo stars change daily, so they are not listed h
 - [lxistired/ledger-reborn](https://github.com/lxistired/ledger-reborn) - `REA` Independent local accounting app, built after studying QuickBooks Desktop for Mac 2024 trial with REA. See [discussion #2198](https://github.com/morluto/rea/discussions/2198). Preview release. MIT.
 - [KarlssonChristoffer/DiskLens](https://github.com/KarlssonChristoffer/DiskLens) - `REA` WinDirStat-style disk analyzer for Windows 11, written by Claude Code. The author used REA to study the shipped WinDirStat 2.5.0 binary first. The author says the code has not been reviewed, so treat it as experimental. GPL-3.0-or-later: `crates/core/src/treemap.rs` and `palette.rs` port WinDirStat 2.5.0 GPL-2.0-or-later code, so this is a GPL derivative rather than clean-room work, and the README says so.
 - [yazzang-homelab/blender-agent-sdk](https://github.com/yazzang-homelab/blender-agent-sdk) - `REA` Plain Python SDK for driving Blender from AI agents, with no MCP. Its grounding work is a REA and Ghidra pass over the stripped 174 MB Blender 5.2.2 binary, 301,393 procedures in about 70 minutes, cross-checked against the v5.2.2 source. GPL-3.0-or-later.
+- [E2-Veera/calendar-reconstruction](https://github.com/E2-Veera/calendar-reconstruction) - `REA` Proof-of-concept rebuild of macOS Calendar in Swift/SwiftUI: month, week, day and year views, events, multiple calendars and search. The behaviour comes from REA evidence (rea-agents 6.5.0) on Calendar.app, with summaries in `evidence/rea/`. The README says it contains no Apple code or assets and does not commit the extracted resources. No license file.
+- [soyrochus/mucrab](https://github.com/soyrochus/mucrab) - `REA (partial)` Rust port of muCommander's file-manager workflows (local, ZIP and SFTP browsing, copy, search, viewer, tabs), reconstructed from its published Java binaries. A pinned REA 6.5.0 probe inventories the JARs and checks class fingerprints; method recovery uses CFR and `javap`, not REA. Experimental. GPL-3.0.
 
 ### Hardware, protocols and drivers
 
@@ -129,6 +131,7 @@ Tags show the evidence source. Repo stars change daily, so they are not listed h
 - [UnknownHacker1/rea-groundtruth](https://github.com/UnknownHacker1/rea-groundtruth) - `REA` Compares REA's reports with the actual code and provides one-command repros. MIT.
 - [dagoSte/rea-safe-agents](https://github.com/dagoSte/rea-safe-agents) - `REA` Skill that contains REA and the receiving agent in two separate restricted Docker containers: no network, read-only roots, no capabilities, no Docker socket, and zero host mounts for the agent. Exposes 27 of REA's 207 tools through an allowlist, and shares only frozen, hash-approved copies of selected inputs with REA. Pins REA 6.7.0, Ghidra 12.1.4 and JADX 0.7.1. Linux and macOS are verified; Windows is experimental. MIT.
 - [Junhan2/reaproof](https://github.com/Junhan2/reaproof) - `AI-RE` Rates how exposed a shipped app is to agents such as REA, and closes what it can close: source maps carrying your original source, server keys, `.env` values and `.git` folders that ended up in the build output. Rates the result on its own "rea risk" scale and cross-checks its counts against `aapt`, `dexdump`, `readelf`, `otool` and `@electron/fuses` on 22 framework test apps. MIT.
+- [MockirDev/antirea](https://github.com/MockirDev/antirea) - `AI-RE` The defensive side: a skill that puts "stop" directives in the instruction files agents read first, plus terminal shims and build hardening. It only stops agents that respect those files, and the README makes no measured claims. MIT.
 
 ## The wider wave: without confirmed REA
 
