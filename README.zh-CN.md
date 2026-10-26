@@ -173,6 +173,7 @@
 
 ## 教程与深度调研
 
+- [AlicanAkyol/blindsight](https://github.com/AlicanAkyol/blindsight) - `AI 逆向` 基于 GhidraMCP/Ollama 的回归测试工具，评估初步分析结论、实际送达模型的代码覆盖率及工具写入行为。试验仅涉及两个合成 ELF 样例和一个模型；未集成 REA。Apache-2.0。
 - [ringozzt/rea-research](https://github.com/ringozzt/rea-research) - 🇨🇳 中文深度技术调研：架构、证据模型、DX-Ball 数字的真实含义、信任模型、Star 与安装量的差距，以及争议背景。仓库未附许可证，数据快照为 10-11。推荐先读。
 - [pablodiazjorge/rea-lab](https://github.com/pablodiazjorge/rea-lab) - 🇪🇸 Windows + Ghidra 环境下的 REA 搭建、练习题和工具评测。五项预注册研究、共 482 次运行，是本列表中最有决策价值的一组证据。研究 1：Claude Code 有无 REA 解出的题目数相同（30 题中 28 题），但使用 REA 时每次运行约慢一倍、花费更高。研究 2：在更难的二进制上，不使用 REA 时 24 次中解出 11 次，使用后解出 4 次，时间和花费同样约为两倍；作者标注这一差异不显著（exact McNemar，p = 0.092）。研究 3 和研究 4 也没有发现显著差异。研究 5：REA 官方 Skill 与不用 Skill 相比没有可测差异，作者改进后的版本比官方版每次运行贵 14%。结论：把 REA 用在目标明确的具体问题上，不要拿它做开放式探索。
 - [jinshi666888/rea-playbook](https://github.com/jinshi666888/rea-playbook) - 🇨🇳 动手实验：最小 Electron 靶机、带 `file:line` 引用的证据提取、MCP 探针，跑通"反编译 → 理解 → 重建"闭环。
