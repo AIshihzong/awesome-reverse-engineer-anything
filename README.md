@@ -19,7 +19,7 @@
 - `Rebuild`: clean-room rewrite with no reverse-engineering evidence.
 - `Claim?`: not yet verified.
 
-> Figures and links in this list were checked on 2026-10-21, with REA's star count and the entries added since refreshed on 2026-10-26. REA and the projects around it move weekly, so read the date next to a number before relying on it.
+> Figures and links in this list were checked on 2026-10-21, with REA's star count refreshed on 2026-10-26, and the entries added since refreshed on 2026-10-29. REA and the projects around it move weekly, so read the date next to a number before relying on it.
 
 > ⚠️ Reverse engineering is governed by local law, software licenses and terms of service. This list covers only public information, for learning, research, interoperability and preservation. Make sure you are allowed to analyse the target. See [Legal and controversy](#legal-and-controversy).
 
@@ -114,6 +114,7 @@ Tags show the evidence source. Repo stars change daily, so they are not listed h
 - [yazzang-homelab/blender-agent-sdk](https://github.com/yazzang-homelab/blender-agent-sdk) - `REA` Plain Python SDK for driving Blender from AI agents, with no MCP. Its grounding work is a REA and Ghidra pass over the stripped 174 MB Blender 5.2.2 binary, 301,393 procedures in about 70 minutes, cross-checked against the v5.2.2 source. GPL-3.0-or-later.
 - [E2-Veera/calendar-reconstruction](https://github.com/E2-Veera/calendar-reconstruction) - `REA` Proof-of-concept rebuild of macOS Calendar in Swift/SwiftUI: month, week, day and year views, events, multiple calendars and search. The behaviour comes from REA evidence (rea-agents 6.5.0) on Calendar.app, with summaries in `evidence/rea/`. The README says it contains no Apple code or assets and does not commit the extracted resources. No license file.
 - [soyrochus/mucrab](https://github.com/soyrochus/mucrab) - `REA (partial)` Rust port of muCommander's file-manager workflows (local, ZIP and SFTP browsing, copy, search, viewer, tabs), reconstructed from its published Java binaries. A pinned REA 6.5.0 probe inventories the JARs and checks class fingerprints; method recovery uses CFR and `javap`, not REA. Experimental. GPL-3.0.
+- [devtechedge/feature-heist](https://github.com/devtechedge/feature-heist) - `REA` CLI that turns REA output into clean-room TypeScript rebuilds of single features, each checked against the original: a Markdown toggle from an MIT Electron app, the WETH9 contract from its bytecode, an npm search client from a HAR capture, Humanizer number words from the .NET assembly, and a function from a native ELF via Ghidra. The REA evidence is stored and hash-pinned, and every rebuild has a differential test. MIT.
 
 ### Hardware, protocols and drivers
 
@@ -132,6 +133,7 @@ Tags show the evidence source. Repo stars change daily, so they are not listed h
 - [dagoSte/rea-safe-agents](https://github.com/dagoSte/rea-safe-agents) - `REA` Skill that contains REA and the receiving agent in two separate restricted Docker containers: no network, read-only roots, no capabilities, no Docker socket, and zero host mounts for the agent. Exposes 27 of REA's 207 tools through an allowlist, and shares only frozen, hash-approved copies of selected inputs with REA. Pins REA 6.7.0, Ghidra 12.1.4 and JADX 0.7.1. Linux and macOS are verified; Windows is experimental. MIT.
 - [Junhan2/reaproof](https://github.com/Junhan2/reaproof) - `AI-RE` Rates how exposed a shipped app is to agents such as REA, and closes what it can close: source maps carrying your original source, server keys, `.env` values and `.git` folders that ended up in the build output. Rates the result on its own "rea risk" scale and cross-checks its counts against `aapt`, `dexdump`, `readelf`, `otool` and `@electron/fuses` on 22 framework test apps. MIT.
 - [MockirDev/antirea](https://github.com/MockirDev/antirea) - `AI-RE` The defensive side: a skill that puts "stop" directives in the instruction files agents read first, plus terminal shims and build hardening. It only stops agents that respect those files, and the README makes no measured claims. MIT.
+- [qybaihe/bla](https://github.com/qybaihe/bla) - `REA` Counter-REA hardening for your own builds: it plants decoys and pushes artifacts past REA's documented resource budgets while keeping runtime behaviour the same. The README separates results measured by running real REA (capacity or budget errors on ASAR, WASM, Go, EVM, PCAP, SQLite, model files and more) from its benchmark's token and cost figures, which are internal estimates. Ghidra-based paths were not tested. MIT.
 
 ## The wider wave: without confirmed REA
 
