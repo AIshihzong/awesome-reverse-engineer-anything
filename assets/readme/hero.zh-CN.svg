@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" role="img" aria-labelledby="t d">
+<title id="t">Awesome REA：AI Agent 逆向并重建了什么，哪些真的用了 REA</title>
+<desc id="d">非官方列表，110 多个条目。示例：DX-Ball 被 REA 官方案例收录，标 REA；Universal Modder 是 Claude Code / Codex 插件，标 AI 逆向；PhotoCraft 是 clean-room 重写，标重写；Linux 上的 Apple TV 遥控器出处未写明工具，标待核实。</desc>
+<defs>
+<pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#22303f"/></pattern>
+<linearGradient id="glow" x1="0" y1="0" x2="1" y2="0.4"><stop offset="0" stop-color="#3fb950" stop-opacity="0.14"/><stop offset="1" stop-color="#3fb950" stop-opacity="0"/></linearGradient>
+</defs>
+<rect width="1200" height="420" rx="20" fill="#0d1520"/>
+<rect width="1200" height="420" rx="20" fill="url(#dots)"/>
+<rect width="1200" height="420" rx="20" fill="url(#glow)"/>
+<text x="56" y="76" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="18" letter-spacing="2" fill="#7d8fa3">精选列表 · AI 逆向工程</text>
+<text x="52" y="160" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans CJK SC', Helvetica, Arial, sans-serif" font-size="76" font-weight="800" fill="#f0f6fc">Awesome <tspan fill="#3fb950">REA</tspan></text>
+<text x="56" y="220" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans CJK SC', Helvetica, Arial, sans-serif" font-size="28" fill="#c9d4df">AI Agent 逆向并重建了什么，</text>
+<text x="56" y="258" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans CJK SC', Helvetica, Arial, sans-serif" font-size="28" fill="#c9d4df">哪些真的用了 REA。</text>
+<line x1="56" y1="328" x2="560" y2="328" stroke="#22303f" stroke-width="2"/>
+<text x="56" y="370" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="19" fill="#8b9bb0">110+ 条目 · 逐条标注出处 · 每周周报</text>
+<rect x="628" y="36" width="520" height="348" rx="16" fill="#131d2a" stroke="#2a3a4d" stroke-width="2"/>
+<text x="656" y="78" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="18" letter-spacing="1" fill="#7d8fa3">案例 · 出处怎么说</text>
+<text x="1120" y="78" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="18" letter-spacing="1" fill="#7d8fa3" text-anchor="end">标签</text>
+
+<line x1="656" y1="96" x2="1120" y2="96" stroke="#22303f" stroke-width="2"/>
+<text x="656" y="129" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans CJK SC', Helvetica, Arial, sans-serif" font-size="22" font-weight="600" fill="#f0f6fc">DX-Ball（1996）</text>
+<text x="656" y="156" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans CJK SC', Helvetica, Arial, sans-serif" font-size="18" fill="#8b9bb0">REA 官方案例收录</text>
+<rect x="1036" y="116" width="84" height="34" rx="17" fill="#3fb950" fill-opacity="0.16" stroke="#3fb950" stroke-width="1.5"/>
+<text x="1078.0" y="137" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="18" font-weight="700" fill="#3fb950" text-anchor="middle">REA</text>
+<line x1="656" y1="168" x2="1120" y2="168" stroke="#22303f" stroke-width="2"/>
+<text x="656" y="201" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans CJK SC', Helvetica, Arial, sans-serif" font-size="22" font-weight="600" fill="#f0f6fc">Universal Modder</text>
+<text x="656" y="228" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans CJK SC', Helvetica, Arial, sans-serif" font-size="18" fill="#8b9bb0">Claude Code / Codex 插件</text>
+<rect x="1002" y="188" width="118" height="34" rx="17" fill="#58a6ff" fill-opacity="0.16" stroke="#58a6ff" stroke-width="1.5"/>
+<text x="1061.0" y="209" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="18" font-weight="700" fill="#58a6ff" text-anchor="middle">AI 逆向</text>
+<line x1="656" y1="240" x2="1120" y2="240" stroke="#22303f" stroke-width="2"/>
+<text x="656" y="273" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans CJK SC', Helvetica, Arial, sans-serif" font-size="22" font-weight="600" fill="#f0f6fc">PhotoCraft</text>
+<text x="656" y="300" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans CJK SC', Helvetica, Arial, sans-serif" font-size="18" fill="#8b9bb0">clean-room 重写</text>
+<rect x="1036" y="260" width="84" height="34" rx="17" fill="#bc8cff" fill-opacity="0.16" stroke="#bc8cff" stroke-width="1.5"/>
+<text x="1078.0" y="281" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="18" font-weight="700" fill="#bc8cff" text-anchor="middle">重写</text>
+<line x1="656" y1="312" x2="1120" y2="312" stroke="#22303f" stroke-width="2"/>
+<text x="656" y="345" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans CJK SC', Helvetica, Arial, sans-serif" font-size="22" font-weight="600" fill="#f0f6fc">Linux 上的 Apple TV 遥控器</text>
+<text x="656" y="372" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans CJK SC', Helvetica, Arial, sans-serif" font-size="18" fill="#8b9bb0">出处未写明工具</text>
+<rect x="1036" y="332" width="84" height="34" rx="17" fill="#d29922" fill-opacity="0.16" stroke="#d29922" stroke-width="1.5"/>
+<text x="1078.0" y="353" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="18" font-weight="700" fill="#d29922" text-anchor="middle">待核实</text>
+</svg>

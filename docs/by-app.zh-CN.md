@@ -4,6 +4,8 @@
 
 按你想替代或兼容的软件找项目。每行写明是否用了 REA（见[标签说明](../README.zh-CN.md)）、许可证，以及项目自述的状态。Star 数不写在这里，因为它会变化；点进去可以看当前数字。
 
+> 这个页面每周更新。[点个 ⭐](https://github.com/AIshihzong/awesome-reverse-engineer-anything)方便下次找到，或者 **Watch → Custom → Releases** 订阅 [AI 逆向周报](https://github.com/AIshihzong/awesome-reverse-engineer-anything/releases)。
+
 | 替代或兼容                           | 项目                                                                                                                                     | 标签                            | 许可                   | 状态（项目自述）                                    |
 | ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------- | -------------------- | ------------------------------------------- |
 | Photoshop                       | [PhotoCraft](https://github.com/storytold/photocraft)                                                                                  | 重写                            | MIT 或 Apache-2.0     | Alpha                                       |
@@ -43,3 +45,5 @@
 | Universal Modder（给你拥有的游戏做 Mod）  | [universal-modder](https://github.com/rehan-remade/universal-modder)                                                                   | AI 逆向                         | MIT                  | 可用（Claude Code / Codex 插件）                  |
 
 [标签说明](../README.zh-CN.md)：`REA` 指 README、作者帖子或官方案例写明使用了 REA；`AI 逆向` 指使用了其他 AI 工具或未写明工具；`重写` 指 clean-room 重写，没有逆向证据；`待核实` 指暂时无法核实；`手工逆向` 指人工逆向，未说明使用 AI。
+
+> 这个页面每周更新。[点个 ⭐](https://github.com/AIshihzong/awesome-reverse-engineer-anything)方便下次找到，或者 **Watch → Custom → Releases** 订阅 [AI 逆向周报](https://github.com/AIshihzong/awesome-reverse-engineer-anything/releases)。
