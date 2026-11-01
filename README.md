@@ -8,7 +8,7 @@
 
 <p align="center">
   <a href="https://github.com/AIshihzong/awesome-reverse-engineer-anything/releases"><img src="https://img.shields.io/github/v/release/AIshihzong/awesome-reverse-engineer-anything?label=weekly%20digest&color=3fb950" alt="Latest weekly digest"></a>
-  <a href="https://github.com/AIshihzong/awesome-reverse-engineer-anything/stargazers"><img src="https://img.shields.io/github/stars/AIshihzong/awesome-reverse-engineer-anything?style=flat&color=f0b429" alt="GitHub stars"></a>
+  <a href="https://github.com/AIshihzong/awesome-reverse-engineer-anything"><img src="https://img.shields.io/github/stars/AIshihzong/awesome-reverse-engineer-anything?style=flat&color=f0b429" alt="GitHub stars"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-CC0--1.0-lightgrey" alt="License: CC0-1.0"></a>
 </p>
 
