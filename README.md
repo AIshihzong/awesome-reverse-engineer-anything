@@ -31,9 +31,26 @@
 - `Rebuild`: clean-room rewrite with no reverse-engineering evidence.
 - `Claim?`: not yet verified.
 
+How each tag is checked: [How this list stays accurate](#how-this-list-stays-accurate).
+
 > Figures and links in this list were checked on 2026-10-21, with REA's star count refreshed on 2026-11-01, and the entries added since refreshed on 2026-10-29. REA and the projects around it move weekly, so read the date next to a number before relying on it.
 
 > ⚠️ Reverse engineering is governed by local law, software licenses and terms of service. This list covers only public information, for learning, research, interoperability and preservation. Make sure you are allowed to analyse the target. See [Legal and controversy](#legal-and-controversy).
+
+## Use it today
+
+Open-source projects you can run now, listed by the app they replace or work with. The [full index](docs/by-app.md) has 37 rows with license and status for each.
+
+| Instead of, or works with | Project                                                                   | Tag                    | Note                                                              |
+| ------------------------- | ------------------------------------------------------------------------- | ---------------------- | ----------------------------------------------------------------- |
+| OBS Studio                | [rec-rs](https://github.com/michaelshimeles/rec-rs)                       | `REA`                  | Rust screen recorder for macOS; build from source                 |
+| Logitech G HUB            | [OpenGHub](https://github.com/Slyvan25/OpenGHub)                          | `Manual RE`            | Native Linux replacement over HID++ 2.0                           |
+| Plex on LG TVs            | [plx-native](https://github.com/GLinnik21/plx-native)                     | `AI-RE`                | Faster startup and selection screens than the stock app           |
+| PowerToys Color Picker    | [hexgrab](https://github.com/iammukeshm/hexgrab)                          | `REA`                  | .NET 10 colour picker                                             |
+| Axure RP `.rp` files      | [zee-rp](https://github.com/LilZeeCN/zee-rp)                              | `REA` (author's reply) | CLI and MCP to read and write prototypes; validated on macOS only |
+| Paper (design canvas)     | [paper-rs](https://github.com/michaelshimeles/paper-rs)                   | `REA`                  | Infinite-canvas design tool in Rust                               |
+| Blender                   | [blender-agent-sdk](https://github.com/yazzang-homelab/blender-agent-sdk) | `REA`                  | Python SDK for Blender; needs Blender                             |
+| Touhou Project games      | [th08](https://github.com/N0zoM1z0/th08) and others                       | `AI-RE`                | Needs your original game data                                     |
 
 ## Most shared
 
@@ -259,6 +276,18 @@ Suggestions are welcome as issues or pull requests. Inclusion rules:
 3. One line per entry: `- [Name](link) - what it does, and its tag.`
 4. No mirrors, pure forks, or projects whose main purpose is infringement or bypassing licensing.
 5. Takedown requests: open an issue with the project name and reason. We will remove the entry and keep the evidence archived.
+
+### How this list stays accurate
+
+- Every `REA` tag needs a source: the project README, the author's post or the official showcase. Each one has an evidence row in [Did it really use REA?](docs/is-it-rea.md).
+- [`scripts/validate_list.py`](scripts/validate_list.py) runs on every pull request. It checks tags, licenses, that the English and Chinese lists match, anchors, the table of contents and known mirrors.
+- A link check runs on every pull request and on a schedule ([`links.yml`](.github/workflows/links.yml)).
+- A daily search collects candidate repos into one issue. Nothing is added automatically: a maintainer reads each source and tags it by hand.
+- Numbers carry the date they were checked, and every change ships in the [weekly digest](https://github.com/AIshihzong/awesome-reverse-engineer-anything/releases).
+
+### Contributors
+
+Thanks to [@Rakesh-7989](https://github.com/Rakesh-7989) for the CI, the validator rules and the English X page, [@AlicanAkyol](https://github.com/AlicanAkyol) for blindsight, and everyone who submitted a case through the [issue form](https://github.com/AIshihzong/awesome-reverse-engineer-anything/issues/new?template=case.yml).
 
 ---
 

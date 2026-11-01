@@ -31,7 +31,24 @@
 - `重写`：clean-room 重写，没有逆向证据。
 - `待核实`：暂时无法核实。
 
+每个标签怎么核对，见[这份列表怎么保证准确](#这份列表怎么保证准确)。
+
 > 本列表中的数据与链接核对于 2026-10-21，REA 星数更新于 2026-11-01，此后新增的条目更新于 2026-10-29。REA 及其周边项目每周都在变化，引用某个数字前请先看它旁边的日期。
+
+## 今天就能用
+
+现在就能跑的开源项目，按它替代或兼容的软件列出。[完整索引](docs/by-app.zh-CN.md)有 37 行，每行写明许可和状态。
+
+| 替代或兼容             | 项目                                                                        | 标签          | 说明                               |
+| ----------------- | ------------------------------------------------------------------------- | ----------- | -------------------------------- |
+| OBS Studio        | [rec-rs](https://github.com/michaelshimeles/rec-rs)                       | `REA`       | Rust 写的 macOS 录屏工具，需从源码构建        |
+| 罗技 G HUB          | [OpenGHub](https://github.com/Slyvan25/OpenGHub)                          | `手工逆向`      | Linux 原生替代品，走 HID++ 2.0 协议       |
+| LG 电视上的 Plex      | [plx-native](https://github.com/GLinnik21/plx-native)                     | `AI 逆向`     | 启动和选片界面比官方应用快                    |
+| PowerToys 取色器     | [hexgrab](https://github.com/iammukeshm/hexgrab)                          | `REA`       | .NET 10 取色小工具                    |
+| Axure RP `.rp` 文件 | [zee-rp](https://github.com/LilZeeCN/zee-rp)                              | `REA`（作者回复） | 读写原型的 CLI 和 MCP，只在 macOS 验证过     |
+| Paper（设计画布）       | [paper-rs](https://github.com/michaelshimeles/paper-rs)                   | `REA`       | Rust 写的无限画布设计工具                  |
+| Blender           | [blender-agent-sdk](https://github.com/yazzang-homelab/blender-agent-sdk) | `REA`       | Blender 的 Python SDK，需自备 Blender |
+| 东方 Project 系列     | [th08](https://github.com/N0zoM1z0/th08) 等                                | `AI 逆向`     | 需要你自己的原版游戏数据                     |
 
 ## 先看这些
 
@@ -262,6 +279,18 @@ REA 走红的同时也带来不少争议，选用和传播案例时值得注意�
 3. 每条一行，格式为 `- [名称](链接) - 一句话说明它做了什么，并标注标签。`
 4. 不收录镜像、纯 fork，或以侵权、绕过授权为主要目的的项目。
 5. 下架请求：提交 Issue 说明项目名称和理由，我们会移除条目并保留证据存档。
+
+### 这份列表怎么保证准确
+
+- 每个 `REA` 标签都要有出处：项目 README、作者帖子或官方案例。每一条在 [REA 说法核实](docs/is-it-rea.zh-CN.md)里都有一行证据。
+- 每个 PR 都会跑 [`scripts/validate_list.py`](scripts/validate_list.py)，检查标签、许可、中英文列表是否一致、锚点、目录和已知的镜像仓库。
+- 每个 PR 和定时任务都会做链接检查（[`links.yml`](.github/workflows/links.yml)）。
+- 每天自动搜索候选仓库，汇总到一个 Issue。不会自动入表，维护者逐个读出处、手工打标签。
+- 数字都标了核对日期，每次改动都会写进 [AI 逆向周报](https://github.com/AIshihzong/awesome-reverse-engineer-anything/releases)。
+
+### 贡献者
+
+感谢 [@Rakesh-7989](https://github.com/Rakesh-7989) 搭建 CI、校验规则和英文 X 页面，[@AlicanAkyol](https://github.com/AlicanAkyol) 贡献 blindsight，以及每一位通过 [Issue 表单](https://github.com/AIshihzong/awesome-reverse-engineer-anything/issues/new?template=case.yml)投稿的朋友。
 
 ---
 
