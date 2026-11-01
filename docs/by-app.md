@@ -4,6 +4,8 @@
 
 Find a project by the app it replaces or works with. Each row says whether REA was used (see the [tags](../README.md)), the license, and the status the project reports for itself. Stars are not listed here, because they change; click through for current numbers.
 
+> This page is updated every week. ⭐ [Star the list](https://github.com/AIshihzong/awesome-reverse-engineer-anything) to find it again, or **Watch → Custom → Releases** for the [weekly digest](https://github.com/AIshihzong/awesome-reverse-engineer-anything/releases).
+
 | Replaces or works with                    | Project                                                                                                                                           | Tag                                   | License                           | Status (self-reported)                                         |
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- | --------------------------------- | -------------------------------------------------------------- |
 | Photoshop                                 | [PhotoCraft](https://github.com/storytold/photocraft)                                                                                             | Rebuild                               | MIT or Apache-2.0                 | Alpha                                                          |
@@ -43,3 +45,5 @@ Find a project by the app it replaces or works with. Each row says whether REA w
 | Universal Modder (mods for games you own) | [universal-modder](https://github.com/rehan-remade/universal-modder)                                                                              | AI-RE                                 | MIT                               | Ready (Claude Code / Codex plugin)                             |
 
 The [tags](../README.md) are: `REA` — the README, author's post or official showcase says REA was used; `AI-RE` — other or unstated AI tools; `Rebuild` — clean-room, no reverse-engineering evidence; `Claim?` — not yet verified; `Manual RE` — reverse-engineered by hand, no AI stated.
+
+> This page is updated every week. ⭐ [Star the list](https://github.com/AIshihzong/awesome-reverse-engineer-anything) to find it again, or **Watch → Custom → Releases** for the [weekly digest](https://github.com/AIshihzong/awesome-reverse-engineer-anything/releases).

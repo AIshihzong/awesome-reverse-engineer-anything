@@ -2,13 +2,25 @@
 
 [English](README.md) · **简体中文**
 
+<p align="center">
+  <img src="assets/readme/hero.zh-CN.svg" width="100%" alt="Awesome REA：AI Agent 逆向并重建了什么，哪些真的用了 REA。示例：DX-Ball 标 REA，Universal Modder 标 AI 逆向，PhotoCraft 标重写，Linux 上的 Apple TV 遥控器标待核实">
+</p>
+
+<p align="center">
+  <a href="https://github.com/AIshihzong/awesome-reverse-engineer-anything/releases"><img src="https://img.shields.io/github/v/release/AIshihzong/awesome-reverse-engineer-anything?label=%E5%91%A8%E6%8A%A5&color=3fb950" alt="最新一期周报"></a>
+  <a href="https://github.com/AIshihzong/awesome-reverse-engineer-anything"><img src="https://img.shields.io/github/stars/AIshihzong/awesome-reverse-engineer-anything?style=flat&color=f0b429" alt="GitHub Star 数"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-CC0--1.0-lightgrey" alt="许可：CC0-1.0"></a>
+</p>
+
 **看看 AI Agent 逆向并重建了什么，哪些今天就能用，哪些真的用了 REA。**
 
 > 非官方列表，与 morluto/rea 无隶属关系。
 
 **[按被替代的软件找项目](docs/by-app.zh-CN.md)** · **[REA 说法核实](docs/is-it-rea.zh-CN.md)** · **[REA 到底有没有用：对照实验](#rea-到底有没有用对照实验)** · **[本周新增](docs/new-this-week.zh-CN.md)** · **[投稿案例](https://github.com/AIshihzong/awesome-reverse-engineer-anything/issues/new?template=case.yml)**
 
-"REA" 原指 [morluto/rea](https://github.com/morluto/rea)（Reverse Engineer Anything），一个开源 MCP Server + CLI（npm 包 `rea-agents`，2026-10-26 时 38.5 万+ Star），让 Claude Code、Codex 等编码 Agent 在**没有源码**的情况下检查原生二进制、Electron 应用、.NET 程序集、APK、固件和网站，解释功能如何实现、给出证据，再在你自己的项目里重建。它本身不做反编译，而是把 Hopper / Ghidra / IDA / JADX 等现有工具编排给 Agent 使用。
+> ⭐ **点个 Star**，在 GitHub 动态里随时找到这份列表；或者 **Watch → Custom → Releases**，每周收到一期 [AI 逆向周报](https://github.com/AIshihzong/awesome-reverse-engineer-anything/releases)。
+
+"REA" 原指 [morluto/rea](https://github.com/morluto/rea)（Reverse Engineer Anything），一个开源 MCP Server + CLI（npm 包 `rea-agents`，2026-11-01 时 41.7 万+ Star），让 Claude Code、Codex 等编码 Agent 在**没有源码**的情况下检查原生二进制、Electron 应用、.NET 程序集、APK、固件和网站，解释功能如何实现、给出证据，再在你自己的项目里重建。它本身不做反编译，而是把 Hopper / Ghidra / IDA / JADX 等现有工具编排给 Agent 使用。
 
 现在 "REA" 也常被用来泛指整股浪潮：AI Agent 逆向并重建闭源软件，无论用的是 REA，还是 Claude Code / Codex 加 Ghidra / IDA MCP。本列表收录这股浪潮，标明每个案例实际用了什么工具。
 
@@ -19,7 +31,7 @@
 - `重写`：clean-room 重写，没有逆向证据。
 - `待核实`：暂时无法核实。
 
-> 本列表中的数据与链接核对于 2026-10-21，REA 星数更新于 2026-10-26，此后新增的条目更新于 2026-10-29。REA 及其周边项目每周都在变化，引用某个数字前请先看它旁边的日期。
+> 本列表中的数据与链接核对于 2026-10-21，REA 星数更新于 2026-11-01，此后新增的条目更新于 2026-10-29。REA 及其周边项目每周都在变化，引用某个数字前请先看它旁边的日期。
 
 ## 先看这些
 
@@ -250,3 +262,7 @@ REA 走红的同时也带来不少争议，选用和传播案例时值得注意�
 3. 每条一行，格式为 `- [名称](链接) - 一句话说明它做了什么，并标注标签。`
 4. 不收录镜像、纯 fork，或以侵权、绕过授权为主要目的的项目。
 5. 下架请求：提交 Issue 说明项目名称和理由，我们会移除条目并保留证据存档。
+
+---
+
+如果这份列表帮你省了一次搜索，点个 ⭐ 能让更多人找到它。新案例每周收进 [AI 逆向周报](https://github.com/AIshihzong/awesome-reverse-engineer-anything/releases)。

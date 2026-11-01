@@ -2,13 +2,25 @@
 
 **English** · [简体中文](README.zh-CN.md)
 
+<p align="center">
+  <img src="assets/readme/hero.svg" width="100%" alt="Awesome REA: what AI agents reverse-engineered and rebuilt, and which ones really used REA. Example rows: DX-Ball tagged REA, Universal Modder tagged AI-RE, PhotoCraft tagged Rebuild, Apple TV remote on Linux tagged Claim?">
+</p>
+
+<p align="center">
+  <a href="https://github.com/AIshihzong/awesome-reverse-engineer-anything/releases"><img src="https://img.shields.io/github/v/release/AIshihzong/awesome-reverse-engineer-anything?label=weekly%20digest&color=3fb950" alt="Latest weekly digest"></a>
+  <a href="https://github.com/AIshihzong/awesome-reverse-engineer-anything"><img src="https://img.shields.io/github/stars/AIshihzong/awesome-reverse-engineer-anything?style=flat&color=f0b429" alt="GitHub stars"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-CC0--1.0-lightgrey" alt="License: CC0-1.0"></a>
+</p>
+
 **What AI agents reverse-engineered and rebuilt, and which ones really used REA.**
 
 > Unofficial. Not affiliated with morluto/rea.
 
 **[Find a project by the app it replaces](docs/by-app.md)** · **[Did it really use REA?](docs/is-it-rea.md)** · **[Does REA help? The evidence](#does-rea-help-the-evidence)** · **[New this week](docs/new-this-week.md)** · **[Submit a case](https://github.com/AIshihzong/awesome-reverse-engineer-anything/issues/new?template=case.yml)**
 
-"REA" started as [morluto/rea](https://github.com/morluto/rea) (Reverse Engineer Anything, 385k+ stars as of 2026-10-26), an open-source MCP server and CLI (npm `rea-agents`) that lets coding agents inspect native binaries, Electron apps, .NET assemblies, APKs, firmware and websites without their source code, explain how a feature works with evidence, and rebuild it. REA itself does not decompile; it orchestrates Hopper, Ghidra, IDA and JADX for the agent.
+> ⭐ **Star this repo** to keep the list in your GitHub feed, or **Watch → Custom → Releases** to get one [weekly digest](https://github.com/AIshihzong/awesome-reverse-engineer-anything/releases) a week of what AI agents took apart.
+
+"REA" started as [morluto/rea](https://github.com/morluto/rea) (Reverse Engineer Anything, 417k+ stars as of 2026-11-01), an open-source MCP server and CLI (npm `rea-agents`) that lets coding agents inspect native binaries, Electron apps, .NET assemblies, APKs, firmware and websites without their source code, explain how a feature works with evidence, and rebuild it. REA itself does not decompile; it orchestrates Hopper, Ghidra, IDA and JADX for the agent.
 
 "REA" now also names the whole wave of AI agents reverse-engineering and rebuilding closed software, whether they use REA, or Claude Code and Codex with Ghidra or IDA MCP. This list covers that wave and says what each case actually used.
 
@@ -19,7 +31,7 @@
 - `Rebuild`: clean-room rewrite with no reverse-engineering evidence.
 - `Claim?`: not yet verified.
 
-> Figures and links in this list were checked on 2026-10-21, with REA's star count refreshed on 2026-10-26, and the entries added since refreshed on 2026-10-29. REA and the projects around it move weekly, so read the date next to a number before relying on it.
+> Figures and links in this list were checked on 2026-10-21, with REA's star count refreshed on 2026-11-01, and the entries added since refreshed on 2026-10-29. REA and the projects around it move weekly, so read the date next to a number before relying on it.
 
 > ⚠️ Reverse engineering is governed by local law, software licenses and terms of service. This list covers only public information, for learning, research, interoperability and preservation. Make sure you are allowed to analyse the target. See [Legal and controversy](#legal-and-controversy).
 
@@ -247,3 +259,7 @@ Suggestions are welcome as issues or pull requests. Inclusion rules:
 3. One line per entry: `- [Name](link) - what it does, and its tag.`
 4. No mirrors, pure forks, or projects whose main purpose is infringement or bypassing licensing.
 5. Takedown requests: open an issue with the project name and reason. We will remove the entry and keep the evidence archived.
+
+---
+
+If this list saved you a search, a ⭐ helps the next person find it. New cases arrive every week in the [weekly digest](https://github.com/AIshihzong/awesome-reverse-engineer-anything/releases).
