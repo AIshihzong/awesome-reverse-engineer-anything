@@ -33,7 +33,7 @@
 
 How each tag is checked: [How this list stays accurate](#how-this-list-stays-accurate).
 
-> Figures and links in this list were checked on 2026-10-21, with REA's star count refreshed on 2026-11-01, and the entries added since refreshed on 2026-10-29. REA and the projects around it move weekly, so read the date next to a number before relying on it.
+> Figures and links in this list were checked on 2026-10-21, with REA's star count refreshed on 2026-11-01, and the entries added since refreshed on 2026-11-02. REA and the projects around it move weekly, so read the date next to a number before relying on it.
 
 > ⚠️ Reverse engineering is governed by local law, software licenses and terms of service. This list covers only public information, for learning, research, interoperability and preservation. Make sure you are allowed to analyse the target. See [Legal and controversy](#legal-and-controversy).
 
@@ -151,6 +151,7 @@ Tags show the evidence source. Repo stars change daily, so they are not listed h
 - [grisuno/VSL-DSP](https://github.com/grisuno/VSL-DSP) - `REA (partial)` Linux kernel module for PreSonus AudioBox VSL sound cards. The repo predates REA; REA helped with some vendor-library findings only.
 - [Slyvan25/OpenGHub](https://github.com/Slyvan25/OpenGHub) - `Manual RE` Linux-native Logitech G HUB replacement over HID++ 2.0. Reverse-engineered from captures and documented in `docs/lighting.md`. No AI or REA mention. MIT.
 - [cudanexus/vd-streamer-linux](https://github.com/cudanexus/vd-streamer-linux) - `REA` Linux port of Virtual Desktop Streamer, built with Claude Code + REA. Not yet tested on a real headset.
+- [bitwisecook/quicken-2002-dumper](https://github.com/bitwisecook/quicken-2002-dumper) - `REA` Python reader that exports Quicken 2002 QDF v3 databases, plus several companion files, to SQLite, so old ledgers can be read without Quicken. The README credits `reverse-engineer-anything` and AI assistance. Findings are checked with page checksums, record validation and cipher test vectors, but not yet against a trusted Quicken export. Public domain (Unlicense).
 
 ### Security and evaluations
 
@@ -160,9 +161,12 @@ Tags show the evidence source. Repo stars change daily, so they are not listed h
 - [REA discussion #2254](https://github.com/morluto/rea/discussions/2254) - `REA` Stripped bzip2 analysed and checked against an unstripped build.
 - [UnknownHacker1/rea-groundtruth](https://github.com/UnknownHacker1/rea-groundtruth) - `REA` Compares REA's reports with the actual code and provides one-command repros. MIT.
 - [dagoSte/rea-safe-agents](https://github.com/dagoSte/rea-safe-agents) - `REA` Skill that contains REA and the receiving agent in two separate restricted Docker containers: no network, read-only roots, no capabilities, no Docker socket, and zero host mounts for the agent. Exposes 27 of REA's 207 tools through an allowlist, and shares only frozen, hash-approved copies of selected inputs with REA. Pins REA 6.7.0, Ghidra 12.1.4 and JADX 0.7.1. Linux and macOS are verified; Windows is experimental. MIT.
+- [lalbers/agent-sandbox](https://github.com/lalbers/agent-sandbox) - `REA` Runs Claude Code and REA in rootless Podman, or a libkrun microVM per command, for analysing untrusted binaries. The threat model assumes the sample compromises both the agent and REA, so they see no host paths you did not mount and have no network route of their own. Tested only on Fedora 44 with SELinux. MIT.
 - [Junhan2/reaproof](https://github.com/Junhan2/reaproof) - `AI-RE` Rates how exposed a shipped app is to agents such as REA, and closes what it can close: source maps carrying your original source, server keys, `.env` values and `.git` folders that ended up in the build output. Rates the result on its own "rea risk" scale and cross-checks its counts against `aapt`, `dexdump`, `readelf`, `otool` and `@electron/fuses` on 22 framework test apps. MIT.
 - [MockirDev/antirea](https://github.com/MockirDev/antirea) - `AI-RE` The defensive side: a skill that puts "stop" directives in the instruction files agents read first, plus terminal shims and build hardening. It only stops agents that respect those files, and the README makes no measured claims. MIT.
 - [qybaihe/bla](https://github.com/qybaihe/bla) - `REA` Counter-REA hardening for your own builds: it plants decoys and pushes artifacts past REA's documented resource budgets while keeping runtime behaviour the same. The README separates results measured by running real REA (capacity or budget errors on ASAR, WASM, Go, EVM, PCAP, SQLite, model files and more) from its benchmark's token and cost figures, which are internal estimates. Ghidra-based paths were not tested. MIT.
+- [davepartner/anti-reverse-engineer-anything](https://github.com/davepartner/anti-reverse-engineer-anything) - `AI-RE` AREA, another defensive toolkit aimed at REA and the tools it drives (Ghidra, Frida, LLDB, DevTools and others): it strips what builds leak and closes debugging channels, with obfuscation and anti-debug steps. The README makes no measured claims. MIT.
+- [KoNit-K/papertrade-research](https://github.com/KoNit-K/papertrade-research) - `REA` Independent research on Papertrade, a perpetual-futures protocol on HyperEVM: its frontend flows, contract bytecode, fees, liquidations and PAPER reward rules. REA cross-checks the client against the contracts, alongside the official docs and public code. Research preview, English and Chinese. Apache-2.0.
 
 ## The wider wave: without confirmed REA
 

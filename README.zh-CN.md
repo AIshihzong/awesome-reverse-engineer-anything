@@ -33,7 +33,7 @@
 
 每个标签怎么核对，见[这份列表怎么保证准确](#这份列表怎么保证准确)。
 
-> 本列表中的数据与链接核对于 2026-10-21，REA 星数更新于 2026-11-01，此后新增的条目更新于 2026-10-29。REA 及其周边项目每周都在变化，引用某个数字前请先看它旁边的日期。
+> 本列表中的数据与链接核对于 2026-10-21，REA 星数更新于 2026-11-01，此后新增的条目更新于 2026-11-02。REA 及其周边项目每周都在变化，引用某个数字前请先看它旁边的日期。
 
 ## 今天就能用
 
@@ -155,6 +155,7 @@
 - [grisuno/VSL-DSP](https://github.com/grisuno/VSL-DSP) - `REA（部分）` PreSonus AudioBox VSL 系列声卡的 Linux 内核模块。仓库创建于 REA 出现之前。部分 DSP 改进的厂商参考结论（如增益寄存器与 -144 dB 底噪）借助 LazyOwn 的 `rea` 插件得出，并非整个协议分析都由 REA 完成。GPL-3.0。
 - [Slyvan25/OpenGHub](https://github.com/Slyvan25/OpenGHub) - `手工逆向` Linux 原生的罗技 G HUB 替代品，通过 HID++ 2.0 协议直接与外设通信。README 和代码中没有 AI 或 REA 的说明；逆向依据是抓包和设备文档，见仓库 `docs/lighting.md`。MIT。
 - [cudanexus/vd-streamer-linux](https://github.com/cudanexus/vd-streamer-linux) - `REA` 用 Claude Code + REA 分析 Virtual Desktop Streamer 的官方安装包，复用协议库、替换 macOS 平台层，做出 Linux 版。README 写明尚未在真实头显上验证，只测试过模拟头显。MIT。
+- [bitwisecook/quicken-2002-dumper](https://github.com/bitwisecook/quicken-2002-dumper) - `REA` 用 Python 把 Quicken 2002 的 QDF v3 数据库及几种配套文件导出成 SQLite，不装 Quicken 也能读旧账本。README 写明借助 `reverse-engineer-anything` 和 AI 完成。结论用页校验和、记录校验和加密测试向量核对过，但还没有和可信的 Quicken 导出结果对照。公有领域（Unlicense）。
 
 ### 安全分析与评测
 
@@ -164,9 +165,12 @@
 - [REA 讨论 #2254：剥离符号的 bzip2](https://github.com/morluto/rea/discussions/2254) - `REA` 把 REA 对剥离版二进制的分析结果，与未剥离的构建和源码逐条对照。
 - [UnknownHacker1/rea-groundtruth](https://github.com/UnknownHacker1/rea-groundtruth) - `REA` 把 REA 的报告与代码中的真实情况逐项比对，为它的盲区提供一键复现脚本。MIT。
 - [dagoSte/rea-safe-agents](https://github.com/dagoSte/rea-safe-agents) - `REA` 把 REA 与接收结果的 Agent 分别关进两个受限 Docker 容器：无网络、只读根文件系统、不给 capability、不挂 Docker socket，Agent 一侧零主机挂载。只通过白名单开放 REA 207 个工具中的 27 个，且只把经过哈希批准的冻结副本交给 REA。固定 REA 6.7.0、Ghidra 12.1.4、JADX 0.7.1。Linux 与 macOS 已验证，Windows 仍是实验性。MIT。
+- [lalbers/agent-sandbox](https://github.com/lalbers/agent-sandbox) - `REA` 把 Claude Code 和 REA 放进无 root 的 Podman，或每条命令一个 libkrun 微虚拟机，用来分析不可信的二进制。威胁模型假设样本能同时攻破 Agent 和 REA，所以它们看不到你没挂载的主机路径，也没有自己的网络出口。只在 Fedora 44 + SELinux 上测试过。MIT。
 - [Junhan2/reaproof](https://github.com/Junhan2/reaproof) - `AI 逆向` 评估你发布的应用对 REA 这类 Agent 暴露到什么程度，并修掉能修的部分：带着原始源码的 source map、服务端密钥、`.env` 的值、混进构建产物的 `.git` 目录。用自带的 "rea risk" 等级给出结论，并在 22 个框架测试应用上用 `aapt`、`dexdump`、`readelf`、`otool`、`@electron/fuses` 交叉核对计数。MIT。
 - [MockirDev/antirea](https://github.com/MockirDev/antirea) - `AI 逆向` 防守方的工具：在 Agent 最先读取的指令文件里放"停止"指令，再加终端 shim 和构建加固。只对遵守这些文件的 Agent 有效，README 没有给出实测数据。MIT。
 - [qybaihe/bla](https://github.com/qybaihe/bla) - `REA` 针对 REA 的防护加固，用于你自己发布的产物：植入诱饵，把产物推过 REA 文档里写明的资源上限，同时保持运行行为不变。README 把用真实 REA 跑出的结果（ASAR、WASM、Go、EVM、PCAP、SQLite、模型文件等格式触发容量或预算错误）和基准测试里的 token 与费用数字分开写明，后者是内部估算。基于 Ghidra 的路径没有测试。MIT。
+- [davepartner/anti-reverse-engineer-anything](https://github.com/davepartner/anti-reverse-engineer-anything) - `AI 逆向` AREA，又一个针对 REA 及其调用的工具（Ghidra、Frida、LLDB、DevTools 等）的防护工具包：去掉构建产物里泄露的信息、关闭调试通道，并提供混淆和反调试。README 没有给出实测数据。MIT。
+- [KoNit-K/papertrade-research](https://github.com/KoNit-K/papertrade-research) - `REA` 对 HyperEVM 上的永续合约协议 Papertrade 的独立研究：前端流程、合约字节码、费用、清算和 PAPER 奖励规则。REA 用来对照客户端与合约，同时参考官方文档和公开代码。研究预览版，中英双语。Apache-2.0。
 
 ## 同一波浪潮：未写明使用 REA 的 AI 逆向项目
 
