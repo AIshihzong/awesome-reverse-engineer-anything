@@ -33,7 +33,7 @@
 
 每个标签怎么核对，见[这份列表怎么保证准确](#这份列表怎么保证准确)。
 
-> 本列表中的数据与链接核对于 2026-10-21，REA 星数更新于 2026-11-01，此后新增的条目更新于 2026-11-02。REA 及其周边项目每周都在变化，引用某个数字前请先看它旁边的日期。
+> 本列表中的数据与链接核对于 2026-10-21，REA 星数更新于 2026-11-01，此后新增的条目更新于 2026-11-05。REA 及其周边项目每周都在变化，引用某个数字前请先看它旁边的日期。
 
 ## 今天就能用
 
@@ -197,6 +197,9 @@
 - [sickpyramid/ReaFuse](https://github.com/sickpyramid/ReaFuse) - 基于 REA 拆解两个 JS/TS 源码项目、融合它们的能力，生成新项目并验证。v0.1，Alpha。
 - [dav1dngy/era-agent](https://github.com/dav1dngy/era-agent) - 基于 REA 的逆向 Agent，加入以证据驱动的自我改进实验室。实验性，v0.1.0。
 - [alexmi256/rea-agent-docker](https://github.com/alexmi256/rea-agent-docker) - REA 的 Docker 镜像，共四个：Ghidra + Hopper 合并版，以及 ghidra、hopper、ida 单独版。IDA 镜像不包含 IDA 本身，仅支持 linux/amd64。
+- [utabk/marrow](https://github.com/utabk/marrow) - REA 的桌面图形界面，支持 macOS、Windows 和 Linux（原名 REA Studio）。原生二进制在经典的代码浏览器里打开，有反汇编列表、反编译、函数图和符号树，每个 REA 工具都有自己的表单。界面上的内容全部来自 REA 的返回结果，运行的是你自己安装的 REA。独立项目，MIT。
+- [JuanDiegoRuiz22/ReaAgents](https://github.com/JuanDiegoRuiz22/ReaAgents) - 🇪🇸 在 Windows 上给 Claude Code 隔离安装 `rea-agents` 6.8.0，所有组件按哈希固定版本：便携 Node、隔离启动器、只在项目级注册 MCP、严格的 Claude Code 权限、网络监控，并附固定版本的安全审计。非官方，MIT。
+- [ahmedmetered/anyrea](https://github.com/ahmedmetered/anyrea) - 把 REA 的 MCP Server 注册到任何读取 MCP 配置的 Agent，并把工作流 Skill 装进任何读取 `SKILL.md` 的 Agent。Node 版本不受支持时只给警告，不直接拒绝运行。早期版本，MIT。
 - [moonfruit/homebrew-tap](https://github.com/moonfruit/homebrew-tap/blob/main/Formula/rea-agents.rb) - 一位个人的 Homebrew tap，不是 homebrew-core 官方收录。
 - [czcdr/dsh-plugin-rea](https://github.com/czcdr/dsh-plugin-rea) - 第三方适配插件，把 morluto/rea 的 MCP 服务接入 DeepSeek Harness，提供 `mcp__rea__*` 工具。2.x 会自动安装 REA CLI、JDK 和 Ghidra。
 - [ShadowSwaps/REA-Reconstruction-Companion](https://github.com/ShadowSwaps/REA-Reconstruction-Companion) - Agent Skill，把 REA 的发现整理成复原所需的规格、架构、计划和验证步骤。

@@ -33,7 +33,7 @@
 
 How each tag is checked: [How this list stays accurate](#how-this-list-stays-accurate).
 
-> Figures and links in this list were checked on 2026-10-21, with REA's star count refreshed on 2026-11-01, and the entries added since refreshed on 2026-11-02. REA and the projects around it move weekly, so read the date next to a number before relying on it.
+> Figures and links in this list were checked on 2026-10-21, with REA's star count refreshed on 2026-11-01, and the entries added since refreshed on 2026-11-05. REA and the projects around it move weekly, so read the date next to a number before relying on it.
 
 > ⚠️ Reverse engineering is governed by local law, software licenses and terms of service. This list covers only public information, for learning, research, interoperability and preservation. Make sure you are allowed to analyse the target. See [Legal and controversy](#legal-and-controversy).
 
@@ -192,6 +192,9 @@ These projects came up alongside REA. Their READMEs do not say REA was used, so 
 - [sickpyramid/ReaFuse](https://github.com/sickpyramid/ReaFuse) - Builds on REA to fuse two JS/TS source projects. v0.1, alpha.
 - [dav1dngy/era-agent](https://github.com/dav1dngy/era-agent) - Evidence-driven reverse-engineering agent with a self-improvement lab. Experimental, v0.1.0.
 - [alexmi256/rea-agent-docker](https://github.com/alexmi256/rea-agent-docker) - Docker images for REA. Four variants: Ghidra + Hopper, ghidra, hopper, and ida. The IDA image does not ship IDA itself. Linux/amd64 only.
+- [utabk/marrow](https://github.com/utabk/marrow) - Desktop GUI for REA on macOS, Windows and Linux (formerly REA Studio). Native binaries open in a classic code browser with listing, decompiler, function graph and symbol tree, and every REA tool gets its own form. Everything shown comes from REA's own answers; it runs the REA you install. Independent, MIT.
+- [JuanDiegoRuiz22/ReaAgents](https://github.com/JuanDiegoRuiz22/ReaAgents) - 🇪🇸 Isolated, hash-pinned install of `rea-agents` 6.8.0 for Claude Code on Windows: a portable Node, an isolated launcher, project-only MCP registration, restrictive Claude Code permissions, a network monitor and a security audit of the pinned version. Unofficial, MIT.
+- [ahmedmetered/anyrea](https://github.com/ahmedmetered/anyrea) - Registers REA's MCP server with any agent that reads MCP configuration and installs its workflow skill into any agent that reads `SKILL.md`. On an unsupported Node version it warns instead of refusing. Early, MIT.
 - [moonfruit/homebrew-tap](https://github.com/moonfruit/homebrew-tap/blob/main/Formula/rea-agents.rb) - One person's Homebrew tap. Not in homebrew-core.
 - [czcdr/dsh-plugin-rea](https://github.com/czcdr/dsh-plugin-rea) - Third-party adapter that brings the morluto/rea MCP server into DeepSeek Harness as `mcp__rea__*` tools. Version 2.x installs the REA CLI, JDK and Ghidra for you.
 - [ShadowSwaps/REA-Reconstruction-Companion](https://github.com/ShadowSwaps/REA-Reconstruction-Companion) - Agent Skill that turns REA findings into a specification, architecture, plan and validation steps for rebuilding an app, feature or format.
