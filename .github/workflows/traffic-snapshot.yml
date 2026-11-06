@@ -1,0 +1,40 @@
+name: Traffic snapshot
+
+# GitHub keeps traffic data for 14 days only. This saves a daily copy as a
+# workflow artifact so growth can be reviewed later. The traffic API needs a
+# token with push access (fine-grained: "Administration: read-only" on this
+# repo), stored as the TRAFFIC_TOKEN secret. Without it the job skips.
+
+on:
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch traffic, referrers, paths and star count
+        env:
+          GH_TOKEN: ${{ secrets.TRAFFIC_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          if [ -z "$GH_TOKEN" ]; then
+            echo "TRAFFIC_TOKEN is not set; skipping."
+            exit 0
+          fi
+          d=$(date -u +%F)
+          mkdir -p "traffic/$d"
+          for p in views clones popular/referrers popular/paths; do
+            gh api "repos/$REPO/traffic/$p" > "traffic/$d/$(echo "$p" | tr / _).json"
+          done
+          gh api "repos/$REPO" --jq '{stars: .stargazers_count, forks: .forks_count, watchers: .subscribers_count}' > "traffic/$d/repo.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: traffic-${{ github.run_id }}
+          path: traffic/
+          retention-days: 90
+          if-no-files-found: ignore
