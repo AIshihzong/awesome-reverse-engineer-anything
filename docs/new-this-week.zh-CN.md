@@ -8,6 +8,7 @@
 | ---------- | ----------------------------------------------------------------------------------------------- | ----- | ----------------------------------------- |
 | 2026-11-04 | [ReaAgents](https://github.com/JuanDiegoRuiz22/ReaAgents)                                       | 插件    | 在 Windows 上隔离、按哈希固定版本安装 REA               |
 | 2026-11-02 | [marrow](https://github.com/utabk/marrow)                                                       | 插件    | 带经典代码浏览器的 REA 桌面界面                        |
+| 2026-10-31 | [Craft Anything](https://github.com/storytold/craft-anything)                                   | AI 逆向 | 研究目标、让 Agent 重建并与原版比对的 Rust 引擎            |
 | 2026-10-31 | [anti-reverse-engineer-anything](https://github.com/davepartner/anti-reverse-engineer-anything) | AI 逆向 | 针对 REA 及其工具的防护工具包                         |
 | 2026-10-30 | [anyrea](https://github.com/ahmedmetered/anyrea)                                                | 插件    | 把 REA 注册到任何支持 MCP 的 Agent                 |
 | 2026-10-29 | [quicken-2002-dumper](https://github.com/bitwisecook/quicken-2002-dumper)                       | REA   | 把 Quicken 2002 数据库导出成 SQLite              |
