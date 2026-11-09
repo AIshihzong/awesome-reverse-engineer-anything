@@ -231,6 +231,7 @@ REA 编排的底层工具，或同类的"给 Agent 用的逆向工具"。
 - [mrexodia/ida-pro-mcp](https://github.com/mrexodia/ida-pro-mcp) - 把 IDA Pro 接入大模型的 MCP Server。REA 的 IDA Pro 支持基于它。作者现在推荐使用官方的 [HexRaysSA/ida-mcp](https://github.com/HexRaysSA/ida-mcp)。
 - [0xshlomil/ida-free-mcp](https://github.com/0xshlomil/ida-free-mcp) - REA 的 IDA Free 原生桥接方案，见 REA 的 `docs/ida-provider.md`。
 - [LaurieWired/GhidraMCP](https://github.com/LaurieWired/GhidraMCP) - Ghidra 的 MCP Server。REA 直接调用 Ghidra 的 `analyzeHeadless`，不经过这个项目，二者是同类工具。
+- [storytold/craft-anything](https://github.com/storytold/craft-anything) - `AI 逆向` Craft Anything，出自做 Craft 系列应用的 ArtCraft 团队：纯 Rust 引擎，约 320 个检查工具（原生程序、.NET、Java、Android、Electron、网站、固件、游戏文件），每个都是 CLI 命令和 MCP 工具。它比分析多走一步：先研究目标，再让编码 Agent（首选 Claude Code）建新项目，然后和原版逐项比对，最后交付。默认是净室模式，只看访客能看到的内容；Deep 模式会读代码和文件，装了 Ghidra 时也会用。README 未提 REA。早期 alpha，2026-10-31 创建。MIT 或 Apache-2.0。
 - [N0zoM1z0/touhou-reverse-engineering](https://github.com/N0zoM1z0/touhou-reverse-engineering) - `AI 逆向` 基于 IDA Pro + Codex 的逆向笔记，以证据为先，记录运行时补丁等实验。README 未提 REA。
 
 ## 其他列表
