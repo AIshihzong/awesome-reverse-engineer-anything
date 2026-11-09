@@ -214,6 +214,7 @@
 ## 教程与深度调研
 
 - [AlicanAkyol/blindsight](https://github.com/AlicanAkyol/blindsight) - `AI 逆向` 基于 GhidraMCP/Ollama 的回归测试工具，评估初步分析结论、实际送达模型的代码覆盖率及工具写入行为。试验仅涉及两个合成 ELF 样例和一个模型；未集成 REA。Apache-2.0。
+- [REA 还是 Craft Anything？](docs/rea-vs-craft-anything.zh-CN.md) - 本列表根据两个项目自己的 README 做的对比：REA 返回证据由 Agent 决定下一步，Craft Anything 跑"研究、构建、比对"的循环，默认净室模式。
 - [ringozzt/rea-research](https://github.com/ringozzt/rea-research) - 🇨🇳 中文深度技术调研：架构、证据模型、DX-Ball 数字的真实含义、信任模型、Star 与安装量的差距，以及争议背景。仓库未附许可证，数据快照为 10-11。推荐先读。
 - [pablodiazjorge/rea-lab](https://github.com/pablodiazjorge/rea-lab) - 🇪🇸 Windows + Ghidra 环境下的 REA 搭建、练习题和工具评测。五项预注册研究、共 482 次运行，是本列表中最有决策价值的一组证据。研究 1：Claude Code 有无 REA 解出的题目数相同（30 题中 28 题），但使用 REA 时每次运行约慢一倍、花费更高。研究 2：在更难的二进制上，不使用 REA 时 24 次中解出 11 次，使用后解出 4 次，时间和花费同样约为两倍；作者标注这一差异不显著（exact McNemar，p = 0.092）。研究 3 和研究 4 也没有发现显著差异。研究 5：REA 官方 Skill 与不用 Skill 相比没有可测差异，作者改进后的版本比官方版每次运行贵 14%。结论：把 REA 用在目标明确的具体问题上，不要拿它做开放式探索。
 - [jinshi666888/rea-playbook](https://github.com/jinshi666888/rea-playbook) - 🇨🇳 动手实验：最小 Electron 靶机、带 `file:line` 引用的证据提取、MCP 探针，跑通"反编译 → 理解 → 重建"闭环。
@@ -233,7 +234,7 @@ REA 编排的底层工具，或同类的"给 Agent 用的逆向工具"。
 - [mrexodia/ida-pro-mcp](https://github.com/mrexodia/ida-pro-mcp) - 把 IDA Pro 接入大模型的 MCP Server。REA 的 IDA Pro 支持基于它。作者现在推荐使用官方的 [HexRaysSA/ida-mcp](https://github.com/HexRaysSA/ida-mcp)。
 - [0xshlomil/ida-free-mcp](https://github.com/0xshlomil/ida-free-mcp) - REA 的 IDA Free 原生桥接方案，见 REA 的 `docs/ida-provider.md`。
 - [LaurieWired/GhidraMCP](https://github.com/LaurieWired/GhidraMCP) - Ghidra 的 MCP Server。REA 直接调用 Ghidra 的 `analyzeHeadless`，不经过这个项目，二者是同类工具。
-- [storytold/craft-anything](https://github.com/storytold/craft-anything) - `AI 逆向` Craft Anything，出自做 Craft 系列应用的 ArtCraft 团队：纯 Rust 引擎，约 320 个检查工具（原生程序、.NET、Java、Android、Electron、网站、固件、游戏文件），每个都是 CLI 命令和 MCP 工具。它比分析多走一步：先研究目标，再让编码 Agent（首选 Claude Code）建新项目，然后和原版逐项比对，最后交付。默认是净室模式，只看访客能看到的内容；Deep 模式会读代码和文件，装了 Ghidra 时也会用。README 未提 REA。早期 alpha，2026-10-31 创建。MIT 或 Apache-2.0。
+- [storytold/craft-anything](https://github.com/storytold/craft-anything) - `AI 逆向` Craft Anything，出自做 Craft 系列应用的 ArtCraft 团队：纯 Rust 引擎，约 320 个检查工具（原生程序、.NET、Java、Android、Electron、网站、固件、游戏文件），每个都是 CLI 命令和 MCP 工具。它比分析多走一步：先研究目标，再让编码 Agent（首选 Claude Code）建新项目，然后和原版逐项比对，最后交付。默认是净室模式，只看访客能看到的内容；Deep 模式会读代码和文件，装了 Ghidra 时也会用。README 未提 REA，对比见 [REA 还是 Craft Anything？](docs/rea-vs-craft-anything.zh-CN.md)。早期 alpha，2026-10-31 创建。MIT 或 Apache-2.0。
 - [N0zoM1z0/touhou-reverse-engineering](https://github.com/N0zoM1z0/touhou-reverse-engineering) - `AI 逆向` 基于 IDA Pro + Codex 的逆向笔记，以证据为先，记录运行时补丁等实验。README 未提 REA。
 
 ## 其他列表
