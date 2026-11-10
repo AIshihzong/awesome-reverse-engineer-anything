@@ -41,7 +41,7 @@ How each tag is checked: [How this list stays accurate](#how-this-list-stays-acc
 
 ## Use it today
 
-Open-source projects you can run now, listed by the app they replace or work with. The [full index](docs/by-app.md) has 37 rows with license and status for each.
+Open-source projects you can run now, listed by the app they replace or work with. The [full index](docs/by-app.md) has 38 rows with license and status for each.
 
 | Instead of, or works with | Project                                                                   | Tag                    | Note                                                              |
 | ------------------------- | ------------------------------------------------------------------------- | ---------------------- | ----------------------------------------------------------------- |
@@ -180,6 +180,7 @@ These projects came up alongside REA. Their READMEs do not say REA was used, so 
 - [AsyncFinn/rook](https://github.com/AsyncFinn/rook) - `Rebuild` Rust reimplementation of the Roblox engine, tested against Studio recordings. Early development. Apache-2.0.
 - [tallowmere/free-heroes4](https://github.com/tallowmere/free-heroes4) - `Rebuild` C++23 reimplementation of the Heroes of Might and Magic IV engine. Needs GOG game files. Unfinished. GPL-3.0.
 - [designgears/wine-uwp](https://github.com/designgears/wine-uwp) - `AI-RE` Patches Wine to run Windows Store apps such as Shapr3D. Not clean-room: it uses Microsoft's own components. The AI claim comes from the author's X post. No license file.
+- [DESIGN:OS Studio](https://github.com/jangtrinh/design-os-studio) - `Manual RE` Independent desktop studio that reads and writes the Figma .fig format (fig-kiwi containers, writes version 106) and reimplements editor behaviour locally, with a bundled stdio MCP server (39 tools). Source-available, not open source (PolyForm Shield 1.0.0).
 - [Universal Modder](https://github.com/rehan-remade/universal-modder) - `AI-RE` Claude Code / Codex plugin that mods games you own (for example, Minecraft content inside GTA V). A modding toolkit, not a reimplementation. MIT.
 - [Firefighter: DOS binary to Rust](https://x.com/esrtweet/status/2106983467141509385) - `AI-RE` Eric S. Raymond recovered the Pascal logic of an old DOS game from its binary and rewrote it in Rust. The work predates REA. No public code found.
 - [Modern Warfare 2 decompilation](https://x.com/momo5502/status/2108886652391141721) - `AI-RE` Author reports 17 agents over three months, 83% of functions byte-matched. Code is not public.
