@@ -2,7 +2,16 @@
 
 **English** · [简体中文](is-it-rea.zh-CN.md)
 
-Many cases are described as "built with REA". This page checks each one against the project's own README, the author's post, or the official showcase, and records what we found. Checked on 2026-10-14. X posts could not be opened from our environment, so for them we rely on the third-party case records named in the table.
+Many cases are described as "built with REA". This page checks each one against the project's own README, the author's post, or the official showcase, and records what we found. First checked on 2026-10-14; the "README says REA?" column was re-checked against every linked repository's current README and agent files on 2026-11-10, with no changes. X posts could not be opened from our environment, so for them we rely on the third-party case records named in the table.
+
+**Summary (39 rows, 2026-11-10):**
+
+- **26 confirmed:** the README, the agent instructions (AGENTS.md, CLAUDE.md) or the official showcase says REA was used.
+- **3 partial:** REA was used for part of the work only.
+- **4 not verified:** 2 claimed only in the author's post, 2 with no source naming the tool.
+- **6 not REA:** other AI tools (mostly Claude Code or Codex with Ghidra or IDA) or manual reverse engineering.
+
+Whether REA helps is a separate question. The two controlled comparisons in this list, [rea-lab](https://github.com/pablodiazjorge/rea-lab) (482 preregistered runs) and [leanrea](https://github.com/aicodeking/leanrea) (36 runs), found no significant gain in solve rate from REA, at higher time and cost. Both are small. See [Does REA help? The evidence](../README.md#does-rea-help-the-evidence).
 
 | Case                                                                                       | README says REA?                     | Other source                             | Result                                                                                                                                  |
 | ------------------------------------------------------------------------------------------ | ------------------------------------ | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
