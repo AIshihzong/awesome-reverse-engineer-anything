@@ -98,7 +98,7 @@ The pages in this list: [Find projects by the app they replace](docs/by-app.md),
 - [rea-agents on npm](https://www.npmjs.com/package/rea-agents) - The published CLI and MCP server.
 - [The REA skill on skills.sh](https://skills.sh/morluto/rea/reverse-engineer-anything) - An agent skill with the investigation workflow instructions only.
 - [The Chinese README](https://github.com/morluto/rea/blob/main/docs/readme/README_zh.md) - The official Simplified Chinese documentation.
-- [How the MCP tool catalog is generated](https://github.com/morluto/rea/blob/main/docs/mcp-contracts.md#generated-catalog) - How the full list of tools, providers and CLI commands is produced. The generated output is not committed.
+- [How the MCP tool catalog is generated](https://github.com/morluto/rea/blob/main/docs/reference/mcp-contracts.md#generated-catalog) - How the full list of tools, providers and CLI commands is produced. The generated output is not committed.
 - [morluto/awesome-reverse-engineering](https://github.com/morluto/awesome-reverse-engineering) - A general reverse-engineering tools and learning list, maintained by REA's own author. CC0-1.0.
 - [The Discord community](https://discord.gg/GkcryMnJDM) - Official Q&A and Show and Tell.
 

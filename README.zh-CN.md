@@ -102,7 +102,7 @@
 - [rea-agents（npm）](https://www.npmjs.com/package/rea-agents) - CLI 与 MCP Server 的发布包。
 - [skills.sh 上的 REA Skill](https://skills.sh/morluto/rea/reverse-engineer-anything) - 只安装调查工作流指令的 Agent Skill。
 - [REA 中文 README](https://github.com/morluto/rea/blob/main/docs/readme/README_zh.md) - 官方简体中文文档。
-- [MCP 工具目录的生成说明](https://github.com/morluto/rea/blob/main/docs/mcp-contracts.md#generated-catalog) - 说明如何生成全部工具、Provider 和 CLI 命令清单（生成结果不入库）。
+- [MCP 工具目录的生成说明](https://github.com/morluto/rea/blob/main/docs/reference/mcp-contracts.md#generated-catalog) - 说明如何生成全部工具、Provider 和 CLI 命令清单（生成结果不入库）。
 - [morluto/awesome-reverse-engineering](https://github.com/morluto/awesome-reverse-engineering) - REA 作者维护的通用逆向工程工具与学习资源列表，CC0-1.0。
 - [Discord 社区](https://discord.gg/GkcryMnJDM) - 官方 Q&A 与 Show and Tell。
 
