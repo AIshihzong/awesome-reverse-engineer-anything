@@ -18,7 +18,7 @@
 
 **一句话结论：**[转发最多的 6 个案例](#先看这些)里，只有 DX-Ball 在自己的仓库里写明用了 REA；另外 2 个只在作者的帖子里这么说，其余 3 个用的是别的工具，或者还没核实。[逐条核查](docs/is-it-rea.zh-CN.md)
 
-**[按被替代的软件找项目](docs/by-app.zh-CN.md)** · **[REA 说法核实](docs/is-it-rea.zh-CN.md)** · **[REA 到底有没有用：对照实验](#rea-到底有没有用对照实验)** · **[本周新增](docs/new-this-week.zh-CN.md)** · **[投稿案例](https://github.com/AIshihzong/awesome-reverse-engineer-anything/issues/new?template=case.yml)**
+**[REA 是什么？常见问题](docs/what-is-rea.zh-CN.md)** · **[按被替代的软件找项目](docs/by-app.zh-CN.md)** · **[REA 说法核实](docs/is-it-rea.zh-CN.md)** · **[REA 到底有没有用：对照实验](#rea-到底有没有用对照实验)** · **[本周新增](docs/new-this-week.zh-CN.md)** · **[投稿案例](https://github.com/AIshihzong/awesome-reverse-engineer-anything/issues/new?template=case.yml)**
 
 > ⭐ **点个 Star**，在 GitHub 动态里随时找到这份列表；或者 **Watch → Custom → Releases**，每周收到一期 [AI 逆向周报](https://github.com/AIshihzong/awesome-reverse-engineer-anything/releases)。
 
@@ -93,7 +93,7 @@
 - [社区讨论与媒体](#社区讨论与媒体)
 - [合规与争议](#合规与争议)
 
-本列表的其他页面：[按被替代的软件找项目](docs/by-app.zh-CN.md)、[REA 说法核实](docs/is-it-rea.zh-CN.md)、[本周新增](docs/new-this-week.zh-CN.md)、[X 上的案例与帖子](docs/x-posts.zh-CN.md) · [English](docs/x-posts.md)、[关于 REA 的帖子与报道](docs/press-and-posts.zh-CN.md)，以及[投稿模板](.github/ISSUE_TEMPLATE/case.yml)。新增条目的规则见[贡献](#贡献)。
+本列表的其他页面：[REA 是什么？常见问题](docs/what-is-rea.zh-CN.md)、[按被替代的软件找项目](docs/by-app.zh-CN.md)、[REA 说法核实](docs/is-it-rea.zh-CN.md)、[本周新增](docs/new-this-week.zh-CN.md)、[X 上的案例与帖子](docs/x-posts.zh-CN.md) · [English](docs/x-posts.md)、[关于 REA 的帖子与报道](docs/press-and-posts.zh-CN.md)，以及[投稿模板](.github/ISSUE_TEMPLATE/case.yml)。新增条目的规则见[贡献](#贡献)。
 
 ## 官方资源
 

@@ -103,3 +103,12 @@ defaults:
       lang: zh-CN
       title: "X（Twitter）上的 REA 热门帖子"
       description: "X 上传播最广的 REA 与 AI 逆向帖子。大多是作者本人的说法，未经独立核实。"
+  - scope: { path: "docs/what-is-rea.md" }
+    values:
+      title: "What is REA (Reverse Engineer Anything)? Install, safety and examples FAQ"
+      description: "REA (morluto/rea) is an open-source MCP server and CLI that lets AI coding agents reverse-engineer apps, binaries, APKs and firmware. How to install rea-agents, where to get it safely, legality, examples and evidence."
+  - scope: { path: "docs/what-is-rea.zh-CN.md" }
+    values:
+      lang: zh-CN
+      title: "REA（Reverse Engineer Anything）是什么？安装、安全与案例常见问题"
+      description: "REA（morluto/rea）是让 AI 编程 Agent 逆向应用、二进制、APK 和固件的开源 MCP 服务器与命令行工具。如何安装 rea-agents、从哪里安全获取、是否合法、有哪些案例和证据。"
