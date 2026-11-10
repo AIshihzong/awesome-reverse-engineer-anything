@@ -239,6 +239,7 @@ Tools that REA drives, or tools in the same category.
 
 ## Other lists
 
+- [AIshihzong/awesome-tv-debloat](https://github.com/AIshihzong/awesome-tv-debloat) - Sister list from the same maintainer: 80+ projects where coding agents and other tools strip ads and bloat from smart TVs (CleanYourTV and the wave after it), sorted by TV, each checked for root and undo. Bilingual. CC0-1.0.
 - [sqwu/rea-gems](https://github.com/sqwu/rea-gems) - Daily-updated gallery of REA cases, built from official pages, GitHub, HN and Reddit. Includes some mirror clones; check before use.
 - [miles990/rea-case-rankings](https://github.com/miles990/rea-case-rankings) - Daily scored ranking of REA cases with JSON, RSS and llms.txt (formerly `rea-awesome`).
 - [kaixinbaba/awesome-rea](https://github.com/kaixinbaba/awesome-rea) - Catalog of reverse-engineering, reimplementation and compatible alternatives ([awesomerea.com](https://awesomerea.com)). REA is not required.
