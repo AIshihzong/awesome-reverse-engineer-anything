@@ -31,6 +31,8 @@ jobs:
             'REA reverse engineering'
             'reverse engineered claude code'
             'clean-room reimplementation rust'
+            'craft-anything'
+            '"craft anything"'
           )
 
           # Repos already linked anywhere in the list.
@@ -72,7 +74,7 @@ jobs:
                 # matches words like "reactive", so stars are not enough.
                 {
                   d = tolower($4)
-                  re = d ~ /reverse[- ]?engineer|decompil|disassembl|clean[- ]?room|reimplement|ghidra|rea-agents|morluto/
+                  re = d ~ /reverse[- ]?engineer|decompil|disassembl|clean[- ]?room|reimplement|ghidra|rea-agents|morluto|craft[- ]anything/
                   rea = d ~ /(^|[^a-z])rea([^a-z]|$)/ && d ~ /mcp|binar|apk|firmware|skill|plugin|protocol|rebuil/
                   name = tolower($1) ~ /reverse-?engineer|\/rea[-_]|[-_]rea($|[-_])/
                 }
