@@ -141,6 +141,7 @@
 - [az9713/wispr-flow-rea-teardown](https://github.com/az9713/wispr-flow-rea-teardown) - `REA` 拆解 Wispr Flow 的语音采集、转写和粘贴流程。每条结论标注"已证实、推断或隐藏"，再用 64 行代码在本地重建精简版。README 未提 morluto/rea，流程参考了一个教程视频。
 - [iammukeshm/hexgrab](https://github.com/iammukeshm/hexgrab) - `REA` 用 REA 研究 PowerToys 取色器的已发布二进制，然后写出的 .NET 10 小工具。MIT。
 - [AdamLinCodes/AdamTerm](https://github.com/AdamLinCodes/AdamTerm) - `REA` 用 REA 研究 Ghostty 后做的极简 macOS 终端，基于 SwiftTerm。仓库未附许可证。
+- [jangtrinh/design-os-studio](https://github.com/jangtrinh/design-os-studio) - `REA` 独立的桌面设计工作室，可读写 Figma 的 .fig 格式（fig-kiwi 容器，写出 version 106），并在本地重实现编辑器行为，附带 stdio MCP 服务器（39 个工具）。README 未提及 REA；公开规格写明使用了 `rea`（morluto/rea 6.7.0），见 [E1-4](https://github.com/jangtrinh/design-os-studio/blob/df14c593e86edcc039adc2c67067bf8db64e9e84/docs/specs/v0.6/E1-4-styles-hold-variable-aliases.md)。仓库是 **source-available（PolyForm Shield 1.0.0），不是开源协议**。
 - [JimLiu/baocut](https://github.com/JimLiu/baocut) - `REA` 宝玉（[@dotey](https://x.com/dotey/status/2109151666020794711)）用 REA 分析 Claude Slides 的网页前端，再用 Claude Code 重写编辑器。README 未提 REA，REA 的说明在作者帖子里。仓库是 **source-available（BaoCut Community License 1.0），不是开源协议**。
 - [LilZeeCN/zee-rp](https://github.com/LilZeeCN/zee-rp) - `REA` 逆向 Axure RP 的 `.rp` 原型文件格式，提供 CLI 和 MCP，让 AI 读写原型。REA 的使用说明在作者回复中，README 未提。目前只在 macOS 和 Axure RP 11 上验证过。MIT。
 - [wquguru/cameo](https://github.com/wquguru/cameo) - `待核实` 链接的仓库是作者自己开发的原创桌面宠物应用，不是 REA 的产出。据作者的后续帖子，REA 用于产出伪代码，再由 Claude Code 还原交互，但重建源码未公开。
@@ -185,7 +186,6 @@
 - [AsyncFinn/rook](https://github.com/AsyncFinn/rook) - `重写` 用 Rust 重实现 Roblox 引擎，以 Studio 录制结果做一致性测试。早期开发中，Apache-2.0。
 - [tallowmere/free-heroes4](https://github.com/tallowmere/free-heroes4) - `重写` C++23 重实现《魔法门之英雄无敌 IV》引擎，需要 GOG 原版文件，尚未完成。GPL-3.0。
 - [designgears/wine-uwp](https://github.com/designgears/wine-uwp) - `AI 逆向` 扩展 Wine，让 Shapr3D 等 Windows 商店应用在 Linux 上运行。它不是 clean-room 重实现：会打补丁并使用微软自己的组件。Claude 辅助的说法来自作者的 X 帖子。仓库未附许可证。
-- [DESIGN:OS Studio](https://github.com/jangtrinh/design-os-studio) - `手工逆向` 独立的桌面设计工作室，可读写 Figma 的 .fig 格式（fig-kiwi 容器，写出 version 106），并在本地重实现编辑器行为，附带 stdio MCP 服务器（39 个工具）。仓库是 **source-available（PolyForm Shield 1.0.0），不是开源协议**。
 - [rehan-remade/universal-modder](https://github.com/rehan-remade/universal-modder) - `AI 逆向` 给 Claude Code / Codex 用的 Mod 工具集，用 AI 分析游戏引擎和素材格式，制作跨游戏的内容 Mod（例如把 Minecraft 角色放进 GTA V）。这是对你自己拥有的游戏做 Mod，不是重写游戏。MIT。
 - [Firefighter：DOS 二进制到 Rust](https://x.com/esrtweet/status/2106983467141509385) - `AI 逆向` Eric S. Raymond 用 AI 从老 DOS 游戏的二进制中恢复 Pascal 逻辑，再转写为 Rust。作者称工作完成于几个月前，10 月 5 日只是分享日期。未找到公开代码。
 - [《现代战争 2》多 Agent 反编译](https://x.com/momo5502/status/2108886652391141721) - `AI 逆向` 作者称 17 个 Agent 协作约三个月，83% 的函数达到字节级匹配。代码不公开。
