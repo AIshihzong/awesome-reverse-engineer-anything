@@ -1,0 +1,42 @@
+name: Project
+description: Suggest a Switch recomp or native port, or correct an entry / 推荐项目或纠错
+title: "[Project] "
+labels: ["project"]
+body:
+  - type: input
+    id: link
+    attributes:
+      label: Repository link / 仓库链接
+      placeholder: https://github.com/owner/repo
+    validations:
+      required: true
+  - type: input
+    id: game
+    attributes:
+      label: Game and version / 游戏和版本
+      placeholder: Tears of the Kingdom 1.4.3
+  - type: dropdown
+    id: device
+    attributes:
+      label: Runs on / 运行设备
+      multiple: true
+      options:
+        - iPhone / iPad
+        - Mac
+        - Windows
+        - Linux
+        - Steam Deck
+        - Android
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: One line on what it does and how far it gets, or the correction / 一句话介绍和完成度，或纠错内容
+  - type: checkboxes
+    id: rules
+    attributes:
+      label: Checks
+      options:
+        - label: It is open source, requires the player's own copy of the game, and does not include or link to games, keys, firmware or pre-built games. It is not an emulator. / 开源，要求玩家使用自己的游戏，不包含也不链接游戏、密钥、固件或已构建的游戏，也不是模拟器。
+          required: true
