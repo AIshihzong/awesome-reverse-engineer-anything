@@ -2,6 +2,8 @@
 
 [English](is-it-rea.md) · **简体中文**
 
+> [在 GitHub 上点个 ⭐](https://github.com/AIshihzong/awesome-reverse-engineer-anything)方便下次找到，或者 **Watch → Custom → Releases** 订阅 [AI 逆向周报](https://github.com/AIshihzong/awesome-reverse-engineer-anything/releases)。
+
 很多案例都写着"用 REA 做的"。这一页把每个案例和项目自己的 README、作者帖子或官方案例逐一对照，并记录结果。首次核对于 2026-10-14；2026-11-10 又对照每个仓库当前的 README 和 Agent 说明文件重新核对了「README 写明用了 REA？」一栏，没有变化。我们的环境无法打开 X 帖子，所以对于 X 上的案例，我们依据的是表格里注明的第三方案例记录。
 
 **汇总（共 39 行，2026-11-10）：**

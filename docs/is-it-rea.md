@@ -2,6 +2,8 @@
 
 **English** · [简体中文](is-it-rea.zh-CN.md)
 
+> ⭐ [Star the list on GitHub](https://github.com/AIshihzong/awesome-reverse-engineer-anything) to find it again, or **Watch → Custom → Releases** for the [weekly digest](https://github.com/AIshihzong/awesome-reverse-engineer-anything/releases).
+
 Many cases are described as "built with REA". This page checks each one against the project's own README, the author's post, or the official showcase, and records what we found. First checked on 2026-10-14; the "README says REA?" column was re-checked against every linked repository's current README and agent files on 2026-11-10, with no changes. X posts could not be opened from our environment, so for them we rely on the third-party case records named in the table.
 
 **Summary (39 rows, 2026-11-10):**

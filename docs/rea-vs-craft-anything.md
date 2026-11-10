@@ -2,6 +2,8 @@
 
 **English** · [简体中文](rea-vs-craft-anything.zh-CN.md)
 
+> ⭐ [Star the list on GitHub](https://github.com/AIshihzong/awesome-reverse-engineer-anything) to find it again, or **Watch → Custom → Releases** for the [weekly digest](https://github.com/AIshihzong/awesome-reverse-engineer-anything/releases).
+
 Both projects give a coding agent reverse-engineering tools over MCP and a CLI, and both were among GitHub's fastest-growing repos in autumn 2026. They answer different questions. **REA explains how a program works and shows the evidence. Craft Anything takes a target and has an agent build your own version of it, then checks the build against the original.**
 
 Everything below comes from each project's own README, read on 2026-11-09. Both change quickly, so check the sources before relying on a detail. Neither project mentions the other.

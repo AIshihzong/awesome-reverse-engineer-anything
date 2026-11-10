@@ -2,6 +2,8 @@
 
 [English](rea-vs-craft-anything.md) · **简体中文**
 
+> [在 GitHub 上点个 ⭐](https://github.com/AIshihzong/awesome-reverse-engineer-anything)方便下次找到，或者 **Watch → Custom → Releases** 订阅 [AI 逆向周报](https://github.com/AIshihzong/awesome-reverse-engineer-anything/releases)。
+
 两个项目都通过 MCP 和 CLI 给编码 Agent 提供逆向工具，也都是 2026 年秋天 GitHub 上涨得最快的仓库之一。但它们回答的是不同的问题。**REA 告诉你一个程序是怎么工作的，并给出证据。Craft Anything 拿到一个目标后，让 Agent 做出你自己的版本，再拿它和原版比对。**
 
 下面的内容都来自两个项目自己的 README，读取时间是 2026-11-09。两边更新都很快，引用细节前请再看一眼原文。两个项目都没有提到对方。
