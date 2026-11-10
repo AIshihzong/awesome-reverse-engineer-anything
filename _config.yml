@@ -29,8 +29,8 @@ relative_links:
 
 # To verify the site in Google Search Console, paste the code from the
 # "HTML tag" method here (the content="..." value only) and uncomment:
-# webmaster_verifications:
-#   google: PASTE_CODE_HERE
+webmaster_verifications:
+  google: H8JTmbIo9CUU-2sjBK5PWhW39h07-OT8sIsEyAneTvI
 
 exclude:
   - AGENTS.md
