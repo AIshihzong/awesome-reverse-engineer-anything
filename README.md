@@ -20,7 +20,7 @@
 
 **[What is REA? FAQ](docs/what-is-rea.md)** · **[Find a project by the app it replaces](docs/by-app.md)** · **[Did it really use REA?](docs/is-it-rea.md)** · **[Does REA help? The evidence](#does-rea-help-the-evidence)** · **[New this week](docs/new-this-week.md)** · **[Submit a case](https://github.com/AIshihzong/awesome-reverse-engineer-anything/issues/new?template=case.yml)**
 
-> ⭐ **Star this repo** to save it and keep it in your GitHub feed (no need to fork unless you are sending a pull request), or **Watch → Custom → Releases** to get one [weekly digest](https://github.com/AIshihzong/awesome-reverse-engineer-anything/releases) a week of what AI agents took apart.
+> ⭐ **[Star this repo](https://github.com/AIshihzong/awesome-reverse-engineer-anything)** to save it and keep it in your GitHub feed (no need to fork unless you are sending a pull request), or **Watch → Custom → Releases** to get one [weekly digest](https://github.com/AIshihzong/awesome-reverse-engineer-anything/releases) a week of what AI agents took apart.
 
 "REA" started as [morluto/rea](https://github.com/morluto/rea) (Reverse Engineer Anything, 417k+ stars as of 2026-11-01), an open-source MCP server and CLI (npm `rea-agents`) that lets coding agents inspect native binaries, Electron apps, .NET assemblies, APKs, firmware and websites without their source code, explain how a feature works with evidence, and rebuild it. REA itself does not decompile; it orchestrates Hopper, Ghidra, IDA and JADX for the agent.
 
@@ -307,4 +307,4 @@ Thanks to [@Rakesh-7989](https://github.com/Rakesh-7989) for the CI, the validat
 
 ---
 
-If this list saved you a search, a ⭐ helps the next person find it. New cases arrive every week in the [weekly digest](https://github.com/AIshihzong/awesome-reverse-engineer-anything/releases).
+If this list saved you a search, a [⭐](https://github.com/AIshihzong/awesome-reverse-engineer-anything) helps the next person find it. New cases arrive every week in the [weekly digest](https://github.com/AIshihzong/awesome-reverse-engineer-anything/releases).
