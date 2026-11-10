@@ -2,6 +2,8 @@
 
 **English** · [简体中文](what-is-rea.zh-CN.md) · [Back to the list](../README.md)
 
+> ⭐ [Star the list on GitHub](https://github.com/AIshihzong/awesome-reverse-engineer-anything) to find it again, or **Watch → Custom → Releases** for the [weekly digest](https://github.com/AIshihzong/awesome-reverse-engineer-anything/releases).
+
 Short answers to the questions people ask most about REA, with links to the sources. Facts were checked for the main list; star counts and versions change weekly, so read the date next to a number.
 
 ## What is REA?

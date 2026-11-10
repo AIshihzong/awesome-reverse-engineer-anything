@@ -2,6 +2,8 @@
 
 [English](what-is-rea.md) · **简体中文** · [返回主列表](../README.zh-CN.md)
 
+> [在 GitHub 上点个 ⭐](https://github.com/AIshihzong/awesome-reverse-engineer-anything)方便下次找到，或者 **Watch → Custom → Releases** 订阅 [AI 逆向周报](https://github.com/AIshihzong/awesome-reverse-engineer-anything/releases)。
+
 关于 REA 最常被问到的问题，每条都附来源链接。事实已在主列表中核查过；Star 数和版本每周都在变，请看数字旁边的日期。
 
 ## REA 是什么？
