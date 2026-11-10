@@ -245,6 +245,7 @@ REA 编排的底层工具，或同类的"给 Agent 用的逆向工具"。
 ## 其他列表
 
 - [AIshihzong/awesome-tv-debloat](https://github.com/AIshihzong/awesome-tv-debloat) - 同一维护者的姊妹清单：CleanYourTV 走红后，用编程 Agent 和其他工具给智能电视去广告、精简的 80 多个项目，按电视品牌整理，每条写明要不要 root、能不能还原。中英双语，CC0-1.0。
+- [AIshihzong/awesome-switch-recomp](https://github.com/AIshihzong/awesome-switch-recomp) - 同一维护者的姊妹清单：60 个 Switch 和 Switch 2 静态重编译和原生移植项目，很多由 AI 编程 Agent 完成，按设备（iPhone、Mac、PC、Steam Deck、Android）整理，每条写明需要哪个游戏版本。只收自备正版。中英双语，CC0-1.0。
 - [sqwu/rea-gems](https://github.com/sqwu/rea-gems) - 每天自动更新的 REA 案例库，抓取官方案例、GitHub、HN 和 Reddit。镜像克隆较多，需人工甄别。
 - [miles990/rea-case-rankings](https://github.com/miles990/rea-case-rankings) - 按统一评分标准排名的 REA 案例榜，每日更新，提供 JSON / RSS / llms.txt。原名 `rea-awesome`，已改名。
 - [kaixinbaba/awesome-rea](https://github.com/kaixinbaba/awesome-rea) - 开源逆向、重实现与兼容替代品目录（[awesomerea.com](https://awesomerea.com)），不要求使用 REA。
