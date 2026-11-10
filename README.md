@@ -18,7 +18,7 @@
 
 **The short answer:** of the six [most-shared cases](#most-shared), only one, DX-Ball, says in its own repo that it used REA. Two more say so only in the author's post, and the other three used other tools or are unverified. [See every check](docs/is-it-rea.md).
 
-**[Find a project by the app it replaces](docs/by-app.md)** · **[Did it really use REA?](docs/is-it-rea.md)** · **[Does REA help? The evidence](#does-rea-help-the-evidence)** · **[New this week](docs/new-this-week.md)** · **[Submit a case](https://github.com/AIshihzong/awesome-reverse-engineer-anything/issues/new?template=case.yml)**
+**[What is REA? FAQ](docs/what-is-rea.md)** · **[Find a project by the app it replaces](docs/by-app.md)** · **[Did it really use REA?](docs/is-it-rea.md)** · **[Does REA help? The evidence](#does-rea-help-the-evidence)** · **[New this week](docs/new-this-week.md)** · **[Submit a case](https://github.com/AIshihzong/awesome-reverse-engineer-anything/issues/new?template=case.yml)**
 
 > ⭐ **Star this repo** to keep the list in your GitHub feed, or **Watch → Custom → Releases** to get one [weekly digest](https://github.com/AIshihzong/awesome-reverse-engineer-anything/releases) a week of what AI agents took apart.
 
@@ -89,7 +89,7 @@ Ran your own comparison? [Submit it](https://github.com/AIshihzong/awesome-rever
 - [Discussion and press](#discussion-and-press)
 - [Legal and controversy](#legal-and-controversy)
 
-The pages in this list: [Find projects by the app they replace](docs/by-app.md), [Did it really use REA?](docs/is-it-rea.md) for a claim check on each case, [New this week](docs/new-this-week.md), [Posts from X](docs/x-posts.md) for the intro posts, the roundups, the official accounts, the controversy and the case-by-case accounts from users, [Press and posts about REA](docs/press-and-posts.md), and the [case submission form](.github/ISSUE_TEMPLATE/case.yml). The [Contributing](#contributing) section has the rules for a new entry.
+The pages in this list: [What is REA? FAQ](docs/what-is-rea.md), [Find projects by the app they replace](docs/by-app.md), [Did it really use REA?](docs/is-it-rea.md) for a claim check on each case, [New this week](docs/new-this-week.md), [Posts from X](docs/x-posts.md) for the intro posts, the roundups, the official accounts, the controversy and the case-by-case accounts from users, [Press and posts about REA](docs/press-and-posts.md), and the [case submission form](.github/ISSUE_TEMPLATE/case.yml). The [Contributing](#contributing) section has the rules for a new entry.
 
 ## Official resources
 
