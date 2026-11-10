@@ -35,7 +35,7 @@
 
 每个标签怎么核对，见[这份列表怎么保证准确](#这份列表怎么保证准确)。
 
-> 本列表中的数据与链接核对于 2026-10-21，REA 星数更新于 2026-11-01，此后新增的条目更新于 2026-11-05。REA 及其周边项目每周都在变化，引用某个数字前请先看它旁边的日期。
+> 本列表中的数据与链接核对于 2026-10-21，REA 星数更新于 2026-11-01，此后新增的条目更新于 2026-11-10。REA 及其周边项目每周都在变化，引用某个数字前请先看它旁边的日期。
 
 ## 今天就能用
 
@@ -158,6 +158,8 @@
 - [Slyvan25/OpenGHub](https://github.com/Slyvan25/OpenGHub) - `手工逆向` Linux 原生的罗技 G HUB 替代品，通过 HID++ 2.0 协议直接与外设通信。README 和代码中没有 AI 或 REA 的说明；逆向依据是抓包和设备文档，见仓库 `docs/lighting.md`。MIT。
 - [cudanexus/vd-streamer-linux](https://github.com/cudanexus/vd-streamer-linux) - `REA` 用 Claude Code + REA 分析 Virtual Desktop Streamer 的官方安装包，复用协议库、替换 macOS 平台层，做出 Linux 版。README 写明尚未在真实头显上验证，只测试过模拟头显。MIT。
 - [bitwisecook/quicken-2002-dumper](https://github.com/bitwisecook/quicken-2002-dumper) - `REA` 用 Python 把 Quicken 2002 的 QDF v3 数据库及几种配套文件导出成 SQLite，不装 Quicken 也能读旧账本。README 写明借助 `reverse-engineer-anything` 和 AI 完成。结论用页校验和、记录校验和加密测试向量核对过，但还没有和可信的 Quicken 导出结果对照。公有领域（Unlicense）。
+- [Shirozo/xid8300-linux](https://github.com/Shirozo/xid8300-linux) - `REA` Matica XID8300 / XID8100 证卡打印机的 Linux CUPS 过滤器、网络后端和 PPD。README 写明由 Claude Code 驱动 REA 分析 Windows 驱动、还原 TCP 协议，再写出驱动；已在 XID8100 上打印成功，很多选项尚未实测。不含厂商代码。GPL-2.0-or-later。
+- [nicolvus/a6000-fw-decomp](https://github.com/nicolvus/a6000-fw-decomp) - `REA（Agent 说明）` 🇪🇸 逆向 Sony A6000 固件 3.21，实现全电子快门。2 字节补丁让真机静音拍摄成功；之后一个版本让相机无法开机，后经 SWD 救回。README 没写用的工具，仓库的 AGENTS.md 要求 Agent 先用 REA、Ghidra 作备用。实验性，只在一台相机上测过。MIT。
 
 ### 安全分析与评测
 
@@ -186,12 +188,14 @@
 - [rehan-remade/universal-modder](https://github.com/rehan-remade/universal-modder) - `AI 逆向` 给 Claude Code / Codex 用的 Mod 工具集，用 AI 分析游戏引擎和素材格式，制作跨游戏的内容 Mod（例如把 Minecraft 角色放进 GTA V）。这是对你自己拥有的游戏做 Mod，不是重写游戏。MIT。
 - [Firefighter：DOS 二进制到 Rust](https://x.com/esrtweet/status/2106983467141509385) - `AI 逆向` Eric S. Raymond 用 AI 从老 DOS 游戏的二进制中恢复 Pascal 逻辑，再转写为 Rust。作者称工作完成于几个月前，10 月 5 日只是分享日期。未找到公开代码。
 - [《现代战争 2》多 Agent 反编译](https://x.com/momo5502/status/2108886652391141721) - `AI 逆向` 作者称 17 个 Agent 协作约三个月，83% 的函数达到字节级匹配。代码不公开。
+- [ruguevara/zx-reaper](https://github.com/ruguevara/zx-reaper) - `AI 逆向` 一套 Agent 工具（Claude Code 或 Codex），把 ZX Spectrum 48K 游戏变成可逐字节重建的带注释汇编，再分阶段移植到 Python，每一阶段都以上一阶段为基准测试。借鉴了 REA 的证据规范，但没有使用 REA。无许可证文件。
 
 ## 插件与集成
 
 - [zhaofeng130/dsh-rea](https://github.com/zhaofeng130/dsh-rea) - DeepSeek Harness 适配器，在每个会话中注册 REA Skill 以及 `rea` / `rea_doctor` 工具。
 - [ya123-4/rea-dsh-plugin](https://github.com/ya123-4/rea-dsh-plugin) - DeepSeek Harness 插件，安装后把 REA MCP 注册为 `mcp__rea__*` 工具并附带 Skill。
 - [sheilacraig/dsh-rea-mcp](https://github.com/sheilacraig/dsh-rea-mcp) - 纯配置的 DeepSeek Harness bundle，用内置 MCP 客户端挂载 REA。
+- [Fanqi89/dsh-rea](https://github.com/Fanqi89/dsh-rea) - 纯配置的 DeepSeek Harness 插件包，挂载 REA 的 MCP 服务器，附 Windows、macOS、Linux 和 WSL 的一键配置脚本，以及逐版本兼容性审计。MIT。
 - [cognixws/picode-rea](https://github.com/cognixws/picode-rea) - PiCode 扩展，只启用 REA 的静态分析工具。当前版本固定为 rea-agents 6.1.0，最新为 6.7.0。
 - [pablodiazjorge/rea-casebook](https://github.com/pablodiazjorge/rea-casebook) - Claude Code mod，实时记录 REA 返回的证据，要求结论必须引用真实的 `evidence_id`，可导出 Markdown。
 - [laaielichter/reverseport](https://github.com/laaielichter/reverseport) - 把逆向结果移植到 Godot、Unity、Unreal、three.js 的 CLI + MCP。**注意**：README 写明其深度分析引擎"基于 REA"，THIRD_PARTY_NOTICES 也称 REA 代码以 MIT 授权，它更像是 REA 的衍生版本，而不是独立工具。

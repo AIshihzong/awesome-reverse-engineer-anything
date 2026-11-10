@@ -35,7 +35,7 @@
 
 How each tag is checked: [How this list stays accurate](#how-this-list-stays-accurate).
 
-> Figures and links in this list were checked on 2026-10-21, with REA's star count refreshed on 2026-11-01, and the entries added since refreshed on 2026-11-05. REA and the projects around it move weekly, so read the date next to a number before relying on it.
+> Figures and links in this list were checked on 2026-10-21, with REA's star count refreshed on 2026-11-01, and the entries added since refreshed on 2026-11-10. REA and the projects around it move weekly, so read the date next to a number before relying on it.
 
 > ⚠️ Reverse engineering is governed by local law, software licenses and terms of service. This list covers only public information, for learning, research, interoperability and preservation. Make sure you are allowed to analyse the target. See [Legal and controversy](#legal-and-controversy).
 
@@ -154,6 +154,8 @@ Tags show the evidence source. Repo stars change daily, so they are not listed h
 - [Slyvan25/OpenGHub](https://github.com/Slyvan25/OpenGHub) - `Manual RE` Linux-native Logitech G HUB replacement over HID++ 2.0. Reverse-engineered from captures and documented in `docs/lighting.md`. No AI or REA mention. MIT.
 - [cudanexus/vd-streamer-linux](https://github.com/cudanexus/vd-streamer-linux) - `REA` Linux port of Virtual Desktop Streamer, built with Claude Code + REA. Not yet tested on a real headset.
 - [bitwisecook/quicken-2002-dumper](https://github.com/bitwisecook/quicken-2002-dumper) - `REA` Python reader that exports Quicken 2002 QDF v3 databases, plus several companion files, to SQLite, so old ledgers can be read without Quicken. The README credits `reverse-engineer-anything` and AI assistance. Findings are checked with page checksums, record validation and cipher test vectors, but not yet against a trusted Quicken export. Public domain (Unlicense).
+- [Shirozo/xid8300-linux](https://github.com/Shirozo/xid8300-linux) - `REA` Linux CUPS filter, network backend and PPDs for Matica XID8300 / XID8100 card printers. The README says Claude Code drove REA over the Windows driver to recover the TCP protocol, then wrote the driver; it has printed cards on an XID8100, many options untested. No vendor code. GPL-2.0-or-later.
+- [nicolvus/a6000-fw-decomp](https://github.com/nicolvus/a6000-fw-decomp) - `REA (agent instructions)` 🇪🇸 Sony A6000 firmware 3.21 reverse-engineered for a fully electronic shutter. A 2-byte patch made the real camera shoot silently; a later build bricked it, and it was recovered over SWD. The README names no tool; the repo's AGENTS.md tells agents to use REA first and Ghidra as backup. Experimental, tested on one camera. MIT.
 
 ### Security and evaluations
 
@@ -181,12 +183,14 @@ These projects came up alongside REA. Their READMEs do not say REA was used, so 
 - [Universal Modder](https://github.com/rehan-remade/universal-modder) - `AI-RE` Claude Code / Codex plugin that mods games you own (for example, Minecraft content inside GTA V). A modding toolkit, not a reimplementation. MIT.
 - [Firefighter: DOS binary to Rust](https://x.com/esrtweet/status/2106983467141509385) - `AI-RE` Eric S. Raymond recovered the Pascal logic of an old DOS game from its binary and rewrote it in Rust. The work predates REA. No public code found.
 - [Modern Warfare 2 decompilation](https://x.com/momo5502/status/2108886652391141721) - `AI-RE` Author reports 17 agents over three months, 83% of functions byte-matched. Code is not public.
+- [ruguevara/zx-reaper](https://github.com/ruguevara/zx-reaper) - `AI-RE` Agent harness (Claude Code or Codex) that turns ZX Spectrum 48K games into annotated asm that rebuilds byte for byte, then ports it to Python step by step, each stage tested against the one before. Borrows REA's evidence discipline but does not use REA. No license file.
 
 ## Plugins and integrations
 
 - [zhaofeng130/dsh-rea](https://github.com/zhaofeng130/dsh-rea) - DeepSeek Harness adapter that registers the REA Skill and tools.
 - [ya123-4/rea-dsh-plugin](https://github.com/ya123-4/rea-dsh-plugin) - DeepSeek Harness plugin that registers REA MCP tools.
 - [sheilacraig/dsh-rea-mcp](https://github.com/sheilacraig/dsh-rea-mcp) - Config-only DeepSeek Harness bundle that mounts REA.
+- [Fanqi89/dsh-rea](https://github.com/Fanqi89/dsh-rea) - Config-only DeepSeek Harness bundle that mounts REA's MCP server, with setup scripts for Windows, macOS, Linux and WSL and a per-version compatibility audit. MIT.
 - [cognixws/picode-rea](https://github.com/cognixws/picode-rea) - PiCode extension enabling REA's static-analysis tools. Pins rea-agents 6.1.0; current is 6.7.0.
 - [pablodiazjorge/rea-casebook](https://github.com/pablodiazjorge/rea-casebook) - Claude Code mod that logs REA evidence and requires conclusions to cite real `evidence_id`s.
 - [laaielichter/reverseport](https://github.com/laaielichter/reverseport) - CLI + MCP for porting reverse-engineering results to Godot, Unity, Unreal and three.js. **Note:** its README says the analysis engine is "based on REA", and its notices say REA code is MIT-licensed. Treat it as a derivative of REA, not an independent tool.
