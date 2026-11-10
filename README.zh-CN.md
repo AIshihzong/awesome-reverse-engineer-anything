@@ -20,7 +20,7 @@
 
 **[REA 是什么？常见问题](docs/what-is-rea.zh-CN.md)** · **[按被替代的软件找项目](docs/by-app.zh-CN.md)** · **[REA 说法核实](docs/is-it-rea.zh-CN.md)** · **[REA 到底有没有用：对照实验](#rea-到底有没有用对照实验)** · **[本周新增](docs/new-this-week.zh-CN.md)** · **[投稿案例](https://github.com/AIshihzong/awesome-reverse-engineer-anything/issues/new?template=case.yml)**
 
-> ⭐ **点个 Star**，在 GitHub 动态里随时找到这份列表；或者 **Watch → Custom → Releases**，每周收到一期 [AI 逆向周报](https://github.com/AIshihzong/awesome-reverse-engineer-anything/releases)。
+> ⭐ **点个 Star** 就能收藏，在 GitHub 动态里随时找到这份列表（不提 PR 的话不用 fork）；或者 **Watch → Custom → Releases**，每周收到一期 [AI 逆向周报](https://github.com/AIshihzong/awesome-reverse-engineer-anything/releases)。
 
 "REA" 原指 [morluto/rea](https://github.com/morluto/rea)（Reverse Engineer Anything），一个开源 MCP Server + CLI（npm 包 `rea-agents`，2026-11-01 时 41.7 万+ Star），让 Claude Code、Codex 等编码 Agent 在**没有源码**的情况下检查原生二进制、Electron 应用、.NET 程序集、APK、固件和网站，解释功能如何实现、给出证据，再在你自己的项目里重建。它本身不做反编译，而是把 Hopper / Ghidra / IDA / JADX 等现有工具编排给 Agent 使用。
 
