@@ -4,7 +4,6 @@
 
 Many cases are described as "built with REA". This page checks each one against the project's own README, the author's post, or the official showcase, and records what we found. First checked on 2026-10-14; the "README says REA?" column was re-checked against every linked repository's current README and agent files on 2026-11-10, with no changes. X posts could not be opened from our environment, so for them we rely on the third-party case records named in the table.
 
-
 **Summary (39 rows, 2026-11-10):**
 
 - **26 confirmed:** the README, the agent instructions (AGENTS.md, CLAUDE.md) or the official showcase says REA was used.
