@@ -1,0 +1,105 @@
+# GitHub Pages site for this list (Settings -> Pages -> Deploy from branch: main, / (root)).
+# It publishes the same Markdown files as the repo, with search-friendly titles,
+# descriptions, canonical URLs and a sitemap. The repo itself renders unchanged:
+# nothing here adds front matter to the Markdown files.
+
+title: Awesome REA
+description: >-
+  What AI agents reverse-engineered and rebuilt with REA (Reverse Engineer Anything),
+  Craft Anything, Claude Code and Codex, and which cases really used REA. Unofficial, bilingual, every case checked.
+url: https://aishihzong.github.io
+baseurl: /awesome-reverse-engineer-anything
+lang: en
+theme: jekyll-theme-primer
+github:
+  repository_url: https://github.com/AIshihzong/awesome-reverse-engineer-anything
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-relative-links
+  - jekyll-optional-front-matter
+  - jekyll-readme-index
+  - jekyll-titles-from-headings
+  - jekyll-default-layout
+
+relative_links:
+  enabled: true
+  collections: false
+
+# To verify the site in Google Search Console, paste the code from the
+# "HTML tag" method here (the content="..." value only) and uncomment:
+# webmaster_verifications:
+#   google: PASTE_CODE_HERE
+
+exclude:
+  - AGENTS.md
+  - scripts/
+  - lychee.toml
+  - .github/
+  - "**/__pycache__/"
+
+defaults:
+  - scope: { path: "README.md" }
+    values:
+      title: "Awesome REA: AI reverse engineering cases, and which ones really used REA"
+      description: "A checked list of what AI agents reverse-engineered and rebuilt with REA (Reverse Engineer Anything), Craft Anything, Claude Code, Codex, Ghidra and IDA MCP. Each case says which tool it really used."
+  - scope: { path: "README.zh-CN.md" }
+    values:
+      lang: zh-CN
+      title: "Awesome REA：AI 逆向一切案例合集，哪些真的用了 REA"
+      description: "收录 AI Agent 用 REA（Reverse Engineer Anything）、Craft Anything、Claude Code、Codex 逆向和重建的软件、游戏和硬件案例，每条都核查用了什么工具。"
+  - scope: { path: "docs/by-app.md" }
+    values:
+      title: "Open-source alternatives built with AI reverse engineering, by app"
+      description: "Find an open-source alternative or compatible client for the app you use, rebuilt by AI agents with REA, Claude Code or Codex. Each row lists the license, status and whether REA was used."
+  - scope: { path: "docs/by-app.zh-CN.md" }
+    values:
+      lang: zh-CN
+      title: "按软件找 AI 逆向重建的开源替代品"
+      description: "按你想替代或兼容的软件，找 AI Agent 用 REA、Claude Code、Codex 逆向重建的开源项目，每行写明许可证、状态和是否用了 REA。"
+  - scope: { path: "docs/is-it-rea.md" }
+    values:
+      title: "Did it really use REA? Fact-checking viral AI reverse-engineering cases"
+      description: "We checked the most-shared \"built with REA\" cases against each project's README, the author's post and the official showcase. Here is which ones really used morluto/rea."
+  - scope: { path: "docs/is-it-rea.zh-CN.md" }
+    values:
+      lang: zh-CN
+      title: "真的用了 REA 吗？热门 AI 逆向案例核查"
+      description: "逐条核对被说成“用 REA 做的”热门案例：看项目 README、作者原帖和官方展示，哪些真的用了 morluto/rea。"
+  - scope: { path: "docs/rea-vs-craft-anything.md" }
+    values:
+      title: "REA vs Craft Anything: which AI reverse-engineering tool to use"
+      description: "REA (Reverse Engineer Anything) explains how a program works with evidence; Craft Anything has an agent build your own version and checks it against the original. A side-by-side comparison."
+  - scope: { path: "docs/rea-vs-craft-anything.zh-CN.md" }
+    values:
+      lang: zh-CN
+      title: "REA 和 Craft Anything 怎么选：AI 逆向工具对比"
+      description: "REA 解释程序如何工作并给出证据，Craft Anything 让 Agent 做出你自己的版本并与原版对照。两者的逐项对比。"
+  - scope: { path: "docs/new-this-week.md" }
+    values:
+      title: "New this week in AI reverse engineering (REA and beyond)"
+      description: "The AI reverse-engineering and rebuild cases added to Awesome REA this week."
+  - scope: { path: "docs/new-this-week.zh-CN.md" }
+    values:
+      lang: zh-CN
+      title: "本周新增的 AI 逆向案例"
+      description: "Awesome REA 本周新收录的 AI 逆向与重建案例。"
+  - scope: { path: "docs/press-and-posts.md" }
+    values:
+      title: "Press and posts about REA (Reverse Engineer Anything)"
+      description: "Articles, videos and blog posts about REA and the wave of AI agents reverse-engineering and rebuilding software."
+  - scope: { path: "docs/press-and-posts.zh-CN.md" }
+    values:
+      lang: zh-CN
+      title: "关于 REA（Reverse Engineer Anything）的报道与文章"
+      description: "关于 REA 和 AI Agent 逆向、重建软件浪潮的文章、视频和博客。"
+  - scope: { path: "docs/x-posts.md" }
+    values:
+      title: "REA posts on X (Twitter): viral AI reverse-engineering demos"
+      description: "The most-shared X posts about REA and AI agents reverse-engineering apps, games and hardware. Most are the author's own account and are marked as unverified."
+  - scope: { path: "docs/x-posts.zh-CN.md" }
+    values:
+      lang: zh-CN
+      title: "X（Twitter）上的 REA 热门帖子"
+      description: "X 上传播最广的 REA 与 AI 逆向帖子。大多是作者本人的说法，未经独立核实。"
