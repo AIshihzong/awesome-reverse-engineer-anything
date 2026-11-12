@@ -39,7 +39,7 @@
 
 ## 今天就能用
 
-现在就能跑的开源项目，按它替代或兼容的软件列出。[完整索引](docs/by-app.zh-CN.md)有 37 行，每行写明许可和状态。
+现在就能跑的开源项目，按它替代或兼容的软件列出。[完整索引](docs/by-app.zh-CN.md)有 38 行，每行写明许可和状态。
 
 | 替代或兼容             | 项目                                                                        | 标签          | 说明                               |
 | ----------------- | ------------------------------------------------------------------------- | ----------- | -------------------------------- |
@@ -141,6 +141,7 @@
 - [az9713/wispr-flow-rea-teardown](https://github.com/az9713/wispr-flow-rea-teardown) - `REA` 拆解 Wispr Flow 的语音采集、转写和粘贴流程。每条结论标注"已证实、推断或隐藏"，再用 64 行代码在本地重建精简版。README 未提 morluto/rea，流程参考了一个教程视频。
 - [iammukeshm/hexgrab](https://github.com/iammukeshm/hexgrab) - `REA` 用 REA 研究 PowerToys 取色器的已发布二进制，然后写出的 .NET 10 小工具。MIT。
 - [AdamLinCodes/AdamTerm](https://github.com/AdamLinCodes/AdamTerm) - `REA` 用 REA 研究 Ghostty 后做的极简 macOS 终端，基于 SwiftTerm。仓库未附许可证。
+- [jangtrinh/design-os-studio](https://github.com/jangtrinh/design-os-studio) - `REA` 独立的桌面设计工作室，可读写 Figma 的 .fig 格式（fig-kiwi 容器，写出 version 106），并在本地重实现编辑器行为，附带 stdio MCP 服务器（39 个工具）。README 未提及 REA；公开规格写明使用了 `rea`（morluto/rea 6.7.0），见 [E1-4](https://github.com/jangtrinh/design-os-studio/blob/df14c593e86edcc039adc2c67067bf8db64e9e84/docs/specs/v0.6/E1-4-styles-hold-variable-aliases.md)。仓库是 **source-available（PolyForm Shield 1.0.0），不是开源协议**。
 - [JimLiu/baocut](https://github.com/JimLiu/baocut) - `REA` 宝玉（[@dotey](https://x.com/dotey/status/2109151666020794711)）用 REA 分析 Claude Slides 的网页前端，再用 Claude Code 重写编辑器。README 未提 REA，REA 的说明在作者帖子里。仓库是 **source-available（BaoCut Community License 1.0），不是开源协议**。
 - [LilZeeCN/zee-rp](https://github.com/LilZeeCN/zee-rp) - `REA` 逆向 Axure RP 的 `.rp` 原型文件格式，提供 CLI 和 MCP，让 AI 读写原型。REA 的使用说明在作者回复中，README 未提。目前只在 macOS 和 Axure RP 11 上验证过。MIT。
 - [wquguru/cameo](https://github.com/wquguru/cameo) - `待核实` 链接的仓库是作者自己开发的原创桌面宠物应用，不是 REA 的产出。据作者的后续帖子，REA 用于产出伪代码，再由 Claude Code 还原交互，但重建源码未公开。

@@ -41,7 +41,7 @@ How each tag is checked: [How this list stays accurate](#how-this-list-stays-acc
 
 ## Use it today
 
-Open-source projects you can run now, listed by the app they replace or work with. The [full index](docs/by-app.md) has 37 rows with license and status for each.
+Open-source projects you can run now, listed by the app they replace or work with. The [full index](docs/by-app.md) has 38 rows with license and status for each.
 
 | Instead of, or works with | Project                                                                   | Tag                    | Note                                                              |
 | ------------------------- | ------------------------------------------------------------------------- | ---------------------- | ----------------------------------------------------------------- |
@@ -137,6 +137,7 @@ Tags show the evidence source. Repo stars change daily, so they are not listed h
 - [az9713/wispr-flow-rea-teardown](https://github.com/az9713/wispr-flow-rea-teardown) - `REA` Teardown of Wispr Flow's voice pipeline. Each claim is marked proven, inferred or hidden, plus a 64-line local rebuild. The README does not link morluto/rea; it follows a tutorial video.
 - [iammukeshm/hexgrab](https://github.com/iammukeshm/hexgrab) - `REA` .NET 10 colour picker written from REA's findings on PowerToys' shipped binaries. MIT.
 - [AdamLinCodes/AdamTerm](https://github.com/AdamLinCodes/AdamTerm) - `REA` Minimal macOS terminal (SwiftTerm) after studying Ghostty with REA. No license file.
+- [jangtrinh/design-os-studio](https://github.com/jangtrinh/design-os-studio) - `REA` Independent desktop studio that reads and writes the Figma .fig format (fig-kiwi containers, writes version 106) and reimplements editor behaviour locally, with a bundled stdio MCP server (39 tools). The README does not mention REA; public specs document `rea` (morluto/rea 6.7.0), including [E1-4](https://github.com/jangtrinh/design-os-studio/blob/df14c593e86edcc039adc2c67067bf8db64e9e84/docs/specs/v0.6/E1-4-styles-hold-variable-aliases.md). Source-available, not open source (PolyForm Shield 1.0.0).
 - [JimLiu/baocut](https://github.com/JimLiu/baocut) - `REA` (author's post) BaoCut app, whose slides editor is adapted from Claude Slides. The README does not name REA. **Source-available (BaoCut Community License 1.0), not open source.**
 - [LilZeeCN/zee-rp](https://github.com/LilZeeCN/zee-rp) - `REA` (author's reply) CLI and MCP for reading and writing Axure RP `.rp` prototype files. Validated only on macOS with Axure RP 11. MIT.
 - [wquguru/cameo](https://github.com/wquguru/cameo) - `Claim?` The linked repo is the author's original desktop-pet app, not REA output. The author's follow-up post describes an REA-based reconstruction, but its source was not published.
