@@ -7,6 +7,7 @@ Entries added in the past week, by the date each repo was created on GitHub. Dat
 | Created    | Project                                                                                         | Tag    | What it is                                                                        |
 | ---------- | ----------------------------------------------------------------------------------------------- | ------ | --------------------------------------------------------------------------------- |
 | 2026-11-08 | [xid8300-linux](https://github.com/Shirozo/xid8300-linux)                                       | REA    | Linux driver for Matica card printers, protocol recovered with REA                |
+| 2026-11-06 | [dsh-craft-anything](https://github.com/Fanqi89/dsh-craft-anything)                             | Plugin | Craft Anything as MCP tools in DeepSeek Harness                                   |
 | 2026-11-04 | [ReaAgents](https://github.com/JuanDiegoRuiz22/ReaAgents)                                       | Plugin | Isolated, hash-pinned REA install for Claude Code on Windows                      |
 | 2026-11-02 | [marrow](https://github.com/utabk/marrow)                                                       | Plugin | Desktop GUI for REA with a classic code browser                                   |
 | 2026-10-31 | [Craft Anything](https://github.com/storytold/craft-anything)                                   | AI-RE  | Rust engine that studies a target, has an agent rebuild it, and checks the result |

@@ -35,7 +35,7 @@
 
 每个标签怎么核对，见[这份列表怎么保证准确](#这份列表怎么保证准确)。
 
-> 本列表中的数据与链接核对于 2026-10-21，REA 星数更新于 2026-11-01，此后新增的条目更新于 2026-11-10。REA 及其周边项目每周都在变化，引用某个数字前请先看它旁边的日期。
+> 本列表中的数据与链接核对于 2026-10-21，REA 星数更新于 2026-11-01，此后新增的条目更新于 2026-11-12。REA 及其周边项目每周都在变化，引用某个数字前请先看它旁边的日期。
 
 ## 今天就能用
 
@@ -208,6 +208,7 @@
 - [sickpyramid/ReaFuse](https://github.com/sickpyramid/ReaFuse) - 基于 REA 拆解两个 JS/TS 源码项目、融合它们的能力，生成新项目并验证。v0.1，Alpha。
 - [dav1dngy/era-agent](https://github.com/dav1dngy/era-agent) - 基于 REA 的逆向 Agent，加入以证据驱动的自我改进实验室。实验性，v0.1.0。
 - [alexmi256/rea-agent-docker](https://github.com/alexmi256/rea-agent-docker) - REA 的 Docker 镜像，共四个：Ghidra + Hopper 合并版，以及 ghidra、hopper、ida 单独版。IDA 镜像不包含 IDA 本身，仅支持 linux/amd64。
+- [psyb0t/docker-reverse-engineer-anything](https://github.com/psyb0t/docker-reverse-engineer-anything) - 非官方的 REA Docker 镜像，内置 JADX、Apktool 和 adb，Ghidra 按需安装，并提供 Streamable HTTP 形式的 MCP 接口，让 Agent 可以通过网络调用 REA。WTFPL。
 - [utabk/marrow](https://github.com/utabk/marrow) - REA 的桌面图形界面，支持 macOS、Windows 和 Linux（原名 REA Studio）。原生二进制在经典的代码浏览器里打开，有反汇编列表、反编译、函数图和符号树，每个 REA 工具都有自己的表单。界面上的内容全部来自 REA 的返回结果，运行的是你自己安装的 REA。独立项目，MIT。
 - [JuanDiegoRuiz22/ReaAgents](https://github.com/JuanDiegoRuiz22/ReaAgents) - 🇪🇸 在 Windows 上给 Claude Code 隔离安装 `rea-agents` 6.8.0，所有组件按哈希固定版本：便携 Node、隔离启动器、只在项目级注册 MCP、严格的 Claude Code 权限、网络监控，并附固定版本的安全审计。非官方，MIT。
 - [ahmedmetered/anyrea](https://github.com/ahmedmetered/anyrea) - 把 REA 的 MCP Server 注册到任何读取 MCP 配置的 Agent，并把工作流 Skill 装进任何读取 `SKILL.md` 的 Agent。Node 版本不受支持时只给警告，不直接拒绝运行。早期版本，MIT。
@@ -244,6 +245,7 @@ REA 编排的底层工具，或同类的"给 Agent 用的逆向工具"。
 - [0xshlomil/ida-free-mcp](https://github.com/0xshlomil/ida-free-mcp) - REA 的 IDA Free 原生桥接方案，见 REA 的 `docs/ida-provider.md`。
 - [LaurieWired/GhidraMCP](https://github.com/LaurieWired/GhidraMCP) - Ghidra 的 MCP Server。REA 直接调用 Ghidra 的 `analyzeHeadless`，不经过这个项目，二者是同类工具。
 - [storytold/craft-anything](https://github.com/storytold/craft-anything) - `AI 逆向` Craft Anything，出自做 Craft 系列应用的 ArtCraft 团队：纯 Rust 引擎，约 320 个检查工具（原生程序、.NET、Java、Android、Electron、网站、固件、游戏文件），每个都是 CLI 命令和 MCP 工具。它比分析多走一步：先研究目标，再让编码 Agent（首选 Claude Code）建新项目，然后和原版逐项比对，最后交付。默认是净室模式，只看访客能看到的内容；Deep 模式会读代码和文件，装了 Ghidra 时也会用。README 未提 REA，对比见 [REA 还是 Craft Anything？](docs/rea-vs-craft-anything.zh-CN.md)。早期 alpha，2026-10-31 创建。MIT 或 Apache-2.0。
+- [Fanqi89/dsh-craft-anything](https://github.com/Fanqi89/dsh-craft-anything) - DeepSeek Harness 插件，把本地 Craft Anything CLI 接成 `mcp__craft__*` 工具，可切换净室模式和深度模式。作者也做了 REA 的插件包 Fanqi89/dsh-rea。MIT。
 - [JuneYaooo/rea-video](https://github.com/JuneYaooo/rea-video) - `AI 逆向` 给 Claude Code、Codex 用的技能和 CLI，逐镜头拆解视频：判断每个镜头是实拍、AI 生成还是代码生成，反推提示词，并给出复刻方案。**虽然名字带 REA，但和 morluto/rea 无关**，它分析的是视频而不是软件。Apache-2.0。
 - [N0zoM1z0/touhou-reverse-engineering](https://github.com/N0zoM1z0/touhou-reverse-engineering) - `AI 逆向` 基于 IDA Pro + Codex 的逆向笔记，以证据为先，记录运行时补丁等实验。README 未提 REA。
 
