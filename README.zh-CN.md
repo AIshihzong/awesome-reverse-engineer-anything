@@ -190,7 +190,7 @@
 - [Firefighter：DOS 二进制到 Rust](https://x.com/esrtweet/status/2106983467141509385) - `AI 逆向` Eric S. Raymond 用 AI 从老 DOS 游戏的二进制中恢复 Pascal 逻辑，再转写为 Rust。作者称工作完成于几个月前，10 月 5 日只是分享日期。未找到公开代码。
 - [《现代战争 2》多 Agent 反编译](https://x.com/momo5502/status/2108886652391141721) - `AI 逆向` 作者称 17 个 Agent 协作约三个月，83% 的函数达到字节级匹配。代码不公开。
 - [ruguevara/zx-reaper](https://github.com/ruguevara/zx-reaper) - `AI 逆向` 一套 Agent 工具（Claude Code 或 Codex），把 ZX Spectrum 48K 游戏变成可逐字节重建的带注释汇编，再分阶段移植到 Python，每一阶段都以上一阶段为基准测试。借鉴了 REA 的证据规范，但没有使用 REA。无许可证文件。
-- [b-nnett/grok-bot-0.18-reconstructed](https://github.com/b-nnett/grok-bot-0.18-reconstructed) - `手工逆向` 把 Grok Bot 0.18.0 macOS 版的运行时（Electron 宿主、协调器、协议）重建成可读的 TypeScript，并能重新打包成可运行的应用。保留了原版压缩过的前端，另加了 Cursor、Claude Code、Codex、OpenRouter 的推理路由和可选的本地 Docker 沙箱。README 没有说重建用了什么 AI 工具。仓库未附许可证，NOTICE.md 写明不授予任何上游许可，仓库还用 Git LFS 保存了原版安装包。
+- [b-nnett/grok-bot-0.18-reconstructed](https://github.com/b-nnett/grok-bot-0.18-reconstructed) - `手工逆向` 把 Grok Bot 0.18.0 macOS 版的运行时（Electron 宿主、协调器、协议）重建成可读的 TypeScript，并能重新打包成可运行的应用。保留了原版压缩过的前端，另加了 Cursor、Claude Code、Codex、OpenRouter 的推理路由和可选的本地 Docker 沙箱。README 没有说重建用了什么 AI 工具。仓库未附许可证，NOTICE.md 写明不授予任何上游许可，仓库还用 Git LFS 保存了原版安装包。作者已将仓库归档（只读）。
 - [RongleCat/grok-bot-sdk](https://github.com/RongleCat/grok-bot-sdk) - `手工逆向` 非官方 Node.js SDK，复现 Grok Bot 0.78.1 桌面客户端的登录、读取、发送和回复流接口。不是 xAI 或 Cursor 的产品。MIT。
 - [ArvinYin1/grokbot-animation-anatomy](https://github.com/ArvinYin1/grokbot-animation-anatomy) - `手工逆向` Grok Bot 头像动画引擎的可交互讲解页，来自对应用 `app.asar` 的静态分析：逐行移植的引擎与原版逐帧对照，另附提取出的动画数据（53 种状态）。仅供学习，提取的数据归原作者所有。MIT。
 - [jeremy-prt/bloub](https://github.com/jeremy-prt/bloub) - `重写` 用 SVG 复刻 x.ai bot 头像的 14 种状态，所有常数都从参考视频里逐帧量出，没有取自应用本身。MIT 只覆盖代码，不覆盖设计。
