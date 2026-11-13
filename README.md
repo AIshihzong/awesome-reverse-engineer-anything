@@ -260,6 +260,7 @@ Tools that REA drives, or tools in the same category.
 - [SubmitGame/awesome-decomp-games](https://github.com/SubmitGame/awesome-decomp-games) - Decompiled games, many playable in the browser. CC0-1.0.
 - [morluto/awesome-reverse-engineering](https://github.com/morluto/awesome-reverse-engineering) - Curated general reverse-engineering tools and learning resources for binaries, applications, firmware, file formats and protocols, maintained by REA's own author. Organised by the task you want to do rather than by tool. It already runs its own weekly link check in CI. CC0-1.0.
 - [reacher-z/Awesome-REA](https://github.com/reacher-z/Awesome-REA) - Bilingual catalogue of reverse-engineering tools, reconstruction projects, case studies and research papers across websites, games, apps, binaries, firmware and protocols, with a searchable site and a separately labelled automated repository index. MIT.
+- [EnzoVezzaro/rea-faang](https://github.com/EnzoVezzaro/rea-faang) - Product catalog for agent-led clean-room rebuilding: 193 product dossiers, candidate open-source alternatives, and portable build skills.
 
 ## Discussion and press
 
