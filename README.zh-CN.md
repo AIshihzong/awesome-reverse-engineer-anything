@@ -265,6 +265,7 @@ REA 编排的底层工具，或同类的"给 Agent 用的逆向工具"。
 - [SubmitGame/awesome-decomp-games](https://github.com/SubmitGame/awesome-decomp-games) - 英文，反编译游戏，首屏即可在浏览器中直接游玩，CC0 许可。
 - [morluto/awesome-reverse-engineering](https://github.com/morluto/awesome-reverse-engineering) - 由 REA 作者本人维护的通用逆向工程工具与学习资源列表，覆盖二进制、应用、固件、文件格式与协议。按"你想做什么任务"而不是按工具分类。它自己已经跑每周一次的链接检查 CI。CC0-1.0。
 - [reacher-z/Awesome-REA](https://github.com/reacher-z/Awesome-REA) - 中英双语的逆向工程工具、复原项目、案例与研究论文目录，覆盖网站、游戏、应用、二进制、固件与通信协议，带可搜索站点和单独标注的自动化仓库索引。MIT。
+- [EnzoVezzaro/rea-faang](https://github.com/EnzoVezzaro/rea-faang) - 面向 Agent 驱动的洁净室重建产品目录：包含 193 个产品档案、候选开源替代品和可移植的构建技能。
 
 ## 社区讨论与媒体
 
