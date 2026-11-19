@@ -6,6 +6,7 @@
 
 | 创建日期       | 项目                                                                                  | 标签    | 简介                                            |
 | ---------- | ----------------------------------------------------------------------------------- | ----- | --------------------------------------------- |
+| 2026-11-16 | [oh-my-rea](https://github.com/voidvenom/oh-my-rea)                                 | 插件    | 基于 REA 的终端逆向 Agent，回答附带证据引用                   |
 | 2026-11-16 | [rust-anything](https://github.com/erkamyaman/rust-anything)                        | 重写    | 把应用逐步重写成 Rust，每一步对照原程序录下的行为                   |
 | 2026-11-14 | [GoW-Ascension-Recomp](https://github.com/bc160201983/GoW-Ascension-Recomp)         | AI 逆向 | 《战神：升天》（PS3）重编译为原生 Windows 程序                 |
 | 2026-11-13 | [ProjectReLink](https://github.com/pixl27/ProjectReLink)                            | 手工逆向  | Switch 2 版《时之笛》重制版重编译为原生 Windows 程序           |

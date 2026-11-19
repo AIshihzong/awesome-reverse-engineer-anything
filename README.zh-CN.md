@@ -232,6 +232,7 @@
 - [dav1dngy/era-agent](https://github.com/dav1dngy/era-agent) - 基于 REA 的逆向 Agent，加入以证据驱动的自我改进实验室。实验性，v0.1.0。
 - [alexmi256/rea-agent-docker](https://github.com/alexmi256/rea-agent-docker) - REA 的 Docker 镜像，共四个：Ghidra + Hopper 合并版，以及 ghidra、hopper、ida 单独版。IDA 镜像不包含 IDA 本身，仅支持 linux/amd64。
 - [psyb0t/docker-reverse-engineer-anything](https://github.com/psyb0t/docker-reverse-engineer-anything) - 非官方的 REA Docker 镜像，内置 JADX、Apktool 和 adb，Ghidra 按需安装，并提供 Streamable HTTP 形式的 MCP 接口，让 Agent 可以通过网络调用 REA。WTFPL。
+- [voidvenom/oh-my-rea](https://github.com/voidvenom/oh-my-rea) - 基于 REA 的终端逆向 Agent（`omr`）。指向一个应用、二进制、固件镜像或网站并提问，回答会引用它保留的证据。安装 `rea-agents` 前会先征求同意，支持 OpenAI、Anthropic 或 Gemini 的密钥。MIT。
 - [utabk/marrow](https://github.com/utabk/marrow) - REA 的桌面图形界面，支持 macOS、Windows 和 Linux（原名 REA Studio）。原生二进制在经典的代码浏览器里打开，有反汇编列表、反编译、函数图和符号树，每个 REA 工具都有自己的表单。界面上的内容全部来自 REA 的返回结果，运行的是你自己安装的 REA。独立项目，MIT。
 - [JuanDiegoRuiz22/ReaAgents](https://github.com/JuanDiegoRuiz22/ReaAgents) - 🇪🇸 在 Windows 上给 Claude Code 隔离安装 `rea-agents` 6.8.0，所有组件按哈希固定版本：便携 Node、隔离启动器、只在项目级注册 MCP、严格的 Claude Code 权限、网络监控，并附固定版本的安全审计。非官方，MIT。
 - [ahmedmetered/anyrea](https://github.com/ahmedmetered/anyrea) - 把 REA 的 MCP Server 注册到任何读取 MCP 配置的 Agent，并把工作流 Skill 装进任何读取 `SKILL.md` 的 Agent。Node 版本不受支持时只给警告，不直接拒绝运行。早期版本，MIT。
