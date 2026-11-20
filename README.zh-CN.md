@@ -130,23 +130,23 @@
 - [N0zoM1z0/th04](https://github.com/N0zoM1z0/th04) - `REA（官方案例）` 《东方幻想乡》PC-98 版源码复原，基于 ReC98 和 Turbo C++ 4.0J 编译比对。README 未提 REA，REA 的用法见上方官方案例。MIT。
 - [N0zoM1z0 的东方 Project 复原系列](https://github.com/N0zoM1z0?tab=repositories) - `AI 逆向` 用 Agent 工作流复原的 [th08](https://github.com/N0zoM1z0/th08)、[th105](https://github.com/N0zoM1z0/th105)、[th095](https://github.com/N0zoM1z0/th095)、[th09](https://github.com/N0zoM1z0/th09)、[th10](https://github.com/N0zoM1z0/th10)、从源码移植到浏览器的 [th08-web](https://github.com/N0zoM1z0/th08-web)，以及统一管理这些工程的 [touhou-reconstruction-factory](https://github.com/N0zoM1z0/touhou-reconstruction-factory)。这些 README 都没有提到 REA，用的是 Codex / GPT-web 加 IDA MCP 或 Ghidra。
 - [ucodia/desktop-games-nostalgia](https://github.com/ucodia/desktop-games-nostalgia) - `REA` 把 2000 年 Gemtree《Desktop Games》移植到 macOS 和浏览器，用 Claude Code + REA + Ghidra 复原图像压缩编码、素材格式和定时器。仓库未附许可证。
-- [tuunanet/rea-ski-or-die-reconstruction](https://github.com/tuunanet/rea-ski-or-die-reconstruction) - `REA` 用 Rust + SDL2 重写 1990 年 MS-DOS 游戏《Ski or Die》的雪球大战小游戏，素材从你自己的游戏副本中提取。
+- [tuunanet/rea-ski-or-die-reconstruction](https://github.com/tuunanet/rea-ski-or-die-reconstruction) - `REA` 用 Rust + SDL2 重写 1990 年 MS-DOS 游戏《Ski or Die》的雪球大战小游戏，素材从你自己的游戏副本中提取。 MIT 或 Apache-2.0。
 - [Moxnatiy/OpenBattlefield2](https://github.com/Moxnatiy/OpenBattlefield2) - `REA` 用 C++20 clean-room 重实现《战地 2》的 Refractor 2 引擎。REA 用法写在 CLAUDE.md 和 `tools/rea.sh` 中，README 未提及；需要原版游戏。MIT。
 - [OpenRsG/GunZRs](https://github.com/OpenRsG/GunZRs) - `REA` 用 Rust + Bevy 重写《GunZ: The Duel》，读取 Steam 安装的原版资源。原版可执行文件有加壳，REA 在移植中的作用有限。Apache-2.0。
-- [a-barzanti/ai-rebuilds](https://github.com/a-barzanti/ai-rebuilds) - `REA` 社区项目，把停止更新的游戏复原到浏览器中。贡献者用 REA 写出规格，再据此构建。规则禁止提交原版游戏文件。
+- [a-barzanti/ai-rebuilds](https://github.com/a-barzanti/ai-rebuilds) - `REA` 社区项目，把停止更新的游戏复原到浏览器中。贡献者用 REA 写出规格，再据此构建。规则禁止提交原版游戏文件。 MIT。
 
 ### 桌面应用与工具复刻
 
-- [michaelshimeles/paper-rs](https://github.com/michaelshimeles/paper-rs) - `REA` 用 REA + Claude Code 研究 Paper 桌面应用的行为后，以 Rust（wgpu + egui）重写的无限画布设计工具，README 称为"clean-room 风格"。
+- [michaelshimeles/paper-rs](https://github.com/michaelshimeles/paper-rs) - `REA` 用 REA + Claude Code 研究 Paper 桌面应用的行为后，以 Rust（wgpu + egui）重写的无限画布设计工具，README 称为"clean-room 风格"。 Apache-2.0。
 - [michaelshimeles/rec-rs](https://github.com/michaelshimeles/rec-rs) - `REA` 用 REA 和 Claude Code 研究 OBS Studio 的架构与行为后写的 Rust macOS 录屏工具。OBS 本身是 GPL-2.0 开源软件，README 称只研究了架构。
 - [michaelshimeles/terminal-rs](https://github.com/michaelshimeles/terminal-rs) - `REA` Bloomberg 风格的 Rust 交易终端。图表交互参考了用 REA 网站模式对 TradingView 公开页面的被动观察。仓库未附许可证。
-- [az9713/wispr-flow-rea-teardown](https://github.com/az9713/wispr-flow-rea-teardown) - `REA` 拆解 Wispr Flow 的语音采集、转写和粘贴流程。每条结论标注"已证实、推断或隐藏"，再用 64 行代码在本地重建精简版。README 未提 morluto/rea，流程参考了一个教程视频。
+- [az9713/wispr-flow-rea-teardown](https://github.com/az9713/wispr-flow-rea-teardown) - `REA` 拆解 Wispr Flow 的语音采集、转写和粘贴流程。每条结论标注"已证实、推断或隐藏"，再用 64 行代码在本地重建精简版。README 未提 morluto/rea，流程参考了一个教程视频。 无许可文件。
 - [iammukeshm/hexgrab](https://github.com/iammukeshm/hexgrab) - `REA` 用 REA 研究 PowerToys 取色器的已发布二进制，然后写出的 .NET 10 小工具。MIT。
 - [AdamLinCodes/AdamTerm](https://github.com/AdamLinCodes/AdamTerm) - `REA` 用 REA 研究 Ghostty 后做的极简 macOS 终端，基于 SwiftTerm。仓库未附许可证。
 - [jangtrinh/design-os-studio](https://github.com/jangtrinh/design-os-studio) - `REA` 独立的桌面设计工作室，可读写 Figma 的 .fig 格式（fig-kiwi 容器，写出 version 106），并在本地重实现编辑器行为，附带 stdio MCP 服务器（39 个工具）。README 未提及 REA；公开规格写明使用了 `rea`（morluto/rea 6.7.0），见 [E1-4](https://github.com/jangtrinh/design-os-studio/blob/df14c593e86edcc039adc2c67067bf8db64e9e84/docs/specs/v0.6/E1-4-styles-hold-variable-aliases.md)。仓库是 **source-available（PolyForm Shield 1.0.0），不是开源协议**。
 - [JimLiu/baocut](https://github.com/JimLiu/baocut) - `REA` 宝玉（[@dotey](https://x.com/dotey/status/2109151666020794711)）用 REA 分析 Claude Slides 的网页前端，再用 Claude Code 重写编辑器。README 未提 REA，REA 的说明在作者帖子里。仓库是 **source-available（BaoCut Community License 1.0），不是开源协议**。
 - [LilZeeCN/zee-rp](https://github.com/LilZeeCN/zee-rp) - `REA` 逆向 Axure RP 的 `.rp` 原型文件格式，提供 CLI 和 MCP，让 AI 读写原型。REA 的使用说明在作者回复中，README 未提。目前只在 macOS 和 Axure RP 11 上验证过。MIT。
-- [wquguru/cameo](https://github.com/wquguru/cameo) - `待核实` 链接的仓库是作者自己开发的原创桌面宠物应用，不是 REA 的产出。据作者的后续帖子，REA 用于产出伪代码，再由 Claude Code 还原交互，但重建源码未公开。
+- [wquguru/cameo](https://github.com/wquguru/cameo) - `待核实` 链接的仓库是作者自己开发的原创桌面宠物应用，不是 REA 的产出。据作者的后续帖子，REA 用于产出伪代码，再由 Claude Code 还原交互，但重建源码未公开。 Apache-2.0。
 - [lxistired/ledger-reborn](https://github.com/lxistired/ledger-reborn) - `REA` 用 REA 研究 QuickBooks Desktop for Mac 2024 试用版后，独立实现的本地记账应用，有早期预览版。REA 的说明见 [REA 讨论 #2198](https://github.com/morluto/rea/discussions/2198)。MIT。
 - [KarlssonChristoffer/DiskLens](https://github.com/KarlssonChristoffer/DiskLens) - `REA` 仿 WinDirStat 的 Windows 11 磁盘分析工具，由 Claude Code 编写。作者先用 REA 研究了已安装的 WinDirStat 2.5.0 二进制。作者称代码未经审阅，视为实验性项目。协议为 GPL-3.0-or-later：`crates/core/src/treemap.rs` 与 `palette.rs` 直接移植了 WinDirStat 2.5.0 的 GPL-2.0-or-later 代码，因此这是 GPL 衍生作品而非 clean-room 复原，README 本身也是这么写的。
 - [yazzang-homelab/blender-agent-sdk](https://github.com/yazzang-homelab/blender-agent-sdk) - `REA` 纯 Python SDK，让 AI Agent 直接驱动 Blender，不走 MCP。设计依据是用 REA + Ghidra 对剥离后的 174 MB Blender 5.2.2 二进制做的完整分析，约 70 分钟处理了 301,393 个函数，结果再与 v5.2.2 源码交叉核对。GPL-3.0-or-later。
@@ -167,9 +167,9 @@
 ### 安全分析与评测
 
 - [NullLabTests/OpenBSD_netcat_REA](https://github.com/NullLabTests/OpenBSD_netcat_REA) - `REA` 用 REA + Ghidra 对 Ubuntu 打包的 netcat-openbsd 1.234-1 做静态分析，附 JSON 产物和方法说明。MIT。
-- [az9713/REA-demo](https://github.com/az9713/REA-demo) - `REA` 用 REA 分析自己的安装包，先做可证伪的预测，再对照源码自评，记录了出错的地方。
-- [REA 讨论 #1406：Next.js + Stripe 应用的外部泄露检查](https://github.com/morluto/rea/discussions/1406) - `REA` 用网站模式从外部检查自己的线上应用，再与源码对照。
-- [REA 讨论 #2254：剥离符号的 bzip2](https://github.com/morluto/rea/discussions/2254) - `REA` 把 REA 对剥离版二进制的分析结果，与未剥离的构建和源码逐条对照。
+- [az9713/REA-demo](https://github.com/az9713/REA-demo) - `REA` 用 REA 分析自己的安装包，先做可证伪的预测，再对照源码自评，记录了出错的地方。 无许可文件。
+- [REA 讨论 #1406：Next.js + Stripe 应用的外部泄露检查](https://github.com/morluto/rea/discussions/1406) - `REA` 用网站模式从外部检查自己的线上应用，再与源码对照。 MIT。
+- [REA 讨论 #2254：剥离符号的 bzip2](https://github.com/morluto/rea/discussions/2254) - `REA` 把 REA 对剥离版二进制的分析结果，与未剥离的构建和源码逐条对照。 MIT。
 - [UnknownHacker1/rea-groundtruth](https://github.com/UnknownHacker1/rea-groundtruth) - `REA` 把 REA 的报告与代码中的真实情况逐项比对，为它的盲区提供一键复现脚本。MIT。
 - [dagoSte/rea-safe-agents](https://github.com/dagoSte/rea-safe-agents) - `REA` 把 REA 与接收结果的 Agent 分别关进两个受限 Docker 容器：无网络、只读根文件系统、不给 capability、不挂 Docker socket，Agent 一侧零主机挂载。只通过白名单开放 REA 207 个工具中的 27 个，且只把经过哈希批准的冻结副本交给 REA。固定 REA 6.7.0、Ghidra 12.1.4、JADX 0.7.1。Linux 与 macOS 已验证，Windows 仍是实验性。MIT。
 - [lalbers/agent-sandbox](https://github.com/lalbers/agent-sandbox) - `REA` 把 Claude Code 和 REA 放进无 root 的 Podman，或每条命令一个 libkrun 微虚拟机，用来分析不可信的二进制。威胁模型假设样本能同时攻破 Agent 和 REA，所以它们看不到你没挂载的主机路径，也没有自己的网络出口。只在 Fedora 44 + SELinux 上测试过。MIT。
