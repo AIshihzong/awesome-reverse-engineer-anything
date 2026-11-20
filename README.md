@@ -108,11 +108,11 @@ The pages in this list: [What is REA? FAQ](docs/what-is-rea.md), [Find projects 
 
 These are on [rea.tools](https://rea.tools/showcase/) and are tagged `REA`, except where noted.
 
-- [DX-Ball: sound-pan function](https://rea.tools/showcase/dx-ball/) - One helper that maps sound position to left/right channels, rebuilt as C. It matches 3,205 original x86 test cases, and 63 bytes match after recompilation. This is one function, not the whole game.
-- [Notion: Electron clipboard bridge](https://rea.tools/showcase/notion/) - Traces a copy from the page API through preload and IPC to the main process.
-- [TH04: DOS bullet-ring maths](https://rea.tools/showcase/th04/) - 16-bit angle helpers from *Touhou 4* on PC-98. REA made a fresh inspection for the page; the reconstruction comes from the TH04 project.
-- [Aegis: login-code generation](https://rea.tools/showcase/aegis/) - Traces TOTP code generation in the Aegis 3.4.3 Android app.
-- [CTF: flag checker](https://rea.tools/showcase/ctf/) - A DownUnderCTF 2023 reverse-engineering challenge.
+- [DX-Ball: sound-pan function](https://rea.tools/showcase/dx-ball/) - `REA` One helper that maps sound position to left/right channels, rebuilt as C. It matches 3,205 original x86 test cases, and 63 bytes match after recompilation. This is one function, not the whole game.
+- [Notion: Electron clipboard bridge](https://rea.tools/showcase/notion/) - `REA` Traces a copy from the page API through preload and IPC to the main process.
+- [TH04: DOS bullet-ring maths](https://rea.tools/showcase/th04/) - `REA` 16-bit angle helpers from *Touhou 4* on PC-98. REA made a fresh inspection for the page; the reconstruction comes from the TH04 project.
+- [Aegis: login-code generation](https://rea.tools/showcase/aegis/) - `REA` Traces TOTP code generation in the Aegis 3.4.3 Android app.
+- [CTF: flag checker](https://rea.tools/showcase/ctf/) - `REA` A DownUnderCTF 2023 reverse-engineering challenge.
 - [Blog: the industrial revolution in reverse engineering](https://rea.tools/blog/touhou-reconstruction) - Written by N0zoM1z0, who also co-builds REA. Most of the work was done by agents with IDA / Ghidra; REA supplied only part of the evidence. Tagged `AI-RE`.
 - [Blog: does reverse engineering need a bigger model?](https://rea.tools/blog/reverse-engineering-models) - Discusses model capability using Touhou examples and proposes a comparison, but reports no measured results. Tagged `AI-RE`.
 

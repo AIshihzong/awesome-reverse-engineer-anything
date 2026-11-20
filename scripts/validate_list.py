@@ -379,11 +379,14 @@ def main() -> int:
     # 1. tags on cases
     for name in (EN_README, ZH_README):
         for entry in entries_by_file.get(name, []):
-            if entry.repo is None or not entry.is_case:
+            # Rule 1 is about the entry, not about the entry having a GitHub link:
+            # `CONTRIBUTING.md` says "Every case carries a tag". Licence and coverage
+            # below keep the repository requirement, which they genuinely need.
+            if not entry.is_case:
                 continue
             if not entry.tags:
                 errors.append(
-                    f"{name}:{entry.line_no} {entry.repo} is a case but carries no tag "
+                    f"{name}:{entry.line_no} {entry.repo or entry.url} is a case but carries no tag "
                     f"from the documented set"
                 )
 

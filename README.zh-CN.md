@@ -112,11 +112,11 @@
 
 以下案例出自 rea.tools 官方案例页，标签为 `REA`。
 
-- [DX-Ball：复原声像计算函数](https://rea.tools/showcase/dx-ball/) - 从一次声音调用追到位置转声像的辅助函数，补全成 C。复原的这一个函数通过 3,205 个原版 x86 对照用例，编译后 63 字节逐字节一致。整款游戏尚未完成。
-- [Notion：追踪 Electron 剪贴板桥](https://rea.tools/showcase/notion/) - 从渲染进程的剪贴板 API 追到 preload、IPC 和主进程，并找到复制内容里指向本地数据的标记。
-- [TH04：复原 DOS 弹幕环计算](https://rea.tools/showcase/th04/) - 分析 PC-98 版《东方幻想乡》的 16 位指令，复原固定角度与自机狙角度计算。REA 用于为案例页做的一次新检查，复原工程本身来自 TH04 项目。
-- [Aegis：身份验证器如何生成登录码](https://rea.tools/showcase/aegis/) - 在 Aegis 3.4.3 的 Android 应用中追踪 TOTP 验证码的生成路径。
-- [CTF：解一道 flag 校验题](https://rea.tools/showcase/ctf/) - 用 REA 解 DownUnderCTF 2023 的入门逆向题。
+- [DX-Ball：复原声像计算函数](https://rea.tools/showcase/dx-ball/) - `REA` 从一次声音调用追到位置转声像的辅助函数，补全成 C。复原的这一个函数通过 3,205 个原版 x86 对照用例，编译后 63 字节逐字节一致。整款游戏尚未完成。
+- [Notion：追踪 Electron 剪贴板桥](https://rea.tools/showcase/notion/) - `REA` 从渲染进程的剪贴板 API 追到 preload、IPC 和主进程，并找到复制内容里指向本地数据的标记。
+- [TH04：复原 DOS 弹幕环计算](https://rea.tools/showcase/th04/) - `REA` 分析 PC-98 版《东方幻想乡》的 16 位指令，复原固定角度与自机狙角度计算。REA 用于为案例页做的一次新检查，复原工程本身来自 TH04 项目。
+- [Aegis：身份验证器如何生成登录码](https://rea.tools/showcase/aegis/) - `REA` 在 Aegis 3.4.3 的 Android 应用中追踪 TOTP 验证码的生成路径。
+- [CTF：解一道 flag 校验题](https://rea.tools/showcase/ctf/) - `REA` 用 REA 解 DownUnderCTF 2023 的入门逆向题。
 - [博客：逆向工程的工业革命](https://rea.tools/blog/touhou-reconstruction) - 作者 N0zoM1z0（同时参与 REA 开发）复盘东方 Project 复原的工作流程。文章强调复原工作多由 Agent 配合 IDA / Ghidra 完成，REA 只提供其中的分析证据，不应把所有结果都归为 REA 的产出。标签：`AI 逆向`。
 - [博客：逆向工程需要更大的模型吗？](https://rea.tools/blog/reverse-engineering-models) - 用东方复原中的实例讨论模型能力与专用化，并提出一个对比实验的设计。文中没有报告测量结果。标签：`AI 逆向`。
 
