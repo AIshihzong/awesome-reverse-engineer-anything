@@ -112,6 +112,11 @@ LICENSE_PATTERNS = [
     re.compile(r"GPL-?[23](?:\.0)?(?:-or-later)?", re.I),
     re.compile(r"CC0(?:-1\.0)?", re.I),
     re.compile(r"\bUnlicensed\b", re.I),
+    # The SPDX identifier is `Unlicense`; `Unlicensed` above is a different word and
+    # does not match it. An entry that says "Public domain (Unlicense)" was being
+    # told it states no licence, which is the one failure a checker must not make.
+    re.compile(r"\bUnlicense\b", re.I),
+    re.compile(r"\bpublic domain\b", re.I),
     re.compile(r"\bno license file\b", re.I),
     re.compile(r"source-available", re.I),
     re.compile(r"\bno license\b", re.I),
