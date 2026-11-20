@@ -247,14 +247,18 @@ def parse_file(path: Path) -> tuple[list[Entry], set[str]]:
             if repo:
                 all_repos.add(repo)
 
-        # A bullet or a table row that starts with a link is an entry.
+        # Only a bullet or a table row is an entry. A sentence that happens to
+        # contain a link is prose: it still contributes to `all_repos`, because
+        # parity is about which links a document carries, but it must not be
+        # judged as a listed project. The tag and licence rules are claims about
+        # entries, and a sentence is not one -- before this guard, a contributor
+        # who wrote "these are collected at [x](...)" in a case section was told
+        # to tag it.
         first = links[0] if links else None
         if first is None:
             continue
-        is_row = raw.lstrip().startswith("|")
-        if is_row:
-            if not BULLET.match(raw) and not raw.lstrip().startswith("|"):
-                continue
+        if not (BULLET.match(raw) or raw.lstrip().startswith("|")):
+            continue
         name, url = first
         text = raw
         entries.append(
