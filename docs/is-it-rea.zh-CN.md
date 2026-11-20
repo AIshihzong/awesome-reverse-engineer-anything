@@ -58,5 +58,8 @@ REA 到底有没有帮助是另一个问题。本列表收录的两组对照实�
 | [OpenGHub](https://github.com/Slyvan25/OpenGHub)                                           | 否                                  | 任何地方都没提 AI 或 REA                    | **不是 REA。** 基于抓包的人工逆向。                                                         |
 | Firefighter（X）                                                                             | —                                  | 转述记录                                | **不是 REA。** 标注为 AI 逆向。                                                         |
 | 《现代战争 2》反编译（X）                                                                             | —                                  | 转述记录                                | **不是 REA。** 标注为 AI 逆向。                                                         |
+| [ai-rebuilds](https://github.com/a-barzanti/ai-rebuilds)                                 | 是                                 | —                                   | **已确认。** README 写明使用 [REA](https://github.com/morluto/rea)，并描述了用它完成的重建。 |
+| [DiskLens](https://github.com/KarlssonChristoffer/DiskLens)                               | 是                                 | —                                   | **已确认。** README 说它"起初是对 [REA](https://github.com/morluto/rea) 的测试"，并列出了 Claude 用 REA 做的步骤。 |
+| [design-os-studio](https://github.com/jangtrinh/design-os-studio)                         | 否                                 | 仓库自带的规格文档                    | **已确认。** README 未提；`docs/specs/v0.6/E1-4-styles-hold-variable-aliases.md` 把 Figma 对齐结论记为 "confirmed by REA"，并注明使用 `rea` 6.7.0。 |
 
 如果你发现这里有错误的案例，请使用案例表单提交 Issue。

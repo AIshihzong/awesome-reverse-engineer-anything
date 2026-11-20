@@ -6,9 +6,9 @@
 
 Many cases are described as "built with REA". This page checks each one against the project's own README, the author's post, or the official showcase, and records what we found. First checked on 2026-10-14; the "README says REA?" column was re-checked against every linked repository's current README and agent files on 2026-11-10, with no changes. X posts could not be opened from our environment, so for them we rely on the third-party case records named in the table.
 
-**Summary (41 rows, 2026-11-17):**
+**Summary (44 rows, 2026-11-20):**
 
-- **27 confirmed:** the README, the agent instructions (AGENTS.md, CLAUDE.md) or the official showcase says REA was used.
+- **30 confirmed:** the README, the project's own specs or agent instructions (AGENTS.md, CLAUDE.md), or the official showcase says REA was used.
 - **3 partial:** REA was used for part of the work only.
 - **4 not verified:** 2 claimed only in the author's post, 2 with no source naming the tool.
 - **7 not REA:** other AI tools (mostly Claude Code or Codex with Ghidra or IDA), manual reverse engineering, or an unrelated project with a similar name.
@@ -58,5 +58,8 @@ Whether REA helps is a separate question. The two controlled comparisons in this
 | [OpenGHub](https://github.com/Slyvan25/OpenGHub)                                           | No                                   | No AI or REA mention anywhere            | **Not REA.** Manual RE from captures.                                                                                                   |
 | Firefighter (X)                                                                            | —                                    | Relayed record                           | **Not REA.** Tagged AI-RE.                                                                                                              |
 | Modern Warfare 2 decompilation (X)                                                         | —                                    | Relayed record                           | **Not REA.** Tagged AI-RE.                                                                                                              |
+| [ai-rebuilds](https://github.com/a-barzanti/ai-rebuilds)                                 | Yes                                  | —                                        | **Confirmed.** The README names [REA](https://github.com/morluto/rea) and describes rebuilds made with it. |
+| [DiskLens](https://github.com/KarlssonChristoffer/DiskLens)                               | Yes                                  | —                                        | **Confirmed.** The README says it "started as a test of [REA](https://github.com/morluto/rea)" and lists the steps Claude took with it. |
+| [design-os-studio](https://github.com/jangtrinh/design-os-studio)                         | No                                   | The repository's own specs              | **Confirmed.** The README is silent; `docs/specs/v0.6/E1-4-styles-hold-variable-aliases.md` records the Figma parity findings as "confirmed by REA" and cites `rea` 6.7.0. |
 
 If you find a case that is wrong here, open an issue using the case form.
