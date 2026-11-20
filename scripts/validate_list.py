@@ -151,6 +151,30 @@ HEADING = re.compile(r"^(#{1,6})\s+(.*)$")
 def read(path: Path) -> str:
     return path.read_text(encoding="utf-8")
 
+FENCE = re.compile(r"^\s*(?:```|~~~)")
+
+
+def masked(text: str) -> list[str]:
+    """Lines of `text` with code removed, keeping the line numbering intact.
+
+    A fenced block is documentation, not content: this repository's own Format
+    section shows `- [Name](link) - ...` inside one. Inline code is masked rather
+    than dropped, because tags live there (`REA`) and a masked line keeps its
+    length.
+    """
+    out: list[str] = []
+    fenced = False
+    for line in text.splitlines():
+        if FENCE.match(line):
+            fenced = not fenced
+            out.append("")
+            continue
+        if fenced:
+            out.append("")
+            continue
+        out.append(re.sub(r"`[^`]*`", lambda m: " " * len(m.group(0)), line))
+    return out
+
 
 def repo_of(url: str) -> str | None:
     """owner/name when the link points at a GitHub repository."""
@@ -181,7 +205,9 @@ def normalise_link(url: str) -> str:
 
 
 def all_links(path: Path) -> set[str]:
-    return {normalise_link(url) for _, url in LINK.findall(read(path))}
+    return {normalise_link(url)
+            for line in masked(read(path))
+            for _, url in LINK.findall(line)}
 
 
 class Entry:
@@ -231,8 +257,10 @@ def parse_file(path: Path) -> tuple[list[Entry], set[str]]:
     all_repos: set[str] = set()
     section = "(top)"
     stack: list[tuple[int, str]] = []
-    for line_no, raw in enumerate(read(path).splitlines(), start=1):
-        heading = HEADING.match(raw)
+    raw_lines = read(path).splitlines()
+    for line_no, line in enumerate(masked(read(path)), start=1):
+        raw = raw_lines[line_no - 1] if line_no <= len(raw_lines) else line
+        heading = HEADING.match(line)
         if heading:
             level = len(heading.group(1))
             section = heading.group(2).strip()
@@ -241,7 +269,7 @@ def parse_file(path: Path) -> tuple[list[Entry], set[str]]:
             stack.append((level, section))
             continue
 
-        links = LINK.findall(raw)
+        links = LINK.findall(line)
         for _, url in links:
             repo = repo_of(url)
             if repo:
@@ -480,8 +508,7 @@ def main() -> int:
         if not path.exists():
             continue
         sibling = Path(name).name.replace(".md", ".zh-CN.md")
-        text = read(path)
-        for line_no, line in enumerate(text.splitlines(), start=1):
+        for line_no, line in enumerate(masked(read(path)), start=1):
             for _, url in REL_LINK.findall(line):
                 if not url.endswith(".zh-CN.md"):
                     continue
